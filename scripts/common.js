@@ -6,16 +6,48 @@ if ($("body").find("i.fa").css('fontFamily') !== 'FontAwesome' )
 }
 /* if fontAwesome cdn fail === end */
 
+/* header Menu === start */
+$("#headerMenu").click(function(e)
+{
+    e.preventDefault();
+    e.stopPropagation();
+    if($(this).hasClass("open"))
+    {
+        $("#headerMenu").stop(true).addClass("close").removeClass("open");
+        $("#mainmenu").stop(true).slideDown(500);
+    }
+    else 
+    {
+        $("#headerMenu").stop(true).addClass("open").removeClass("close");
+        $("#mainmenu").stop(true).slideUp(500);
+    }
+});
+$("#mainmenu").click(function(e)  
+{
+    e.preventDefault();
+    e.stopPropagation();
+});
+$('body').click(function(e) // close on click body
+{    
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.target != $('#headerMenu') || e.target != $('#mainmenu')) 
+    {
+        $("#headerMenu").addClass("open").removeClass("close");
+        $("#mainmenu").slideUp(500);
+    }
+});
+/* header Menu === end */
 
 
 /* application open on header === start */
-$("#openApplication").click(function(e)
+$("#headerApplication").click(function(e)
 {
     e.preventDefault();
     e.stopPropagation();
     $("#findmarket").focus().val('')
     $("#applicationBox").stop(true).slideToggle(300);
-    $("#openApplication p").stop(true).toggleClass("active");
+    $("#headerApplication").stop(true).toggleClass("active");
 });
 $("#applicationBox").click(function(e) // stop closing on same div
 {
@@ -25,13 +57,12 @@ $("#applicationBox").click(function(e) // stop closing on same div
 $('body').click(function(e) // close on click body
 {    
     e.stopPropagation();
-    if (e.target != $('#openApplication')  || e.target != $('#applicationBox')) 
+    if (e.target != $('#headerApplication')  || e.target != $('#applicationBox')) 
     {
         $("#findmarket").val('');
         $("#applicationBox").slideUp(300);
-        $("#openApplication p").removeClass("active");
+        $("#headerApplication").removeClass("active");
     }
- 
 });
 /* application open on header === end */
 

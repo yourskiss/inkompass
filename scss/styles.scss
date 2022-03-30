@@ -1,0 +1,41 @@
+@import "_normalize.scss";
+@import "_fonts.scss";
+@import "_var.scss";
+@import "_mixin.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "_banners.scss";
+@import "_breadcrumbs.scss";
+
+
+
+/* #################### companyinfomation page  #################### */
+.companyinfomation  { 
+    width:100%; float:left; padding:3.5rem 0; 
+    section { 
+        width:95%; max-width:1300px; float:none; margin:0 auto; 
+        h2 { width:100%; float:left; margin-bottom:1.5rem; font-size:1.8rem;  color:#333333; font-weight:900; }
+        ul { 
+            width:100%; float:left;  
+            li { list-style:none;  width:50%; float:left;  
+                p { margin-bottom: 2rem; font-size:1.2rem; line-height: 1.4; color:#333333; font-weight:400; }
+                aside {  
+                    margin:0.2rem 0; @include display(flex-start, center); font-size:1.2rem; line-height: 1.4;  font-weight:400;   
+                    i.fa { 
+                        color:#333333; margin:0 0.7rem 0 0.4rem; font-size: 90%; font-size:90%;
+                        &.fa-phone { transform: rotate(20deg); }
+                    }
+                    a { 
+                        text-decoration:none; color:#333333; 
+                        &:hover { color: #1f3c84; }
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+
+/* #################### faqs wrap  #################### */
+.faqswraps  { 
+    position:relative; width:100%; float:left;  }

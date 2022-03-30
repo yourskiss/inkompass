@@ -1,0 +1,42 @@
+/* breadcrumbs */
+.breadcrumbs { 
+    margin-bottom:1rem; width:100%; float:left; @include display(flex-start, center); 
+    li { 
+        @include display(center, center); height:20px;  list-style:none; margin-right:0.7rem; font-size:0.8rem; font-weight: 400; 
+        i.fa.fa-circle { font-size:0.2rem; line-height: 0; }
+        a { 
+            text-decoration:underline; font-weight: 400; @include transition(ease-out); 
+            &:hover { text-decoration:none;  @include transition(ease-in); }
+        }
+    }
+}
+
+.mainbanner.aboutus .breadcrumbs{
+    margin-top:1rem;
+        li {  
+        color:#fff; 
+            a { 
+                color:#fff;
+                &:hover { color:#1f3c84; }
+            }
+    }
+}
+.mainbanner.contactus .breadcrumbs {
+    margin-top:1rem;
+    li 
+    {  
+        color:#393939; 
+        a { 
+            color:#393939; 
+            &:hover { color:#1f3c84; }
+        }
+    }
+}
+
+.termright .breadcrumbs li {  
+    color:#393939; 
+    a { 
+        color:#393939; 
+        &:hover { color:#1f3c84; }
+    }
+}
