@@ -24,18 +24,24 @@
         <a href="/"><img src="images/logo.png" alt="logo" /></a>
         <span>Intern at PMI</span>
     </aside>
-    <nav>
+    <nav id="mainmenu">
         <ul>
             <li><a href="#" class="active">EXPLORE OPPORTUNITIES</a></li>
             <li><a href="#">PROGRAM DETAILS</a></li>
             <li><a href="#">DISCOVER PMI</a></li>
             <li><a href="#">FAQs</a></li>
             <li><a href="#">CONTACT US</a></li>
+            <li class="navlastmenu"><a href="#">APPLICATION OPEN <b>&#10141;</b></a></li>
         </ul>
     </nav>
-    <div class="header-right" id="openApplication">
-        <p>APPLICATION OPEN <b>&#10141;</b></p>
-        <span><i class="fa fa-search" aria-hidden="true"></i></span>
+    <div class="header-right">
+        <div class="headerMenu open" id="headerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="headerApplication" id="headerApplication">APPLICATION OPEN <b>&#10141;</b></span>
+        <span class="headerSearch" id="headerSearch"><i class="fa fa-search" aria-hidden="true"></i></span>
     </div>
 
 
@@ -60,22 +66,27 @@
 <!-- header end -->       
 
 
-    
- 
+
 
 
 <!-- banner start -->
 <section class="mainbanner home">
-    <img class="banner_web" src="images/home/banner_web.jpg" alt="home" />
-    <img class="banner_ipad" src="images/home/banner_web.jpg" alt="home" />
-    <img class="banner_mobile" src="images/home/banner_web.jpg" alt="home" />
+    <img class="banner_web" src="images/home/banner1.jpg" alt="home" />
+    <img class="banner_ipad" src="images/home/banner2.jpg" alt="home" />
+    <img class="banner_mobile" src="images/home/banner3.jpg" alt="home" />
     <section class="bannerinner">
         <div class="home-block">
+            <aside class="makehistory_mob">
+                <img src="images/home/makehistory.png" alt="make history" />
+            </aside>
             <h2>
                 <span>An internship<br>that’s challenging? </span>
                 <strong>How about delivering<br>a smoke-free future<br>with us?</strong> 
             </h2>
             <p><a href="#">EXPLORE NOW<b>&#10141;</b></a></p>
+            <aside class="makehistory_web">
+                <img src="images/home/makehistory.png" alt="make history" />
+            </aside>
         </div>
     </section>
 </section>
@@ -98,7 +109,8 @@
             </h3>
             <p><a href="#">EXPLORE NOW<b>&#10141;</b></a></p>
         </div>
-        <img src="images/home/gainexperience.png" alt="gain experience" />
+        <img class="gainexperienceWEB" src="images/home/gainexperience_web.png" alt="gain experience" />
+        <img class="gainexperienceMOB"src="images/home/gainexperience_mob.png" alt="gain experience" />
     </div>
 </section>
 <!-- gain experience end -->
@@ -218,31 +230,31 @@
                 </div>
             </div>
             <div class="items">
-                <img src="images/home/latest1.png" alt="interns" />
+                <img src="images/home/latest4.png" alt="interns" />
                 <div class="item"> 
                     <h4>Applications opening soon</h4>
                     <p>
-                        Japan, Korea and Argentina going live in Q3, 2022
+                        Japan is going live in Q3, 2022
                     </p>
                     <aside><a href="#"><span><i class="fa fa-arrow-right" aria-hidden="true"></i></span> DON’T MISS OUT!</a></aside>
                 </div>
             </div>
             <div class="items">
-                <img src="images/home/latest2.png" alt="interns" />
+                <img src="images/home/latest5.png" alt="interns" />
                 <div class="item">
-                    <h4>Find us near you</h4>
+                    <h4>Career Quiz</h4>
                     <p>
-                        Australia is going to visit the University of Melbourne on 12th April 2022.
+                        Find out a PMI career path for you
                     </p>
                     <aside><a href="#"><span><i class="fa fa-arrow-right" aria-hidden="true"></i></span> READ MORE</a></aside>
                 </div>
             </div>
             <div class="items">
-                <img src="images/home/latest3.png" alt="interns" />
+                <img src="images/home/latest6.png" alt="interns" />
                 <div class="item">
-                    <h4>John Doe loved his INKOMPASS journey</h4>
+                    <h4>Global Top Employer 2022</h4>
                     <p>
-                        Get to know John Doe’s INKOMPASS experience
+                        Six years in a row
                     </p>
                     <aside><a href="#"><span><i class="fa fa-arrow-right" aria-hidden="true"></i></span> READ MORE</a></aside>
                 </div>
@@ -331,7 +343,7 @@
 // slick === start
 $('.latestatHereSlider, .meetinternsSlider').slick({
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     dots: true,
     arrows: true,
     autoplay: false,
@@ -339,17 +351,18 @@ $('.latestatHereSlider, .meetinternsSlider').slick({
     infinite: false,
     adaptiveHeight: false,
     centerMode: false,
-    centerPadding: '1rem',
+    centerPadding: '10px',
+    initialSlide:0,
     responsive:
     [
         {
             breakpoint: 767,
-            settings: { slidesToShow: 2 }
+            settings: { arrows: false, slidesToShow: 2, slidesToScroll: 2 }
         },
         {
             breakpoint: 479,
-            settings: { slidesToShow: 1 }
-        }
+            settings: { centerPadding: '8px', arrows: false, slidesToShow: 1, slidesToScroll: 1 }
+        } 
     ]
 });
 // slick === end
