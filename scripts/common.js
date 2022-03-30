@@ -6,6 +6,14 @@ if ($("body").find("i.fa").css('fontFamily') !== 'FontAwesome' )
 }
 /* if fontAwesome cdn fail === end */
 
+/* page refresh on orientation change === START */
+$(window).on('orientationchange', function (event) 
+{
+    location.reload(true);
+});
+/* page refresh on orientation change === END */
+
+
 /* header Menu === start */
 $("#headerMenu").click(function(e)
 {
