@@ -1,5 +1,6 @@
 @import "_normalize.scss";
 @import "_fonts.scss";
+@import "_fontawesome.scss";
 @import "_var.scss";
 @import "_mixin.scss";
 @import "_header.scss";
@@ -11,23 +12,23 @@
 
 /* #################### companyinfomation page  #################### */
 .companyinfomation  { 
-    width:100%; float:left; padding:3.5rem 0; 
-    section { 
+    width:100%; float:left; padding:3.5rem 0; background: $white;
+    .companyinfoInner { 
         width:95%; max-width:1300px; float:none; margin:0 auto; 
-        h2 { width:100%; float:left; margin-bottom:1.5rem; font-size:1.8rem;  color:#333333; font-weight:900; }
+        h2 { width:100%; float:left; margin-bottom:1.5rem; font-size:1.8rem;  color:$lightBlack; font-weight:900; }
         ul { 
             width:100%; float:left;  
             li { list-style:none;  width:50%; float:left;  
-                p { margin-bottom: 2rem; font-size:1.2rem; line-height: 1.4; color:#333333; font-weight:400; }
+                p {  font-size:1.2rem; line-height: 1.4; color:$lightBlack; font-weight:400; }
                 aside {  
                     margin:0.2rem 0; @include display(flex-start, center); font-size:1.2rem; line-height: 1.4;  font-weight:400;   
                     i.fa { 
-                        color:#333333; margin:0 0.7rem 0 0.4rem; font-size: 90%; font-size:90%;
+                        color:$lightBlack; margin:0 0.7rem 0 0.4rem; font-size: 90%; font-size:90%;
                         &.fa-phone { transform: rotate(20deg); }
                     }
                     a { 
-                        text-decoration:none; color:#333333; 
-                        &:hover { color: #1f3c84; }
+                        text-decoration:none; color:$lightBlack; 
+                        &:hover { color: $darkBlue; }
                     }
                 }
             }
@@ -39,3 +40,28 @@
 /* #################### faqs wrap  #################### */
 .faqswraps  { 
     position:relative; width:100%; float:left;  }
+
+
+
+
+
+@media only screen and (max-width:1024px) 
+{
+    /* #################### companyinfomation page  #################### */
+    .companyinfomation  { 
+        padding:2rem 0; 
+        .companyinfoInner {  
+            h2 { margin-bottom:0; font-size:1.6rem; text-align:center; }
+            ul { 
+                li { 
+                    width:100%; background:$aboutaddressBG; margin-top:1.5rem;padding: 1.5rem;
+                    p { 
+                        font-size:1.1rem; 
+                        strong { color:$darkBlue; }
+                    }
+                    aside {  font-size:1.1rem; }
+                }
+            }
+        }
+    }
+}

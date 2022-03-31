@@ -14,10 +14,10 @@
 .mainbanner.aboutus .breadcrumbs{
     margin-top:1rem;
         li {  
-        color:#fff; 
+        color:$white; 
             a { 
-                color:#fff;
-                &:hover { color:#1f3c84; }
+                color:$white;
+                &:hover { color:$darkBlue; }
             }
     }
 }
@@ -25,18 +25,25 @@
     margin-top:1rem;
     li 
     {  
-        color:#393939; 
+        color:$lightBlack; 
         a { 
-            color:#393939; 
-            &:hover { color:#1f3c84; }
+            color:$lightBlack; 
+            &:hover { color:$darkBlue; }
         }
     }
 }
 
 .termright .breadcrumbs li {  
-    color:#393939; 
+    color:$lightBlack; 
     a { 
-        color:#393939; 
-        &:hover { color:#1f3c84; }
+        color:$lightBlack; 
+        &:hover { color:$darkBlue; }
     }
+    &:first-child { margin-left:0; }
+}
+
+
+@media only screen and (max-width:1023px) 
+{
+    .breadcrumbs { display:none; }
 }

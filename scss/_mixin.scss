@@ -13,7 +13,6 @@
     justify-content:$val1; 
     align-items:$val2;
   }
-
   @mixin transition($val) 
   {
     transition : all 0.3s $val;
