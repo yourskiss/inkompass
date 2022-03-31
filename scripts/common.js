@@ -1,11 +1,4 @@
 
-/* if fontAwesome cdn fail === start */
-if ($("body").find("i.fa").css('fontFamily') !== 'FontAwesome' ) 
-{
-    $('head').append('<link href="styles/fontawesome.min.css" rel="stylesheet" />');
-}
-/* if fontAwesome cdn fail === end */
-
 /* page refresh on orientation change === START */
 $(window).on('orientationchange', function (event) 
 {
@@ -39,11 +32,15 @@ $('body').click(function(e) // close on click body
 {    
     e.preventDefault();
     e.stopPropagation();
-    if (e.target != $('#headerMenu') || e.target != $('#mainmenu')) 
+    if($(window).width() < 1023)
     {
-        $("#headerMenu").addClass("open").removeClass("close");
-        $("#mainmenu").slideUp(500);
+        if (e.target != $('#headerMenu') || e.target != $('#mainmenu')) 
+        {
+            $("#headerMenu").addClass("open").removeClass("close");
+            $("#mainmenu").slideUp(500);
+        }
     }
+    
 });
 /* header Menu === end */
 
