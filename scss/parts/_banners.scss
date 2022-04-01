@@ -1,0 +1,258 @@
+
+/* #################### main banners  #################### */
+.mainbanner  { 
+    position:relative; width:100%; float:left; 
+    .bannersection {
+        position:relative; width:100%; float:left;  
+        .banner_web { display:block; width:100%; }
+        .banner_ipad { display:none; width:100%; }
+        .banner_mobile { display:none; width:100%; }
+        .bannerinner { 
+            z-index:2; position:absolute; top:0; left:50%; transform:translateX(-50%); width:95%; max-width:1300px; height: 100%; 
+        }
+    }
+}
+
+/* home block */
+.home-block { 
+    z-index:3; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:95%; max-width:1300px; 
+    .makehistory_web {
+        display:block; width:100%; float:left; text-align:left; margin-top: 2rem;
+        img { max-width:100%; display:inline-block; margin:0 auto; }
+    }
+    .makehistory_mob  {
+        display:none; width:100%; float:left; text-align:center; margin-bottom: 0.5rem;
+        img { max-width:100%; display:inline-block; margin:0 auto; }
+    }
+    h2 {  
+        width:100%; float:left; font-size:3rem; color: $white;  
+        span { display:block; margin-bottom:5px;  font-weight:300; }
+        strong { font-weight:700;  }
+    }
+    p{
+        width:100%; float:left; margin-top:2rem; 
+        a { 
+            display:inline-block; background: $darkBlue; padding:1rem 1.2rem; font-weight:700; font-size:0.8rem; letter-spacing: 2px; text-transform:uppercase; color: $white; cursor:pointer; @include transition(ease-out);
+            b{ font-weight:400; margin-left:0.3rem; @include transition(ease-out); }
+            &:hover { 
+                padding:1rem 0.9rem 1rem 1.2rem; @include transition(ease-in);
+                b { margin-left:0.6rem; @include transition(ease-in); } 
+            }
+        }
+    }
+}
+ 
+/* contactus block */
+.mainbanner.contactus:before { content:''; z-index:1; position:absolute; top:0; left:0; width:100%; height:100%; background: transparent linear-gradient(90deg, #000000 0%, #54545400 100%) 0% 0% no-repeat padding-box; }
+.contactus-block { 
+    z-index:3; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:95%; max-width:1300px; 
+    h2 {  width:100%; max-width: 450px; clear:both; font-size:3rem; color:$white;  font-weight:900;  } 
+    p {  width:100%; max-width: 450px; clear:both; padding: 2rem 0; line-height: 1.4; font-size:1.2rem; color:$white;  font-weight:400;  }
+    aside { 
+         width:100%; max-width: 450px;  clear:both;
+        a { 
+            text-decoration:underline; font-size:1.2rem; color:$white; font-weight: 400; @include transition(ease-out);
+            &:hover { text-decoration:none; @include transition(ease-in); }
+        }
+    }
+}
+ 
+/* aboutusb block */
+.aboutus-block { 
+    z-index:3; position:absolute; top:50%; left:5%; width:auto; transform: translateY(-50%);
+    h2 {  width:100%; font-size:3rem; color:$white;  font-weight:900;  }
+}
+
+
+/* faq block */
+.faqsheadingMobile { display:none; }
+.faqs-block { 
+    z-index:3; position:absolute; top:50%; left:50%; transform:translate(-50%, -40%); width:95%; max-width:1300px; 
+    .faqsinner-block {
+        width:100%; max-width:600px; float:left;
+        h2 { width:100%;float:left; font-size:1.8rem; color:$black; font-weight:700;  } 
+        input[type='text'] { width:100%;float:left;margin:0.7rem 0; padding:1rem 2rem; @include borderradius(40px); border:none; outline:none; font-size:1.2rem; color:$lightBlack; font-weight:400; 
+            background:#fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABu0lEQVRYR+2VSytFURiGz3GJoUvhF1CGLgkTihEGUgxNDch1QJli4lLKH5ABM3IpQgYUf8Fl4hpTxMTlebVOncHZe62tfZzUXvW0Tmvv837v+b71fScey/CKZzh+LDIQZSDKQJAMFNOyA9AO5ZAFV7ADi/Dwm5Z2NdCB+DIUeAR55bwPVoKacDGgX7wO2bALs3AKn1ANg9BlAvcao84+bAYKUbqEIpiCSQ/lIc4X4M2U59bVgc3ABELTcACt8OUjvMqzHpiH0bAMnCDUACrDtkW0zpTmnL0iLAOPCJVAKTxZRHN4/m6ylM/+4WLCVgK1VplBZvxWbpKBvLAMHCPUCGrDLccSXPCe5oTTsmVgHJUZOIQWk14v4TUedMMcjDlF5yWbAQ0etaGmoLpBbZiqE4Y51+1/gUq4CcuAdNpgAzSI9kCD6Ax0yWpAg6jTBLxmr4f7MA1IS22oUazBlGo9m6BqP92BJlcTthIkB9M07AddSF0ytZ3+jDZhCTQF96EqiIkgBlyyqjujMtUaE83sd35fDNuAYqlMiUwc8VkmPFc6DCRM6M6MmEz8uQGXcv28k64MRAaiDPyfDHwD1jVOIZcvW0YAAAAASUVORK5CYII=') no-repeat; background-position:right 10px center;
+        }
+        p { width:100%;float:left; line-height: 1.4; font-size:1.2rem; color:$black;  font-weight:400; }
+    }
+}
+
+
+
+@media only screen and (max-width:1565px) 
+{
+    /* home block */
+    .home-block { 
+        h2 {  font-size: 2.6rem; }
+        p { margin-top:1.5rem; }
+    }
+
+    /* contactus block */
+    .contactus-block { 
+        h2 {  font-size:2.6rem;  } 
+        p { padding: 1.5rem 0; font-size:1rem;  }
+        aside { 
+        a { font-size:1rem; }
+        }
+    }
+
+    /* aboutusb block */
+    .aboutus-block { 
+        transform: translateY(-25%);
+        h2 {  font-size:2.6rem;  }
+    }
+
+    /* faq block */
+    .faqs-block { 
+        .faqsinner-block {
+            max-width:500px; 
+            h2 { font-size:1.5rem;  } 
+            input[type='text'] { margin:0.5rem 0; padding:0.6rem 2rem; font-size:1rem;}
+            p { font-size:1rem;}
+        }
+    }
+
+}
+
+@media only screen and (max-width:1255px) 
+{
+    /* home block */
+    .home-block {  
+        h2 {  font-size: 2rem; }
+        p { margin-top:1rem; }
+    }
+    
+    /* faq block */
+    .faqs-block { 
+        transform: translate(-50%, -32%); 
+        .faqsinner-block {
+            input[type='text'] { margin: 0.3rem 0; }
+        } 
+    }
+}
+
+@media only screen and (max-width:1023px) 
+{
+    .mainbanner{
+        .bannersection{
+            .banner_web { display:none;   }
+            .banner_ipad { display:block;  }
+            .banner_mobile { display:none;   }
+        }
+        
+    }
+
+    /* faq block */
+    .faqs-block { 
+        transform: translate(-50%, -50%); 
+        .faqsinner-block {
+            max-width: 350px;
+            input[type='text'] { margin: 0.3rem 0; }
+        } 
+    }
+
+}
+
+
+
+@media only screen and (max-width:767px) 
+{
+    /* home block */
+    .home-block {
+        .makehistory_web { margin-top:1rem;}
+        h2 {font-size: 1.4rem;}
+        p {
+            margin-top: 0.5rem;
+            a {
+                padding: 0.6rem 0.9rem; font-size: 0.7rem;letter-spacing: 1px;
+                &:hover { padding:0.6rem;}
+            }
+        }
+    }
+
+
+    /* contactus block */
+    .contactus-block { 
+        
+        h2 {  max-width: 300px; } 
+        p {  max-width: 300px;   }
+        aside { max-width: 300px;  }
+    }
+
+    /* aboutusb block */
+    .aboutus-block { 
+        transform: translateY(-50%);
+        h2 {  font-size:2.2rem;  }
+    }
+}
+
+
+@media only screen and (max-width:599px) 
+{
+    /* faq block */
+    .mainbanner.faqsbanner:before { content:''; z-index:1; position:absolute; top:0; left:0; width:100%; height:100%; background: transparent linear-gradient(90deg, #000000 0%, #54545400 100%) 0% 0% no-repeat padding-box; }
+    .faqsheadingMobile { 
+        display:block; z-index:3;  position:absolute; top:50%; left:5%; width:auto; transform: translateY(-50%); font-size:1.6rem; color: $white; font-weight:900; 
+        span { display:block; }
+    }
+    .faqs-block { 
+        position: relative;left: 0;top: 0; transform: translate(0%, 0%); float:left; width:100%; padding:2rem 5%; background:$white;
+        .faqsinner-block {
+            max-width: 100%;
+            h2 { display:none; }
+            input[type='text'] { margin:0 0 1rem 0; padding:0.8rem 2rem; background-color: $whiteLight; }
+            p { text-align:center; }
+        } 
+    }
+
+    
+}
+
+@media only screen and (max-width:479px) 
+{
+    .mainbanner{
+        .bannersection{
+            .banner_web { display:none;   }
+            .banner_ipad { display:none;  }
+            .banner_mobile { display:block;   }
+        }
+    }
+
+    /* home block */
+    .mainbanner.home {background:$homebg;}
+    .home-block {
+        position: relative;top: 0; left: 0; transform: translate(0%, 0%);width: 90%; margin:-70px 5% 0 5%; height: auto; float: left; background:$btnBG; border-top: solid 5px $lightBlue2; padding: 1rem;
+        .makehistory_web { display:none; }
+        .makehistory_mob { display:block; }
+        h2 { font-size: 1.3rem; font-size: 1.3rem; text-align: center;}
+        p {
+            margin-top:1rem; text-align: center;
+            a {
+                background:$lightBlue2; color:$white; padding:1rem 1.7rem 1rem 1.4rem; font-size: 0.7rem;letter-spacing: 1px;
+                &:hover { padding:1rem 1.4rem;}
+            }
+        }      
+    }
+
+
+    /* contactus block */
+    .contactus-block { 
+        z-index: 3;position: relative;top: 0;left: 0; transform: translate(0%, 0%);width: 100%; background:$white; padding: 3rem 2rem; float: left;
+        h2 {  max-width:100%; text-align:center; color: $lightBlack; font-size:1.5rem;  } 
+        p { max-width:100%; text-align:center; color: $lightBlack2; font-size:1.1rem; padding:1rem 0; }
+        aside { 
+            max-width: 100%; text-align:center;
+            a { color: $lightBlack2; font-size:1.1rem;  }
+        }
+    }
+
+
+    /* aboutusb block */
+    .mainbanner.aboutus:before { content:''; z-index:1; position:absolute; top:0; left:0; width:100%; height:100%; background:transparent linear-gradient(90deg, #000000B7 0%, #54545400 100%) 0% 0% no-repeat padding-box; }
+    .aboutus-block { 
+        h2 {  font-size:1.5rem;  }
+    }
+
+
+}

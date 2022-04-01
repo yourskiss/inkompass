@@ -1,0 +1,119 @@
+.share-nav { width:100%; float:left; padding:1rem; background:$shareNavBg; @include display(center, center); overflow: hidden; }
+.share-nav aside { margin-left:1rem; @include display(center, center);  }
+.share-nav aside a { @include borderradius(50%); @include display(center, center); background:$darkBlue; height: 50px; width: 50px; margin: 0 10px; text-decoration:none;   color:$white; cursor:poiter; @include transition(ease-out); }
+.share-nav aside a:hover { background:$white; color:$darkBlue;  @include transition(ease-in); }
+.share-nav aside a i.fa { font-size:1.5rem;}
+.share-nav p { font-weight:400; font-size:1.2rem; color:$white;  }
+
+
+.footer { width:100%; float:left; background: $footerBG; text-align:center; overflow: hidden; }
+.footer-inner { display:inline-block; width:95%; max-width:1300px; margin:0 auto; float:none; }
+
+.footer section { 
+    width:100%; float:left; padding: 1.5rem 0; @include display(space-between, flex-start); align-items: stretch; 
+    ul { 
+        height: inherit; width:25%; border-right:solid 1px $footerLine; padding: 0 2rem 0 4rem; 
+        &:first-child { padding-left:0; }
+        li { 
+            list-style:none;  text-align:left; margin-bottom:.4rem; 
+            &:last-child { margin-bottom:0; }
+            h2 { margin-bottom:1rem; font-size:1.2rem; font-weight:900; color:$lightBlack }
+            a { 
+                text-decoration:none; font-size:1rem; color: $ultralightBlack;  font-weight: 400; @include transition(ease-out); 
+                &:hover { color:$footerLiA; @include transition(ease-in); }
+            }
+        }
+    &.followus { 
+        border-right:none; 
+        li{
+            a { 
+                margin-right:1rem; font-size:1.5rem; color:$footerLiA; 
+                &:hover { color: $ultralightBlack;  }
+            }
+        } 
+    }
+    }
+}
+ 
+
+.footer .copyrightpart { 
+    width:100%; float:left; padding: 1.5rem 0; border-top:solid 1px $footerLine; @include display(space-between, center); 
+    ul { 
+        @include display(flex-start, center); 
+        li { 
+            list-style:none; display:inline-block; text-align:left; margin-right:2rem; 
+            &:last-child { margin-right:0; }
+            a { 
+                text-decoration:none; font-size:.9rem; letter-spacing: 2px; color: $ultralightBlack; text-transform: uppercase; font-weight: 400; @include transition(ease-out); 
+                &:hover { color: $copyrightLiA; @include transition(ease-in); }
+            }
+        }
+    }
+    p { font-size:.9rem;  color: $ultralightBlack; font-weight: 400;  }
+}
+  
+
+@media only screen and (max-width:1255px) 
+{
+    .footer section ul {padding: 0 1rem 0 2rem;}
+    .footer section ul.followus li a {margin-right: 0.5rem; }
+    .footer .copyrightpart {flex-wrap: wrap;justify-content: center;}
+    
+}   
+@media only screen and (max-width:1023px) 
+{
+    .share-nav p {  font-size: 1rem; } 
+    .share-nav aside a {
+        height: 36px;width: 36px; 
+        i.fa {font-size: 1rem; }
+    }
+ 
+    .footer section ul {
+        padding: 0 0.5rem 0 1rem;
+    }
+    .footer .copyrightpart ul li {margin-right: 1rem;   }
+    .footer .copyrightpart ul li a { letter-spacing: 1px; }
+    .footer .copyrightpart p { width:100%; text-align:center; margin-top: 1rem; }
+}
+@media only screen and (max-width:767px) 
+{
+    .footer-inner { width: 100%; }
+    .footer section {
+        flex-wrap: wrap; align-items: flex-start;
+        ul {
+            padding: 0; width: 100%; border-right: 0; margin-bottom:2.5rem;
+            li {
+                text-align: center; margin-bottom:0.6rem;
+                h2 {
+                    margin-bottom:1rem; 
+                }
+            }
+         &.followus { 
+             margin-bottom: 0;
+             li a {margin-right: 1rem;font-size: 1.7rem;}
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:599px) 
+{
+    .footer .copyrightpart ul{
+        width:100%;
+        justify-content: center; align-items:flex-start; flex-direction: column;
+        li {
+            width:100%; margin:0.3rem 0; text-align:center;
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width:599px) 
+{
+    .share-nav {  flex-wrap: wrap;
+        p {  margin-bottom: 1rem;}
+        aside a {   margin: 0 7px; }
+    }
+
+}
