@@ -1,0 +1,200 @@
+@import "parts/_normalize.scss";
+@import "parts/_fonts.scss";
+@import "parts/_fontawesome.scss";
+@import "parts/_var.scss";
+@import "parts/_mixin.scss"; 
+@import "parts/_header.scss";
+@import "parts/_footer.scss";
+@import "parts/_banners.scss";
+@import "parts/_slick.scss"; 
+
+
+
+.gainexperience { 
+    padding:3rem 0; width:100%; float:left; background:$homebg; overflow: hidden;
+    .gainexperienceInner { 
+        display: flow-root; position: relative; width:95%; max-width:1300px; margin:0 auto; 
+        .gainexperienceWEB { display:block; width:80%; float: right; }
+        .gainexperienceMOB { display:none; }
+        div 
+        { 
+            position:absolute; top:50%; left:0; z-index:2; transform:translateY(-50%); background:$white; width:45%; padding:2.5rem;
+            h2 {  
+                width:100%; float:left; font-size:1.8rem; color:$lightBlack; font-weight:700;
+            }
+            h3 {  
+                 width:100%; float:left; margin:1rem 0; font-size:1.2rem; line-height: 1.4; color:$lightBlack2; font-weight:400;
+            }
+            p{
+                width:100%; float:left; 
+                a { 
+                    display:inline-block; background:$darkBlue; padding:1rem 1.2rem; font-weight:700; font-size:0.8rem; letter-spacing: 2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out);
+                    b{ font-weight:400; margin-left:0.3rem; @include transition(ease-out); }
+                    &:hover { 
+                        padding:1rem 0.9rem 1rem 1.2rem; @include transition(ease-in);
+                        b { margin-left:0.6rem; @include transition(ease-in); } 
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+
+.meetinterns { 
+    padding:3rem 0; width:100%; float:left; background:  $white; overflow: hidden;
+    .meetinternsInner { 
+        display: flow-root; position: relative; width:95%; max-width:1300px; margin:0 auto; 
+        h2 {  
+            width:100%; float:left; text-align:center; font-size:1.8rem; color:$lightBlack2; font-weight:700;
+        }
+        h3 {  
+             width:100%; float:left; margin:1rem 0;  text-align:center; font-size:1.2rem; line-height: 1.4; color:$lightBlack2; font-weight:400;
+        }
+     }
+}
+.meetinternsSlider { width:100%; float:left; }
+.meetinternsSlider { width: 100%; float: left; margin: 0 !important; padding: 0 0 2rem 0; display: flex; flex-wrap:nowrap; justify-content:center;  overflow: visible;}
+.meetinternsSlider .slick-list{padding:1rem 0 !important; }
+.meetinternsSlider .slick-track{display: flex !important;}
+.meetinternsSlider .slick-slide { 
+    height: inherit !important;  display: flex !important; justify-content: center; align-items: flex-start; background: $white; margin: 0 10px;  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    .items {
+        border:0; @include transition(ease-out);
+        img { width:100%; }
+        .item { 
+            width:100%; float:left; padding: 1.5rem 5% 1rem 5%; 
+            h4 { width:100%; float:left; color:$btnBG; font-size:1.2rem; font-weight:700;  }
+            p { width:100%; float:left; padding:1rem 0 1.5rem 0; color:$lightBlack; font-size:1rem; font-weight:400;  }
+            aside { 
+                width:100%; float:left;
+                a { @include display(left, center); float: left; text-decoration:none; color: $lightBlack; font-size:0.8rem; font-weight:400; 
+                    span { @include display(center, center); margin-right: 1rem; width:36px; height:36px; border-radius:50%; background: $darkBlue; color: $white; }
+                }
+            }
+        }
+    }
+    &:hover { 
+        background: $lightBlue; @include transition(ease-in);
+        .items {
+            .item {
+                h4{  color: $white; }
+                p{  color: $white; } 
+                aside a {  
+                    color: $white;
+                    span { background: $white; color: $darkBlue; }
+                }
+            }
+        }  
+    }
+}
+.meetinternsSlider .slick-dots li { 
+    background:$superultralightBlack;  
+    &.slick-active { background: $slickbullet; }
+}
+.meetinternsSlider .slick-arrow:before { color: $slickarroNormal;  }
+.meetinternsSlider .slick-arrow:hover:before { color: $slickarro; } 
+
+.latestatHere { 
+    padding:3rem 0; width:100%; float:left; background:$lightBlue; overflow: hidden;
+    .latestatHereInner { 
+        display: flow-root; position: relative; width:95%; max-width:1300px; margin:0 auto; 
+        h2 {  
+            width:100%; float:left; text-align:center; font-size:1.8rem; color: $white; font-weight:700;
+        }
+     }
+}
+.latestatHereSlider { width: 100%; float: left; margin: 0 !important; padding: 0 0 2rem 0; display: flex; flex-wrap:nowrap; justify-content:center;  overflow: visible;}
+.latestatHereSlider .slick-list{padding:1rem 0 !important; }
+.latestatHereSlider .slick-track{display: flex !important; justify-content:space-between; }
+.latestatHereSlider .slick-slide { 
+    height: inherit !important; position:relative;  display: flex !important; justify-content: center; align-items: top; background: $white; margin: 0 10px; 
+    &:before { opacity:0;  content:''; position:absolute; top:0; left:0; z-index:2; width: 100%;height: 7px; background: $darkBlue; @include transition(ease-out); }
+    .items { 
+        border:none;
+        img { width:100%; }
+        .item { 
+            width:100%; float:left; padding: 1.5rem 5% 1rem 5%; 
+            h4 { width:100%; float:left; color:$btnBG; font-size:1.2rem; font-weight:700;  }
+            p { width:100%; float:left; padding:1rem 0 1.5rem 0; color:$lightBlack; font-size:1rem; font-weight:400;  }
+            aside { 
+                width:100%; float:left;
+                a { @include display(left, center); float: left; text-decoration:none; color:$lightBlack; font-size:0.8rem; font-weight:400; 
+                    span { @include display(center, center); margin-right: 1rem; width:36px; height:36px; border-radius:50%; background: $darkBlue; color: $white; }
+                }
+            }
+        }
+    
+    }
+    &:hover{
+        &:before { opacity:1; @include transition(ease-in); }
+     }
+}
+.latestatHereSlider .slick-dots li { 
+    background: $white;  
+    &:li.slick-active { background:$slickbullet; }
+}
+.latestatHereSlider .slick-arrow:before { color: $white;  }
+.latestatHereSlider .slick-arrow:hover:before { color:$slickbullet; } 
+ 
+
+
+@media only screen and (max-width:1565px) 
+{
+    .gainexperience .gainexperienceInner div h2 { font-size: 1.6rem; }
+    .gainexperience .gainexperienceInner div h3 {  font-size: 1rem; }
+
+    .meetinterns .meetinternsInner h2 {  font-size: 1.7rem; }
+    .meetinterns .meetinternsInner h3 {  font-size: 1rem; }
+    .meetinternsSlider .slick-slide .items .item h4 { font-size: 1.1rem; }
+    .meetinternsSlider .slick-slide .items .item p { font-size: 0.9rem; padding: 0.5rem 0 1rem 0; }
+    .meetinternsSlider .slick-slide .items .item aside a span { margin-right: 0.5rem;width: 30px;height: 30px; }
+
+    .latestatHere .latestatHereInner h2 {  font-size: 1.7rem; }
+    .latestatHereSlider .slick-slide .items .item h4 { font-size: 1.1rem; }
+    .latestatHereSlider .slick-slide .items .item p { font-size: 0.9rem; padding: 0.5rem 0 1rem 0; }
+    .latestatHereSlider .slick-slide .items .item aside a span { margin-right: 0.5rem;width: 30px;height: 30px; }
+
+}
+
+
+ 
+
+@media only screen and (max-width:1023px) 
+{
+    .gainexperience .gainexperienceInner {
+        width: 100%;display: flex;flex-wrap: wrap; flex-direction: column;
+        .gainexperienceWEB { width: 100%;}
+        div {
+            position: relative;top: 0;left: 0; transform: translateY(0);width: 90%;padding: 1.5rem;float: left;margin: 0 5%;margin-top: -100px; 
+            h2{text-align:center;}
+            h3{text-align:center;}
+            p {text-align: center;}
+        }
+    }
+    
+}
+@media only screen and (max-width:767px) 
+{
+    .meetinternsSlider { padding: 0 0 0.7rem 0; }
+    .latestatHereSlider { padding: 0 0 0.7rem 0;  }
+}
+ 
+@media only screen and (max-width:479px) 
+{
+    .meetinternsSlider  .slick-list {padding:5px 40px 5px 20px !important; }
+    .meetinternsSlider .slick-slide { margin: 0 8px;  }
+    .latestatHereSlider .slick-list {padding:5px 40px 5px 20px !important; }
+    .latestatHereSlider .slick-slide { margin: 0 8px;  }
+
+    .gainexperience .gainexperienceInner {
+         div { padding: 1rem; margin-top: -50px; }
+         .gainexperienceWEB { display:none;  }
+        .gainexperienceMOB { display:block;  }
+    }
+ 
+ 
+    
+    
+}
+

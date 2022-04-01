@@ -1,0 +1,113 @@
+@import "parts/_normalize.scss";
+@import "parts/_fonts.scss";
+@import "parts/_fontawesome.scss";
+@import "parts/_var.scss";
+@import "parts/_mixin.scss"; 
+@import "parts/_header.scss";
+@import "parts/_footer.scss";
+@import "parts/_breadcrumbs.scss"; 
+
+
+
+/* #################### main termandpolicy  #################### */
+.termandpolicy  {  position:relative; width:100%; float:left; background:$termBg;  background:-webkit-linear-gradient(90deg, $termBg 50%, $white 50%); background:linear-gradient(90deg, $termBg 50%, $white 50%); }
+.termandpolicy .termpolicyInner {  width:95%; max-width:1300px; margin:0 auto; float:none;  @include display(flex-start, flex-start); }
+.termleft { 
+    padding:3rem 1rem 3rem 0; width:25%; float:left; background:$termBg; 
+    ul {
+        width:100%; float:left;
+        li{
+            list-style:none; margin:0 0 1.5rem 0;
+            a {
+                font-size:1rem;  color:$black; font-weight:700;
+                &.active { color:$darkBlue; }
+            }
+        }
+    }
+}
+.termright { 
+    padding: 1rem 0 3rem 5rem; width:75%; float:right; background:$white;  
+    h2 { width:100%; float:left;  margin:1rem 0 2rem 0; font-size:1.8rem;  color:$lightBlack; font-weight:900;  }
+    h3 { width:100%; float:left; margin:0 0 0.7rem 0; font-size:1.1rem;  color:$lightBlack; font-weight:700;  }
+    p { width:100%; float:left; margin:0 0 2rem 0; font-size:1.1rem;  color:$lightBlack; font-weight:400; text-align: justify; line-height: 1.4; 
+        a { color:$darkBlue;
+        &:hover { color: $black2; }
+        }
+    }
+    ul {
+        width:100%; float:left; margin:0 0 2rem 0;
+        li { list-style:disc; margin: 0 0 7px 18px; font-size:1.1rem;  color:$lightBlack; font-weight:400;   }
+    }
+}
+
+.privacytable { 
+    width:100%; float:left;
+    table {
+        width:100%; float:left; margin:0 0 2rem 0;  border-collapse: collapse; border: none;
+        th {
+            vertical-align: middle;
+            padding:0.5rem 1rem; background:$termTableBorder;border:solid 1px $termTableBorder;     text-align: left; font-weight:700; font-size:1rem; color:$black;
+        }
+        td{
+            vertical-align: top;
+            padding:0.5rem 1rem; background:$white; border:solid 1px $termTableBorder; text-align: left;  font-weight:400; font-size:1rem; color:$lightBlack;
+            &:first-child { width:40%; }
+        }
+    }
+    p { text-align:left; margin: 0; }
+    ul { margin:0; }
+ }
+
+
+
+
+@media only screen and (max-width:1565px) 
+{
+
+    .termright { 
+        
+        h2 { font-size:1.5rem; margin-top:0; }
+        h3 { font-size:1rem;  }
+        p { font-size:1rem; }
+        ul {
+            li { font-size:1rem;  }
+        }
+    }
+}
+
+@media only screen and (max-width:1255px) 
+{
+    .termleft { width: 30%; }
+    .termright {  width: 70%; padding: 1rem 1rem 2rem 2rem; }
+}
+
+@media only screen and (max-width:1023px) 
+{
+    .termandpolicy .termpolicyInner { width: 100%; }
+    .termleft { display:none; }
+    .termright { 
+        width:100%; padding: 1rem 2%;
+        .termright h2 {margin: 0 0 2rem 0; }
+    }
+}
+
+@media only screen and (max-width:767px) 
+{
+    .termright {  
+        padding: 1rem 3%;
+    }
+}
+
+@media only screen and (max-width:599px) 
+{
+    .termright {  
+        padding: 1rem 4%;
+    }
+
+    .privacytable { 
+        overflow:hidden; overflow-x: scroll;
+        table { width:600px; }
+    }
+}
+
+ 
