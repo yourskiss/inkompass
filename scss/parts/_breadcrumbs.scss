@@ -12,6 +12,13 @@
     }
 }
 
+.mainbanner.home.discover .breadcrumbs{
+    li {  
+        color:$white; 
+        a { color:$white;}
+    }
+}
+
 .mainbanner.aboutus .breadcrumbs{
     li {  
         color:$white; 
@@ -40,6 +47,8 @@
         margin-bottom:0; 
     }
 }
+
+
  
 
 

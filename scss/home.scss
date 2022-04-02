@@ -7,39 +7,9 @@
 @import "parts/_footer.scss";
 @import "parts/_banners.scss";
 @import "parts/_slick.scss"; 
+@import "parts/_box.scss"; 
 
 
-
-.gainexperience { 
-    padding:3rem 0; width:100%; float:left; background:$homebg; overflow: hidden;
-    .gainexperienceInner { 
-        display: flow-root; position: relative; width:95%; max-width:1300px; margin:0 auto; 
-        .gainexperienceWEB { display:block; width:80%; float: right; }
-        .gainexperienceMOB { display:none; }
-        div 
-        { 
-            position:absolute; top:50%; left:0; z-index:2; transform:translateY(-50%); background:$white; width:45%; padding:2.5rem;
-            h2 {  
-                width:100%; float:left; font-size:1.8rem; color:$lightBlack; font-weight:700;
-            }
-            h3 {  
-                 width:100%; float:left; margin:1rem 0; font-size:1.2rem; line-height: 1.4; color:$lightBlack2; font-weight:400;
-            }
-            p{
-                width:100%; float:left; 
-                a { 
-                    display:inline-block; background:$darkBlue; padding:1rem 1.2rem; font-weight:700; font-size:0.8rem; letter-spacing: 2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out);
-                    b{ font-weight:400; margin-left:0.3rem; @include transition(ease-out); }
-                    &:hover { 
-                        padding:1rem 0.9rem 1rem 1.2rem; @include transition(ease-in);
-                        b { margin-left:0.6rem; @include transition(ease-in); } 
-                    }
-                }
-            }
-        }
-    }
-}
- 
 
 .meetinterns { 
     padding:3rem 0; width:100%; float:left; background:  $white; overflow: hidden;
@@ -141,9 +111,7 @@
 
 @media only screen and (max-width:1565px) 
 {
-    .gainexperience .gainexperienceInner div h2 { font-size: 1.6rem; }
-    .gainexperience .gainexperienceInner div h3 {  font-size: 1rem; }
-
+ 
     .meetinterns .meetinternsInner h2 {  font-size: 1.7rem; }
     .meetinterns .meetinternsInner h3 {  font-size: 1rem; }
     .meetinternsSlider .slick-slide .items .item h4 { font-size: 1.1rem; }
@@ -160,20 +128,6 @@
 
  
 
-@media only screen and (max-width:1023px) 
-{
-    .gainexperience .gainexperienceInner {
-        width: 100%;display: flex;flex-wrap: wrap; flex-direction: column;
-        .gainexperienceWEB { width: 100%;}
-        div {
-            position: relative;top: 0;left: 0; transform: translateY(0);width: 90%;padding: 1.5rem;float: left;margin: 0 5%;margin-top: -100px; 
-            h2{text-align:center;}
-            h3{text-align:center;}
-            p {text-align: center;}
-        }
-    }
-    
-}
 @media only screen and (max-width:767px) 
 {
     .meetinternsSlider { padding: 0 0 0.7rem 0; }
@@ -187,13 +141,6 @@
     .latestatHereSlider .slick-list {padding:5px 40px 5px 20px !important; }
     .latestatHereSlider .slick-slide { margin: 0 8px;  }
 
-    .gainexperience .gainexperienceInner {
-         div { padding: 1rem; margin-top: -50px; }
-         .gainexperienceWEB { display:none;  }
-        .gainexperienceMOB { display:block;  }
-    }
- 
- 
     
     
 }
