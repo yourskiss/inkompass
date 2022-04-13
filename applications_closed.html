@@ -67,6 +67,36 @@
 <!-- header end -->       
 
 
+
+<!-- market navigation start -->
+<section class="market_navigation_wrap">
+    <div class="market_navigation_container">
+        <div>
+            <p id="margket_nav_bar">AUSTRALIA</p>
+            <aside>
+                <img src="images/flag/australia.png" alt="australa" />
+                <span>EN <b>&#9662;</b></span>
+            </aside>
+        </div>
+        <ul id="margket_nav_menu">
+            <li onclick="gotothe('theprogram');">The Program</li>
+            <li onclick="gotothe('schedule');">Schedule</li>
+            <li onclick="gotothe('assessment');">Assessment</li>
+            <li onclick="gotothe('ourinterns');">Our Interns</li>
+            <li onclick="gotothe('ourcoaches');">Our Coaches</li>
+            <li onclick="gotothe('joinus');">Join Us</li>
+            <li onclick="gotothe('careerquiz');">Career Quiz</li>
+            <li class="marketNavMobile">
+                <img src="images/flag/australia.png" alt="australa" />
+                <span>EN <b>&#9662;</b></span>
+            </li>
+        </ul>   
+    </div>
+</section>
+<!-- market navigation end -->
+
+
+
  
 <!-- banner start -->
 <section class="mainbanner applicaton">
@@ -141,6 +171,7 @@
             <img class="assessment-web" src="images/applications/assessment-web.jpg" alt="assessment" />
             <img class="assessment-mob" src="images/applications/assessment-mob.jpg" alt="assessment" />
             <span><i class="fa fa-play" aria-hidden="true"></i></span>
+            <aside>WATCH VIDEO <b>&#8227;</b></aside>
         </div>
         <div class="showtranscripts">
             <span>
@@ -530,6 +561,21 @@
 <script src="scripts/slick.min.js"></script>
 
 <script>
+// market navigation ==== start
+$("#margket_nav_bar").click(function()
+{
+    $(this).toggleClass('active');
+    $("#margket_nav_menu").slideToggle(300);
+
+});
+$("#margket_nav_menu").click(function()
+{
+    $("#margket_nav_bar").removeClass('active');
+    $("#margket_nav_menu").slideUp(300);
+});
+// market navigation ==== end
+
+
 // slick === start
 $('.ourpeoplesSlider').slick({
     slidesToShow: 3,
