@@ -677,41 +677,12 @@
 
 
 
-<!-- job Opening Popup  start -->
-<div class="jobOpeningPopup">
-    <div class="jobOpeningPopupBG"></div>
-    <div class="jobOpeningPopupContainte">
-        <aside onclick="closeOpeningDetails()"><i class="fa fa-times"></i></aside>
-        <div class="slimscroller"> 
-            <h2>Analytics Delivery</h2>
-            <p>
-                At INKOMPASS, our goal is to provide equal and unique opportunities for our interns to grow through real business challenges and be ready for future endeavors. 
-                <br>
-                At INKOMPASS you become a part of a transformational journey to #MakeHistory. 
-                <br><br>
-                We are looking for candidates who are interested in an internship opportunity in the Finance function, and are: 
-            </p>
-            <ul>
-                <li>Excellent team players who enjoy working in an international environment </li>
-                <li>Fluent in English and German (at least B2 level) </li>
-                <li>Quick to grasp, open-minded and interested in a diverse corporate culture. </li>
-                <li>Adept at research and has strong analytical skills. </li>
-                <li>Pursuing a Bachelor’s or Master’s degree in Economics with a focus on Finance. </li>
-            </ul> 
-            <p>
-                If you fit these requirements, you are the one we want on our team. Apply for the role on the website and begin your INKOMPASS journey to #MakeHistory.
-            </p>
-        </div>
-    </div>
-</div>
-<!-- job Opening Popup  end -->
-
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>window.jQuery || document.write("<script src='scripts/jquery-min.js'><\/script>")</script>
 <script src="scripts/common.js"></script>
 <script src="scripts/slick.min.js"></script>
-<script src="scripts/slimscroll.min.js"></script>
+
 <script>
 // market navigation ==== start
 $("#margket_nav_bar").click(function()
@@ -726,34 +697,6 @@ $("#margket_nav_menu").click(function()
     $("#margket_nav_menu").slideUp(300);
 });
 // market navigation ==== end
-
-//  scrollbar === start
-$('.slimscroller').slimScroll({ 
-            width: "100%",
-            height: "100%",
-            size: "5px",
-            color: "#14A0D2",
-            position: "right",
-            distance: "1px",
-            start: "top",
-            opacity: 0.8,
-            alwaysVisible: false,
-            disableFadeOut: true,
-            railVisible: true,
-            allowPageScroll: false,
-            railColor: "#575756",
-            railOpacity: 0.6,
-            railDraggable: true,
-            railClass: "slimscrollerRail",
-            barClass: "slimscrollerBar",
-            wrapperClass: "slimscrollerHolder",
-            wheelStep: 10,
-            touchScrollStep: 100,
-            borderRadius: "5px",
-            railBorderRadius: "5px"
-});
-//  scrollbar === end
-
 
 
 
@@ -861,19 +804,6 @@ function registerformValidation()
 // register form Validation === end
 
 
-
-// post details === start 
-function viewOpeningDetails(val)
-{
-    $(".jobOpeningPopup").fadeIn(500);
-    $("body").css("overflow","hidden");
-}
-function closeOpeningDetails()
-{
-    $(".jobOpeningPopup").fadeOut(500);
-    $("body").css("overflow","auto");
-}
-// post details === end 
 </script>
  
 </body>
