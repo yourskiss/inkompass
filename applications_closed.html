@@ -79,13 +79,12 @@
             </aside>
         </div>
         <ul id="margket_nav_menu">
-            <li onclick="gotothe('theprogram');">The Program</li>
-            <li onclick="gotothe('schedule');">Schedule</li>
-            <li onclick="gotothe('assessment');">Assessment</li>
-            <li onclick="gotothe('ourinterns');">Our Interns</li>
-            <li onclick="gotothe('ourcoaches');">Our Coaches</li>
-            <li onclick="gotothe('joinus');">Join Us</li>
-            <li onclick="gotothe('careerquiz');">Career Quiz</li>
+            <li id="tab_theprogram" onclick="gotothe(this.id, 'theprogram', 300);">The Program</li>
+            <li id="tab_assessment" onclick="gotothe(this.id, 'assessment', 900);">Assessment</li>
+            <li id="tab_ourinterns" onclick="gotothe(this.id, 'ourinterns', 1200);">Our Interns</li>
+            <li id="tab_ourcoaches" onclick="gotothe(this.id, 'ourcoaches', 1500);">Our Coaches</li>
+            <li id="tab_joinus" onclick="gotothe(this.id, 'joinus', 1800);">Join Us</li>
+            <li id="tab_careerquiz" onclick="gotothe(this.id, 'careerquiz', 2100);">Career Quiz</li>
             <li class="marketNavMobile">
                 <img src="images/flag/australia.png" alt="australa" />
                 <span>EN <b>&#9662;</b></span>
@@ -124,7 +123,7 @@
 
 
 <!-- Discover yourself with INKOMPASS start -->
-<section class="boxpart application">
+<section class="boxpart application"  id="section_theprogram">
     <div class="boxpartInner">
         <img class="boxpartWEB" src="images/applications/discover-ourself-web.jpg" alt="Discover yourself with INKOMPASS" />
         <img class="boxpartMOB" src="images/applications/discover-ourself-mob.jpg" alt="Discover yourself with INKOMPASS" />
@@ -161,7 +160,7 @@
 
 
 <!-- introducing assessment start -->
-<section class="introducing_assessment">
+<section class="introducing_assessment" id="section_assessment">
     <div class="introducing_assessment_inner">
         <h2>Introducing INKOMPASS assessment</h2>
         <p>
@@ -187,7 +186,7 @@
 
 
 <!-- ourpeoples start -->
-<section class="ourpeoples">
+<section class="ourpeoples" id="section_ourinterns">
     <div class="ourpeoplesInner">
         <h2>Meet our interns</h2>
         <h3>
@@ -264,7 +263,7 @@
 
 
 <!-- ourpeoples start -->
-<section class="ourpeoples">
+<section class="ourpeoples" id="section_ourcoaches">
     <div class="ourpeoplesInner">
         <h2>Meet our coaches</h2>
         <h3>
@@ -382,7 +381,7 @@
 
 
 <!-- ############### registeruswrap start ############### -->
-<section class="registeruswrap">
+<section class="registeruswrap" id="section_joinus">
     <div class="registeruscontainer">
         <h2>Register with us</h2>
         <h3>*Mandatory Fields</h3>
@@ -432,7 +431,7 @@
 
 
 <!-- career quiz start -->
-<section class="careerquizWrap">
+<section class="careerquizWrap" id="section_careerquiz">
     <div class="careerquizContainer"> 
             <div class="careerquiz">
                 <img class="take-quiz-web" src="images/applications/take-quiz-web.jpg" alt="quiz" />
@@ -560,129 +559,7 @@
 <script src="scripts/common.js"></script>
 <script src="scripts/slick.min.js"></script>
 
-<script>
-// market navigation ==== start
-$("#margket_nav_bar").click(function()
-{
-    $(this).toggleClass('active');
-    $("#margket_nav_menu").slideToggle(300);
-
-});
-$("#margket_nav_menu").click(function()
-{
-    $("#margket_nav_bar").removeClass('active');
-    $("#margket_nav_menu").slideUp(300);
-});
-// market navigation ==== end
-
-
-// slick === start
-$('.ourpeoplesSlider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    dots: true,
-    arrows: true,
-    autoplay: false,
-    autoplaySpeed: 4000,
-    infinite: false,
-    adaptiveHeight: false,
-    centerMode: false,
-    centerPadding: '10px',
-    initialSlide:0,
-    responsive:
-    [
-        {
-            breakpoint: 767,
-            settings: { arrows: false, slidesToShow: 2, slidesToScroll: 2 }
-        },
-        {
-            breakpoint: 479,
-            settings: { centerPadding: '8px', arrows: false, slidesToShow: 1, slidesToScroll: 1 }
-        } 
-    ]
-});
-// slick === end
-
-
-// lookbackwrap === start
-$('.lookbackwrap').slick({
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    dots: true,
-    arrows: false,
-    autoplay: false,
-    autoplaySpeed: 4000,
-    infinite: false,
-    adaptiveHeight: true,
-    centerMode: false,
-    centerPadding: '8px',
-    initialSlide:0,
-    responsive:
-    [
-        {
-            breakpoint: 9999,
-            settings: "unslick"
-        },
-        {
-            breakpoint: 1023,
-            settings: {   slidesToShow: 2, slidesToScroll: 2 }
-        },
-        {
-            breakpoint: 599,
-            settings: {  slidesToShow: 1, slidesToScroll: 1 }
-        } 
-    ]
-});
-// lookbackwrap === end
-
-
-
-
-// register form Validation === start
-function registerformValidation() 
-{
-    var emailReg = /( )|(^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$)/;
-            if ($("#first_name").val() == "") 
-            {
-                $("#error_fn").show().text('Please Enter First Name');
-                return false;
-            }
-            if ($("#last_name").val() == "") 
-            {
-                $("#error_ln").show().text('Please Enter Last Name');
-                return false;
-            }
-            else if ($("#email_address").val() == "") 
-            {
-                $("#error_email").show().text('Please Enter Email Address');
-                return false;
-            }
-            else if (!emailReg.test($("#email_address").val()))
-            {
-                $("#error_email").show().text('Please Enter Valid  Email Address');
-                return false;
-            }
-            else if ($("#phone_number").val() == "") 
-            {
-                $("#error_phone").show().text('Please Enter Mobile Number');
-                return false;
-            }
-            else if ($("#leave_a_message").val() == "") 
-            {
-                $("#error_message").show().text('Please leave a message ');
-                return false;
-            }
-            else 
-            {
-                $(".registerform").hide();
-                $(".registerthankyou").show();
-                return true;
-            }
-}
-// register form Validation === end
-
-
-</script>
+<script src="scripts/applications.js"></script>
  
 </body>
 </html>
