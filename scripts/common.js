@@ -31,11 +31,6 @@ $("#headerMenu").click(function(e)
         $("#header-serch-box").animate( { right:'-100%' } , 500);
     }
 });
-$("#mainmenu").click(function(e)  
-{
-    e.preventDefault();
-    e.stopPropagation();
-});
 /* header Menu === end */
 
 
@@ -60,7 +55,7 @@ $("#headerApplication").click(function(e)
         $("#header-serch-box").animate( { right:'-100%' } , 500);
     }
 });
-$("#applicationBox").click(function(e) 
+$(".marketserch").click(function(e) 
 {
     e.preventDefault();
     e.stopPropagation();
@@ -110,7 +105,7 @@ $("#header-serch-box").click(function(e)
 $('body').click(function(e) // close on click body
 {    
     e.stopPropagation();
-    if (e.target != $('#headerApplication')  || e.target != $('#applicationBox')) 
+    if (e.target != $('#headerApplication')  || e.target != $('.marketserch')) 
     {
         $("#findmarket").val('');
         $("#applicationBox").slideUp(300);
