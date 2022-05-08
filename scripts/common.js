@@ -38,7 +38,7 @@ $("#headerMenu").click(function(e)
 
 
 /* application open on header === start */
-$("#headerApplication").click(function(e)
+$("#headerApplication").hover(function(e)
 {
     e.preventDefault();
     e.stopPropagation();
@@ -99,7 +99,13 @@ $("#header-serch-box").click(function(e)
 /* search on header === end */
 
 
-
+// header fixed on scroll === start
+$(window).scroll(function() 
+{
+    if ($(window).scrollTop() > 0) $('.header').addClass('headerFixed');
+    else $('.header').removeClass('headerFixed');
+});
+// header fixed on scroll === end
 
 
 $('body').click(function(e) // close on click body
