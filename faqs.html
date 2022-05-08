@@ -83,7 +83,7 @@
     <div class="faqs-block">
         <div class="faqsinner-block">
             <h2>Still curious to know more?</h2>
-            <input name="faqserch" type="text" placeholder="Type keywords to find answers" />
+            <input id="FaqsSerchInput" name="faqserch" type="text" placeholder="Type keywords to find answers" />
             <p>You can also browse topics above to find out what you are looking for.</p>
         </div>
     </div>
@@ -96,11 +96,18 @@
 <div class="faqswraps">
     <div class="faqsInsider">
 
+
+        <!-- faqsclearsearch start -->
+        <div class="faqsclearsearch">
+            <span onclick="clearSearch()">Clear Search</span>
+        </div>
+        <!-- faqsclearsearch end -->
+
         <!-- faqscontainer start -->
         <div class="faqscontainer">
             <h2>Got questions?</h2>
             <p>
-                Listed below are some frequently asked questions to help you with as much information as possible. If you don't find answers to your questions, please feel free to CONTACT US
+                Listed below are some frequently asked questions to help you with as much information as possible. If you don't find answers to your questions, please feel free to 
                 <a href="/contact-us">CONTACT US</a>
             </p>
             <ul>
@@ -575,6 +582,43 @@
         $(this).next("section").removeClass("selected").slideDown(300);
         
     });
+
+
+$('#FaqsSerchInput').on('keypress', function (e) 
+{
+    if (e.keyCode == '13' || e.charCode == '13') return false;
+});
+$("#FaqsSerchInput").keyup(function () 
+{
+    $(".faqscontainer, .faqshead").fadeOut(300);
+    $(".faqsclearsearch").fadeIn(300);
+
+    let getval = $(this).val();
+    let listno = 0;
+    $(".faqsholder .faqsbody aside").each(function () {
+        let current = $(this).text();
+        if (current.search(new RegExp(getval, "i")) < 0) 
+        {
+            $(this).hide().removeClass("active");
+            $(this).next("section").removeClass("selected").hide();
+        }
+        else 
+        {
+            $(this).show().addClass("active disabled");
+            $(this).next("section").addClass("selected").show();
+            listno++;
+        }
+    });
+});
+
+function clearSearch()
+{
+    $("#FaqsSerchInput").val('');
+    $(".faqsclearsearch").fadeOut(300);
+    $(".faqscontainer, .faqshead").fadeIn(300);
+    $(".faqsholder .faqsbody aside").show().removeClass("active").removeClass("disabled");
+    $(".faqsholder .faqsbody section").hide().removeClass("selected");
+}
 </script>
  
 </body>
