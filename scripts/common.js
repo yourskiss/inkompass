@@ -22,14 +22,7 @@ $("#headerMenu").click(function(e)
         $("#headerMenu").stop(true).addClass("open").removeClass("close");
         $("#mainmenu").stop(true).slideUp(500);
     }
-    if($(window).width() < 1255)
-    {
-        $("#header-serch-box").slideUp(300);
-    }
-    else 
-    {
-        $("#header-serch-box").animate( { right:'-100%' } , 500);
-    }
+
 });
 /* header Menu === end */
 
@@ -43,18 +36,10 @@ $("#headerApplication").hover(function(e)
     e.preventDefault();
     e.stopPropagation();
     $("#findmarket").focus().val('')
-    $("#applicationBox").stop(true).slideToggle(300);
-    $("#headerApplication").stop(true).toggleClass("active");
-
-    if($(window).width() < 1255)
-    {
-        $("#header-serch-box").slideUp(300);
-    }
-    else 
-    {
-        $("#header-serch-box").animate( { right:'-100%' } , 500);
-    }
+    $("#applicationBox").stop(true).slideDown(300);
+    $("#headerApplication").stop(true).addClass("active");
 });
+
 $(".marketserch").click(function(e) 
 {
     e.preventDefault();
@@ -65,38 +50,6 @@ $(".marketserch").click(function(e)
 
 
 
-/* search on header === start */
-$("#headerSearch").click(function(e)
-{
-    e.preventDefault();
-    e.stopPropagation();
-    if($(window).width() < 1255)
-    {
-        $("#header-serch-box").slideDown(300);
-    }
-    else 
-    {
-        $("#header-serch-box").animate( { right:'0' } , 500);
-    }
-    
-
-    
-    $("#findmarket").val('');
-    $("#applicationBox").slideUp(300);
-    $("#headerApplication").removeClass("active");
-
-    if($(window).width() < 1255)
-    {
-        $("#headerMenu").addClass("open").removeClass("close");
-        $("#mainmenu").slideUp(500);
-    }
-});
-$("#header-serch-box").click(function(e) 
-{
-    e.preventDefault();
-    e.stopPropagation();
-});
-/* search on header === end */
 
 
 // header fixed on scroll === start
@@ -124,18 +77,6 @@ $('body').click(function(e) // close on click body
         {
             $("#headerMenu").addClass("open").removeClass("close");
             $("#mainmenu").slideUp(500);
-        }
-    }
-
-    if (e.target != $('#headerSearch')  || e.target != $('#header-serch-box')) 
-    {
-        if($(window).width() < 1255)
-        {
-            $("#header-serch-box").slideUp(300);
-        }
-        else 
-        {
-            $("#header-serch-box").animate( { right:'-100%' } , 500);
         }
     }
 });
