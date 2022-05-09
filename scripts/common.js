@@ -10,7 +10,8 @@ $(window).on('orientationchange', function (event)
 /* onLoad cookies container open === start */
 $(window).on('load', function() 
 {
-    $("#siteusescookies").slideDown(300);
+    function siteusescookiesOpen() { $("#siteusescookies").slideDown(300); } 
+    setTimeout(siteusescookiesOpen, 3000); 
 });
 /* onLoad cookies container open === end */
 
