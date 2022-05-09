@@ -7,6 +7,24 @@ $(window).on('orientationchange', function (event)
 /* page refresh on orientation change === END */
 
 
+/* onLoad cookies container open === start */
+$(window).on('load', function() 
+{
+    $("#siteusescookies").slideDown(300);
+});
+/* onLoad cookies container open === end */
+
+
+
+/* cookies accept === start */
+function acceptcookies()
+{
+    $("#siteusescookies").slideUp(300);
+}
+/* cookies accept === end */
+
+
+
 /* header Menu === start */
 $("#headerMenu").click(function(e)
 {
