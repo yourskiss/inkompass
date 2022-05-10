@@ -171,6 +171,29 @@ $('.lookbackwrap').slick({
 // lookbackwrap === end
 
 
+
+// assessment video === start
+function openassessmentvideo(popupType, iframesrc)
+{
+    if(popupType == 0) // close 
+    {
+        $(".assessment_close").fadeOut(600);
+        $("#videoassessment").fadeOut(300).attr('src', '');
+    }
+    else if(popupType == 1) // open
+    {
+        $(".assessment_close").fadeIn(600);
+        $("#videoassessment").fadeIn(300).attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&loop=1&rel=0&showinfo=0&controls=1&playlist="+iframesrc);
+    }
+    else 
+    {
+        // nothing
+    }
+}
+// assessment video === end
+
+
+
 // register form Validation === start
 function registerformValidation() 
 {

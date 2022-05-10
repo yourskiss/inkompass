@@ -402,8 +402,14 @@
         <div class="assessment_video"> 
             <img class="assessment-web" src="images/applications/assessment-web.jpg" alt="assessment" />
             <img class="assessment-mob" src="images/applications/assessment-mob.jpg" alt="assessment" />
-            <span><i class="fa fa-play" aria-hidden="true"></i></span>
-            <aside>WATCH VIDEO <b>&#8227;</b></aside>
+            <span class="assessment_close" onclick="openassessmentvideo(0, '')">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </span>
+            <span class="assessment_play" onclick="openassessmentvideo(1, 'GmJCdPuCpfk')">
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </span>
+            <aside onclick="openassessmentvideo(1, 'GmJCdPuCpfk')">WATCH VIDEO <b>&#8227;</b></aside>
+            <iframe id="videoassessment" src="" frameborder="0" allowtransparency="true" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="showtranscripts">
             <span>
