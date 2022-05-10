@@ -773,6 +773,17 @@
 <script>window.jQuery || document.write("<script src='scripts/jquery-min.js'><\/script>")</script>
 <script src="scripts/common.js"></script>
 
- 
+<script>
+    $(window).scroll(function (event) {
+        if($('.termleft ul').offset().top + $('.termleft ul').height() >= $('.share-nav').offset().top - 10)
+        {
+            $('.termleft ul').css('position', 'relative');
+        }
+        if($(document).scrollTop() + window.innerHeight < $('.share-nav').offset().top)
+        {
+            $('.termleft ul').css('position', 'fixed'); 
+        }
+    });
+</script>
 </body>
 </html>

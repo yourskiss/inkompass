@@ -192,7 +192,13 @@
         </p>
         <div class="testimonialvideo">
             <img src="images/coaches/oksana-video.jpg" alt="video" />
-            <span><i class="fa fa-play" aria-hidden="true"></i></span>
+            <span class="testimonial_video_close" onclick="testimonialvideo(0, '')">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </span>
+            <span class="testimonial_video_play" onclick="testimonialvideo(1, 'Er-Mi5bXDkk')">
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </span>
+            <iframe id="testimonial_video_iframe" src="" frameborder="0" allowtransparency="true" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <aside class="showtranscripts">
             <span>
@@ -396,6 +402,27 @@ $('.intern_testimonial_container, .ourcoaches_container').slick({
     ]
 });
 // slick === end
+
+
+// testimonial  video === start
+function testimonialvideo(popupType, iframesrc)
+{
+    if(popupType == 0) // close 
+    {
+        $(".testimonial_video_close").fadeOut(600);
+        $("#testimonial_video_iframe").fadeOut(300).attr('src', '');
+    }
+    else if(popupType == 1) // open
+    {
+        $(".testimonial_video_close").fadeIn(600);
+        $("#testimonial_video_iframe").fadeIn(300).attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&loop=1&rel=0&showinfo=0&controls=0&playlist="+iframesrc);
+    }
+    else 
+    {
+        // nothing
+    }
+}
+// testimonial  video === end
 </script>
  
 </body>
