@@ -46,14 +46,93 @@
         <div class="marketserch">
             <input type="text" id="findmarket" name="findmarket" placeholder="Find your market" />
         </div>
-        <ul>
-            <li onclick="window.open('applications_open_1.html','_self');"><img src="images/flag/argentina.png" alt="argentina" /> <span>Argentina</span> </li>
-            <li onclick="window.open('applications_closed.html','_self');"><img src="images/flag/australia.png" alt="australia" /> <span>Australia</span> </li>
-            <li onclick="window.open('applications_open_2.html','_self');"><img src="images/flag/Belgium.png" alt="Belgium" /> <span>Belgium</span> </li>
-            <li onclick="window.open('applications_open_1.html','_self');"><img src="images/flag/canada.png" alt="canada" /> <span>Canada</span> </li>
-            <li onclick="window.open('applications_closed.html','_self');"><img src="images/flag/Egypt.png" alt="Egypt" /> <span>Egypt</span> </li>
-            <li onclick="window.open('applications_open_2.html','_self');"><img src="images/flag/ukraine.png" alt="ukraine" /> <span>Ukraine</span> </li>
-            <li onclick="window.open('applications_closed.html','_self');"><img src="images/flag/Germany.png" alt="Germany" /> <span>Germany</span> </li>
+        <p id="marketnotfound">No result found</p>
+        <ul id="listofmarket">
+            <li class="firstresult">
+                <a href="#">
+                    <img src="images/flag/argentina.png" alt="argentina" /> 
+                    <span>Argentina</span> 
+                </a>
+            </li>
+            <li class="firstresult">
+                <a href="#">   
+                    <img src="images/flag/australia.png" alt="australia" />
+                    <span>Australia</span> 
+                </a>
+            </li>
+            <li class="firstresult">
+                <a href="#">  
+                    <img src="images/flag/Belgium.png" alt="Belgium" /> 
+                    <span>Belgium</span> 
+                </a>
+            </li>
+            <li class="firstresult">
+                <a href="#"> 
+                    <img src="images/flag/canada.png" alt="canada" /> 
+                    <span>Canada</span> 
+                </a>
+            </li>
+            <li class="firstresult">
+                <a href="#">
+                    <img src="images/flag/Egypt.png" alt="Egypt" /> 
+                    <span>Egypt</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/flag/ukraine.png" alt="ukraine" /> 
+                    <span>Ukraine</span> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/flag/Germany.png" alt="Germany" /> 
+                    <span>Germany</span> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/flag/hongkong.png" alt="hongkong" /> 
+                    <span>Hongkong</span> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/flag/hungary.png" alt="hungary" /> 
+                    <span>Hungary</span> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/flag/jordan.png" alt="jordan" /> 
+                    <span>Jordan</span> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/flag/kazaksthan.png" alt="kazaksthan" /> 
+                    <span>Kazaksthan</span> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/flag/malaysia.png" alt="malaysia" /> 
+                    <span>Malaysia</span> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/flag/moldova.png" alt="moldova" /> 
+                    <span>Moldova</span> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/flag/russia.png" alt="russia" /> 
+                    <span>Russia</span> 
+                </a>
+            </li>
+            <li></li>
         </ul>
         <h4><a href="applications_open_2.html">VIEW ALL OPEN MARKETS</a></h4>
     </div>
@@ -96,10 +175,16 @@
 
 
         <!-- faqsclearsearch start -->
-        <div class="faqsclearsearch">
+        <div class="faqsclearsearch" id="faqsclearsearch">
             <span onclick="clearSearch()">Clear Search</span>
         </div>
         <!-- faqsclearsearch end -->
+
+        <!-- faqsnotfound start -->
+        <div class="faqsnotfound" id="faqsnotfound">
+            <span>No Result found</span>
+        </div>
+        <!-- faqsnotfound end -->
 
         <!-- faqscontainer start -->
         <div class="faqscontainer">
@@ -599,41 +684,49 @@
     });
 
 
+ 
+
+// faqs search === start  
 $('#FaqsSerchInput').on('keypress', function (e) 
 {
     if (e.keyCode == '13' || e.charCode == '13') return false;
 });
-$("#FaqsSerchInput").keyup(function () 
+$("#FaqsSerchInput").keyup(function() 
 {
     $(".faqscontainer, .faqshead").fadeOut(300);
-    $(".faqsclearsearch").fadeIn(300);
-
-    let getval = $(this).val();
-    let listno = 0;
-    $(".faqsholder .faqsbody aside").each(function () {
-        let current = $(this).text();
-        if (current.search(new RegExp(getval, "i")) < 0) 
-        {
+    $("#faqsclearsearch").fadeIn(300);
+    var filter = $(this).val(),
+    count = 0;
+    if (count == 0) { $('#faqsnotfound').hide();  }
+    $('.faqsholder .faqsbody aside').each(function() 
+    {
+      if ($(this).text().search(new RegExp(filter, "i")) < 0) 
+      {
+            if (count == 0) $('#faqsnotfound').show();
+            else $('#faqsnotfound').hide();
             $(this).hide().removeClass("active");
             $(this).next("section").removeClass("selected").hide();
-        }
-        else 
-        {
+      } 
+      else 
+      {
             $(this).show().addClass("active disabled");
             $(this).next("section").addClass("selected").show();
-            listno++;
-        }
+            count++;
+      }
     });
 });
-
 function clearSearch()
 {
+    $('#faqsnotfound').hide();
     $("#FaqsSerchInput").val('');
-    $(".faqsclearsearch").fadeOut(300);
+    $("#faqsclearsearch").fadeOut(300);
     $(".faqscontainer, .faqshead").fadeIn(300);
     $(".faqsholder .faqsbody aside").show().removeClass("active").removeClass("disabled");
     $(".faqsholder .faqsbody section").hide().removeClass("selected");
 }
+// faqs search === end  
+
+
 </script>
  
 </body>

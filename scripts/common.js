@@ -15,14 +15,53 @@ $(window).on('load', function()
 });
 /* onLoad cookies container open === end */
 
-
-
 /* cookies accept === start */
 function acceptcookies()
 {
     $("#siteusescookies").slideUp(300);
 }
 /* cookies accept === end */
+
+
+
+
+
+
+
+// market search === start  
+$('#findmarket').on('keypress', function (e) 
+{
+    if (e.keyCode == '13' || e.charCode == '13') return false;
+});
+$("#findmarket").keyup(function() 
+{
+    $('#listofmarket li').removeClass("firstresult");
+    if ($(this).val() == '')
+    {
+        $('#listofmarket li:nth-of-type(1), #listofmarket li:nth-of-type(2), #listofmarket li:nth-of-type(3), #listofmarket li:nth-of-type(4), #listofmarket li:nth-of-type(5)').addClass('firstresult');
+    }
+    else 
+    {
+        var searchmarcket = $(this).val(),
+        counter = 0;
+        if (counter == 0) { $('#marketnotfound').hide(); }
+        $('#listofmarket li').each(function() 
+        {
+            if ($(this).find("span").text().search(new RegExp(searchmarcket, "i")) < 0) 
+            {
+                if (counter == 0) $('#marketnotfound').show();
+                else $('#marketnotfound').hide();
+                $(this).removeClass("firstresult");
+            } 
+            else 
+            {
+                $(this).addClass("firstresult");
+                counter++;
+            }
+        });
+    }
+});
+// market search === end  
 
 
 
@@ -54,7 +93,6 @@ $("#headerApplication").hover(function(e)
 {
     e.preventDefault();
     e.stopPropagation();
-    $("#findmarket").focus().val('')
     $("#applicationBox").stop(true).slideDown(300);
     $("#headerApplication").stop(true).addClass("active");
 });
@@ -85,7 +123,6 @@ $('body').click(function(e) // close on click body
     e.stopPropagation();
     if (e.target != $('#headerApplication')  || e.target != $('.marketserch')) 
     {
-        $("#findmarket").val('');
         $("#applicationBox").slideUp(300);
         $("#headerApplication").removeClass("active");
     }
