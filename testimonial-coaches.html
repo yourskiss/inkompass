@@ -375,55 +375,7 @@
 <script>window.jQuery || document.write("<script src='scripts/jquery-min.js'><\/script>")</script>
 <script src="scripts/common.js"></script>
 <script src="scripts/slick.min.js"></script>
-<script>
-// slick === start
-$('.intern_testimonial_container, .ourcoaches_container').slick({
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    dots: true,
-    arrows: false,
-    autoplay: false,
-    autoplaySpeed: 4000,
-    infinite: false,
-    adaptiveHeight: false,
-    centerMode: false,
-    centerPadding: '7px',
-    initialSlide:0,
-    responsive:
-    [
-        {
-            breakpoint: 99999,
-            settings: "unslick"
-        },
-        {
-            breakpoint: 479,
-            settings: {  slidesToShow:1, slidesToScroll:1 }
-        } 
-    ]
-});
-// slick === end
-
-
-// testimonial  video === start
-function testimonialvideo(popupType, iframesrc)
-{
-    if(popupType == 0) // close 
-    {
-        $(".testimonial_video_close").fadeOut(600);
-        $("#testimonial_video_iframe").fadeOut(300).attr('src', '');
-    }
-    else if(popupType == 1) // open
-    {
-        $(".testimonial_video_close").fadeIn(600);
-        $("#testimonial_video_iframe").fadeIn(300).attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&loop=1&rel=0&showinfo=0&controls=0&playlist="+iframesrc);
-    }
-    else 
-    {
-        // nothing
-    }
-}
-// testimonial  video === end
-</script>
+ 
  
 </body>
 </html>
