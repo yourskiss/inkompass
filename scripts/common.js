@@ -426,6 +426,34 @@ function clearSearch()
 
 
 /* ############################ exploreopportunities === start ############################ */  
+if($("#internshipTitle").length > 0)
+{
+    $('#internshipTitle').on('keypress', function (e) 
+    {
+        if (e.keyCode == '13' || e.charCode == '13') return false;
+    });
+    $("#internshipTitle").keyup(function() 
+    {
+        var filter = $(this).val(),
+        count = 0;
+        if (count == 0) { $('#internshipNotFound').hide(); }
+        $('#internshipData tbody tr').each(function() 
+        {
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) 
+            {
+                $(this).hide();
+                if (count == 0) $('#internshipNotFound').show();
+                else $('#internshipNotFound').hide();
+            } 
+            else 
+            {
+                $(this).show();
+                count++;
+            }
+        });
+    });
+}
+
 if($("#findcountry").length > 0)
 {
     $('#findcountry').on('keypress', function (e) 

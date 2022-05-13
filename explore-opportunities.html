@@ -30,7 +30,9 @@
                 <li><a href="discover-PMI.html">DISCOVER PMI</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
                 <li><a href="contact-us.html">CONTACT US</a></li>
-                <li class="navlastmenu"><a href="applications_open_1.html">APPLICATION OPEN <b>&#10141;</b></a></li>
+                <li class="navlastmenu">
+                    <a href="applications_open_1.html">APPLICATION OPEN <b>&#8594;</b></a>
+                </li>
             </ul>
         </nav>
         <div class="header-right">
@@ -39,7 +41,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <span class="headerApplication" id="headerApplication">APPLICATION OPEN <b>&#10141;</b></span>
+            <span class="headerApplication" id="headerApplication">APPLICATION OPEN <b>&#8594;</b></span>
         </div>
 
         <div class="header-application-box" id="applicationBox">
@@ -463,26 +465,28 @@
         <h2>Opportunities for you</h2>
         <div class="opportunitiesfilter">
             <div>
-                <input type="text" name="job-title" placeholder="Internship Title" />
+                <input id="internshipTitle" type="text" placeholder="Internship Title" />
                 <span class="error_msg"></span>
             </div>
             <div>
-                <select name="country-location">
+                <select id="internshipLocation">
                     <option value="0">Location</option>
-                    <option value="1">Country</option>
-                    <option value="2">Country</option>
-                    <option value="3">Country</option>
-                    <option value="4">Country</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Canada">Canada</option>
                 </select>
                 <span class="error_msg"></span>
             </div>
             <div>
-                <select name="function-area">
+                <select id="internshipFunction">
                     <option value="0">Function</option>
-                    <option value="1">Development</option>
-                    <option value="2">Development</option>
-                    <option value="3">Development</option>
-                    <option value="4">Development</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Operations">Operations</option>
+                    <option value="Media">Media</option>
+                    <option value="Development">Development</option>
+                    <option value="Marketing">Marketing</option>
                 </select>
                 <span class="error_msg"></span>
             </div>
@@ -491,134 +495,165 @@
 
         <h2>Open internships for</h2>
         <div class="opportunitiestable">
-            <table>
-                <tr>
-                    <th>Title</th>
-                    <th>Location</th>
-                    <th>Function</th>
-                    <th>Openings</th>
-                    <th>Activity</th>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(1)">Analytics Delivery</span></td>
-                    <td>Netherlands</td>
-                    <td>Finance</td>
-                    <td>25</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(2)">Talent Acquisition Intern</span></td>
-                    <td>Egypt</td>
-                    <td>P&C</td>
-                    <td>13</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(3)">Operations Intern</span></td>
-                    <td>Thailand</td>
-                    <td>Operations</td>
-                    <td>2</td>
-                    <td>
-                        <a href="#">Join Us</a>   
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(4)">Analytics Delivery</span></td>
-                    <td>Netherlands</td>
-                    <td>Finance</td>
-                    <td>25</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(5)">Talent Acquisition Intern</span></td>
-                    <td>Egypt</td>
-                    <td>P&C</td>
-                    <td>13</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(6)">Operations Intern</span></td>
-                    <td>Thailand</td>
-                    <td>Operations</td>
-                    <td>2</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(7)">Analytics Delivery</span></td>
-                    <td>Netherlands</td>
-                    <td>Finance</td>
-                    <td>25</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(8)">Talent Acquisition Intern</span></td>
-                    <td>Egypt</td>
-                    <td>P&C</td>
-                    <td>13</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(9)">Operations Intern</span></td>
-                    <td>Thailand</td>
-                    <td>Operations</td>
-                    <td>2</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(10)">Analytics Delivery</span></td>
-                    <td>Netherlands</td>
-                    <td>Finance</td>
-                    <td>25</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(11)">Talent Acquisition Intern</span></td>
-                    <td>Egypt</td>
-                    <td>P&C</td>
-                    <td>13</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span onclick="viewOpeningDetails(12)">Operations Intern</span></td>
-                    <td>Thailand</td>
-                    <td>Operations</td>
-                    <td>2</td>
-                    <td>
-                        <a href="#">Join Us</a>  
-                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    </td>
-                </tr>
+            <table id="internshipData">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Location</th>
+                        <th>Function</th>
+                        <th>Openings</th>
+                        <th>Activity</th>
+                    </tr>
+                    <tr id="internshipNotFound" style="display:none;">
+                        <td colspan="5" >Result not found</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(1)">Analytics Delivery</span>
+                        </td>
+                        <td class="joblocation">Argentina</td>
+                        <td class="jobfunction">Finance</td>
+                        <td>25</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(2)">Talent Acquisition Intern</span>
+                        </td>
+                        <td class="joblocation">Argentina</td>
+                        <td class="jobfunction">Operations</td>
+                        <td>13</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(3)">Operations Intern</span>
+                        </td>
+                        <td class="joblocation">Egypt</td>
+                        <td class="jobfunction">Media</td>
+                        <td>2</td>
+                        <td>
+                            <a href="#">Join Us</a>   
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(4)">Analytics Delivery</span>
+                        </td>
+                        <td class="joblocation">Egypt</td>
+                        <td class="jobfunction">Development</td>
+                        <td>25</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(5)">Talent Acquisition Intern</span>
+                        </td>
+                        <td class="joblocation">Thailand</td>
+                        <td class="jobfunction">Marketing</td>
+                        <td>13</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(6)">Operations Intern</span>
+                        </td>
+                        <td class="joblocation">Thailand</td>
+                        <td class="jobfunction">Finance</td>
+                        <td>2</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(7)">Analytics Delivery</span>
+                        </td>
+                        <td class="joblocation">Japan</td>
+                        <td class="jobfunction">Operations</td>
+                        <td>25</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(8)">Talent Acquisition Intern</span>
+                        </td>
+                        <td class="joblocation">Japan</td>
+                        <td class="jobfunction">Media</td>
+                        <td>13</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(9)">Operations Intern</span>
+                        </td>
+                        <td class="joblocation">Canada</td>
+                        <td class="jobfunction">Development</td>
+                        <td>2</td>
+                        <td>
+                            <a href="#">Join Us</a>                          
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(10)">Analytics Delivery</span>
+                        </td>
+                        <td class="joblocation">Canada</td>
+                        <td class="jobfunction">Marketing</td>
+                        <td>25</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(11)">Talent Acquisition Intern</span>
+                        </td>
+                        <td class="joblocation">Australia</td>
+                        <td class="jobfunction">Media</td>
+                        <td>13</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="jobtitle">
+                            <span onclick="viewOpeningDetails(12)">Operations Intern</span>
+                        </td>
+                        <td class="joblocation">Australia</td>
+                        <td class="jobfunction">Operations</td>
+                        <td>2</td>
+                        <td>
+                            <a href="#">Join Us</a>  
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
         <p>
@@ -698,7 +733,7 @@
                 <span id="error_message" class="error_msg">error</span>
             </div>
             <div class="formField ff100 center">
-                <span class="formfieldSubmit" onclick="registerformValidation()">SUBMIT <b>&#10141;</b></span>
+                <span class="formfieldSubmit" onclick="registerformValidation()">SUBMIT <b>&#8594;</b></span>
             </div>
         </div>
 
@@ -787,7 +822,7 @@
             <a href="cookie-policy.html" target="_blank">Read More</a>
         </p>
         <aside>
-            <span onclick="acceptcookies()">GOT IT! <b>&#10141;</b></span>
+            <span onclick="acceptcookies()">GOT IT! <b>&#8594;</b></span>
         </aside>
     </div>
 </div>
