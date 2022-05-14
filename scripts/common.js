@@ -426,6 +426,7 @@ function clearSearch()
 
 
 /* ############################ exploreopportunities === start ############################ */  
+
 if($("#internshipTitle").length > 0)
 {
     $('#internshipTitle').on('keypress', function (e) 
@@ -454,6 +455,48 @@ if($("#internshipTitle").length > 0)
     });
 }
 
+if($("#show_more_country").length > 0)
+{
+    let counter, count;
+    if($(window).width() > 1023){
+        counter = 12;
+        count = 12;
+    }else if($(window).width() < 1023 && $(window).width() > 599){
+        counter = 8;
+        count = 8;
+    }else if($(window).width() < 599 && $(window).width() > 479){
+        counter = 6;
+        count = 6;
+    }else{
+        counter = 4;
+        count = 4;
+    }
+    $("#show_less_country").hide();
+    $('#listofcountry li').slice(0, counter).show();
+    $('#show_more_country').on('click', function (e) 
+    {
+        e.preventDefault();
+        count = count+counter;
+        $('#listofcountry li').slice(0, count).show();
+        if(count > 45)
+        {
+            $("#show_more_country").hide();
+            $("#show_less_country").show();
+        }
+    });
+    $('#show_less_country').on('click', function () 
+    {
+        if($(window).width() > 1023) count = 12;
+        else if($(window).width() < 1023 && $(window).width() > 599) count = 8;
+        else if($(window).width() < 599 && $(window).width() > 479) count = 6;
+        else count = 4;
+        $("#show_more_country").show();
+        $("#show_less_country").hide();
+        $('#listofcountry li').slideUp(300);
+        $('#listofcountry li').slice(0, counter).show(300);
+    });
+}
+
 if($("#findcountry").length > 0)
 {
     $('#findcountry').on('keypress', function (e) 
@@ -462,23 +505,33 @@ if($("#findcountry").length > 0)
     });
     $("#findcountry").keyup(function() 
     {
-        var filter = $(this).val(),
-        count = 0;
-        if (count == 0) { $('.countrynotfound').hide(); }
-        $('#listofcountry li').each(function() 
+        if($("#findcountry").val() == '')
         {
-            if ($(this).find("p").text().search(new RegExp(filter, "i")) < 0) 
+            $("#show_more_country").hide();
+            $("#show_less_country").show();
+        }
+        else 
+        {
+            $("#show_more_country").hide();
+            $("#show_less_country").hide();
+            var filter = $(this).val(),
+            count = 0;
+            if (count == 0) { $('.countrynotfound').hide(); }
+            $('#listofcountry li').each(function() 
             {
-            $(this).hide();
-            if (count == 0) $('.countrynotfound').show();
-            else $('.countrynotfound').hide();
-            } 
-            else 
-            {
-            $(this).show();
-            count++;
-            }
-        });
+                if ($(this).find("p").text().search(new RegExp(filter, "i")) < 0) 
+                {
+                $(this).hide();
+                if (count == 0) $('.countrynotfound').show();
+                else $('.countrynotfound').hide();
+                } 
+                else 
+                {
+                $(this).show();
+                count++;
+                }
+            });
+        }
     });
 }
 /* ############################ exploreopportunities === end ############################ */
