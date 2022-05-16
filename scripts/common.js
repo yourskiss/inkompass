@@ -281,24 +281,6 @@ $(function($)
         });
     }
 });
-
-function testimonialvideo(popupType, iframesrc)
-{
-    if(popupType == 0) // video close 
-    {
-        $(".testimonial_video_close").fadeOut(600);
-        $("#testimonial_video_iframe").fadeOut(300).attr('src', '');
-    }
-    else if(popupType == 1) // video open
-    {
-        $(".testimonial_video_close").fadeIn(600);
-        $("#testimonial_video_iframe").fadeIn(300).attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&loop=1&rel=0&showinfo=0&controls=0&playlist="+iframesrc);
-    }
-    else 
-    {
-        // nothing
-    }
-}
 /* ############################ testimonial === end ############################ */
 
 
@@ -598,23 +580,6 @@ $(function($)
     }
 });
 
-function openassessmentvideo(popupType, iframesrc)
-{
-    if(popupType == 0) // video close 
-    {
-        $(".assessment_close").fadeOut(600);
-        $("#videoassessment").fadeOut(300).attr('src', '');
-    }
-    else if(popupType == 1) // video open
-    {
-        $(".assessment_close").fadeIn(600);
-        $("#videoassessment").fadeIn(300).attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&loop=1&rel=0&showinfo=0&controls=0&playlist="+iframesrc);
-    }
-    else 
-    {
-        // nothing
-    }
-}
 if($(window).width() < 1023) // menu on mobile
 {
     if($("#margket_nav_bar").length > 0)
@@ -706,6 +671,41 @@ $(window).scroll(function()  // add remove active class by element position
     }
 });
 /* ############################ application === end ############################ */
+
+
+
+/* ############################ transcript and video === start ############################ */
+function videosShow(iframesrc) // video show
+{
+    $(".videosection_close").fadeIn(600);
+    $(".videosection_frame").fadeIn(300)
+    $("#videoassessment").attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&loop=1&rel=0&showinfo=0&controls=0&playlist="+iframesrc);
+}
+function videosHide() // video close 
+{
+    $(".videosection_close").fadeOut(600);
+    $(".videosection_frame").fadeOut(300)
+    $("#videoassessment").attr('src', '');
+}
+function toggelTranscript()
+{
+    if($("#transcriptUpDown").hasClass("show"))
+    {
+        $(".transcriptContainer").slideUp(500);
+        $("#transcriptUpDown").removeClass("show");
+        $("#transcriptUpDown b").text("SHOW TRANSCRIPT");
+        $("#transcriptUpDown i.fa").removeClass("fa-angle-up").addClass("fa-angle-down");
+    }
+    else 
+    {
+        $(".transcriptContainer").slideDown(500);
+        $("#transcriptUpDown").addClass("show");
+        $("#transcriptUpDown b").text("HIDE TRANSCRIPT");
+        $("#transcriptUpDown i.fa").removeClass("fa-angle-down").addClass("fa-angle-up");
+    }
+}
+/* ############################ transcript and video === end ############################ */
+
 
 
 
