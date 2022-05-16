@@ -507,6 +507,7 @@ if($("#findcountry").length > 0)
     {
         if($("#findcountry").val() == '')
         {
+            $('#listofcountry li').show();
             $("#show_more_country").hide();
             $("#show_less_country").show();
         }
