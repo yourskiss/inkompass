@@ -607,7 +607,7 @@ function openassessmentvideo(popupType, iframesrc)
     else if(popupType == 1) // video open
     {
         $(".assessment_close").fadeIn(600);
-        $("#videoassessment").fadeIn(300).attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&loop=1&rel=0&showinfo=0&controls=1&playlist="+iframesrc);
+        $("#videoassessment").fadeIn(300).attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&loop=1&rel=0&showinfo=0&controls=0&playlist="+iframesrc);
     }
     else 
     {
