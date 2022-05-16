@@ -674,13 +674,17 @@ $(window).scroll(function()  // add remove active class by element position
 
 
 
+
 /* ############################ transcript and video === start ############################ */
 function videosShow(iframesrc) // video show
 {
     $(".videosection_close").fadeIn(600);
     $(".videosection_frame").fadeIn(300)
-    $("#videoassessment").attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&loop=1&rel=0&showinfo=0&controls=0&playlist="+iframesrc);
+    $("#videoassessment").attr("src", "https://www.youtube.com/embed/"+iframesrc+"?autoplay=1&mute=0&loop=1&rel=0&showinfo=0&controls=0&modestbranding=1&playsinline=1&playlist="+iframesrc);
 }
+ 
+
+
 function videosHide() // video close 
 {
     $(".videosection_close").fadeOut(600);
