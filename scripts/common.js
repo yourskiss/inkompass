@@ -539,6 +539,25 @@ if($("#findcountry").length > 0)
 
 
 
+/* ############################ home/program last slide removed === start ############################ */
+var peoplesSliderIndex = $(".ourpeoplesSlider > *").length;
+var peoplesSliderLast = peoplesSliderIndex - 1;
+var latestSliderIndex = $(".latestatHereSlider > *").length;
+var latestSliderLast = latestSliderIndex - 1;
+$(window).on("load", function()
+{
+    if($("#peoplesSlickSlider").length > 0)
+    {
+        $('.ourpeoplesSlider').slick('slickRemove', peoplesSliderLast);
+    }
+    if($("#latestSlickSlider").length > 0)
+    {
+        $('.latestatHereSlider').slick('slickRemove', latestSliderLast);
+    }
+});
+/* ############################ home/program last slide removed === end ############################ */
+
+
 
 
 
@@ -595,8 +614,6 @@ function openassessmentvideo(popupType, iframesrc)
         // nothing
     }
 }
-
-
 if($(window).width() < 1023) // menu on mobile
 {
     if($("#margket_nav_bar").length > 0)
