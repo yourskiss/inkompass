@@ -344,10 +344,18 @@ if($(".faqscontainer").length > 0)
     });
     $(".faqsbody aside").click(function()
     {
-        $(".faqsbody aside").removeClass("active");
-        $(".faqsbody section").removeClass("selected").slideUp(300);
-        $(this).addClass("active");
-        $(this).next("section").removeClass("selected").slideDown(300);
+        if($(this).hasClass('active'))
+        {
+            $(".faqsbody aside").removeClass("active");
+            $(".faqsbody section").removeClass("selected").slideUp(300);
+        }
+        else 
+        {
+            $(".faqsbody aside").removeClass("active");
+            $(".faqsbody section").removeClass("selected").slideUp(300);
+            $(this).addClass("active");
+            $(this).next("section").addClass("selected").slideDown(300);
+        }
     });
     $('#FaqsSerchInput').on('keypress', function (e) 
     {
@@ -492,6 +500,7 @@ if($("#findcountry").length > 0)
             $('#listofcountry li').show();
             $("#show_more_country").hide();
             $("#show_less_country").show();
+            $('.countrynotfound').hide();
         }
         else 
         {
@@ -525,15 +534,18 @@ if($("#findcountry").length > 0)
 /* ############################ home/program last slide removed === start ############################ */
 var peoplesSliderIndex = $(".ourpeoplesSlider > *").length;
 var peoplesSliderLast = peoplesSliderIndex - 1;
+
 var latestSliderIndex = $(".latestatHereSlider > *").length;
 var latestSliderLast = latestSliderIndex - 1;
+
 $(window).on("load", function()
 {
-    if($("#peoplesSlickSlider").length > 0)
+    if($("#peoplesSlickSlider").length > 0 || $("#ctl03_CLContentDataViewMeetOurInterns").length > 0 || $("#ctl03_CLContentDataViewMeetOurCoaches").length > 0)
     {
         $('.ourpeoplesSlider').slick('slickRemove', peoplesSliderLast);
     }
-    if($("#latestSlickSlider").length > 0)
+
+    if($("#latestSlickSlider").length > 0 || $("#ctl03_CLContentDataViewLatestatInkompass").length > 0)
     {
         $('.latestatHereSlider').slick('slickRemove', latestSliderLast);
     }
@@ -557,7 +569,7 @@ $(function($)
             autoplay: false,
             autoplaySpeed: 4000,
             infinite: false,
-            adaptiveHeight: true,
+            adaptiveHeight: false,
             centerMode: false,
             centerPadding: '8px',
             initialSlide:0,
