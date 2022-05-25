@@ -625,7 +625,7 @@ function gotothe(tabID, sectionID, scrollDuration) // click to jump
 {
     $("#margket_nav_menu li").removeClass('active');
     $("#"+tabID).addClass('active');
-    $('html,body').animate({ scrollTop: $("#section_"+sectionID).offset().top - 60 }, scrollDuration);
+    $('html,body').animate({ scrollTop: $("#section_"+sectionID).offset().top - 50 }, scrollDuration);
 }
 function isOnScreen(elem)  // element is visible in viewport 
 {
