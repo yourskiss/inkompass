@@ -340,7 +340,7 @@ if($(".faqscontainer").length > 0)
     $(".faqscontainer ul li").click(function()
     {
         var getName = $(this).attr("data-id");
-        $('html, body').animate({scrollTop: $("#" + getName + "_top").offset().top - 100 }, 1000);
+        $('html, body').animate({scrollTop: $("#" + getName + "_top").offset().top - 90 }, 1000);
     });
     $(".faqsbody aside").click(function()
     {
@@ -625,7 +625,7 @@ function gotothe(tabID, sectionID, scrollDuration) // click to jump
 {
     $("#margket_nav_menu li").removeClass('active');
     $("#"+tabID).addClass('active');
-    $('html,body').animate({ scrollTop: $("#section_"+sectionID).offset().top - 90 }, scrollDuration);
+    $('html,body').animate({ scrollTop: $("#section_"+sectionID).offset().top - 60 }, scrollDuration);
 }
 function isOnScreen(elem)  // element is visible in viewport 
 {
