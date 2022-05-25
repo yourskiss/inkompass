@@ -1,0 +1,182 @@
+
+
+.boxpart { 
+    padding:4rem 0; width:100%; float:left; background:$homebg; overflow: hidden;
+    .boxpartInner { 
+        display: flow-root; position: relative; width:95%; max-width:1372px; margin:0 auto; 
+        .boxpartWEB { display:block; width:80%; float: right; }
+        .boxpartMOB { display:none; }
+        div 
+        { 
+            position:absolute; top:50%; left:0; z-index:2; transform:translateY(-50%); background:$white; width:45%; padding:2rem;
+            h2 {  
+                width:100%; float:left; font-size:30px; line-height: 1.2; color:$lightBlack; font-weight:600; font-family:'latosemibold';
+            }
+            h3 {  
+                 width:100%; float:left; margin:1.1rem 0 1.7rem 0; font-size:20px;  color:$lightBlack2; font-weight:400; font-family:'latoregular';
+            }
+            p{
+                width:100%; float:left; 
+                a { 
+                    background:$darkBlue; padding:15px 20px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
+                    b{ margin-left:5px; @include transition(ease-out); display:inline-block; font-size:0; width:8px; height:8px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; }
+                    &:hover { 
+                        background:$darkBlue2; padding:15px 15px 15px 20px; @include transition(ease-in);
+                        b { margin-left:10px; @include transition(ease-in); } 
+                    }
+                    &.shareopportunity {
+                        margin-left:5px;  color:$darkBlue; background:$white; box-shadow: inset 0px 0px 0px 1px $darkBlue;
+                        i.fa.fa-share-alt { margin-left:5px; @include transition(ease-out); }
+                        &:hover { 
+                            color:$white; background:$darkBlue;  
+                            i.fa.fa-share-alt { margin-left:10px; @include transition(ease-in); } 
+                        } 
+                    }
+                }
+            }
+            h4 { 
+                width:100%; float:left; margin:0 0 1rem 0; font-size:20px;  color:$darkBlue; font-weight:400; font-family:'latoregular';
+                span { display:block; color:$lightBlack2;  }
+            }
+            ul {
+                width:100%; float:left; margin:0 0 1.5rem 0;
+                li { list-style:disc; margin:3px 0 3px 20px; font-size:20px; color:$lightBlack2; font-weight:400; font-family:'latoregular'; }
+            }
+        }
+    }
+}
+
+.boxpart.testimonialstory {
+    .boxpartInner { 
+         .boxpartstory { width:70%; float: right; }
+         div { 
+            h6 { position: absolute; left:2rem; bottom:-3rem;
+                width:auto; float:left; @include display(flax-start, center);
+                span { margin-right:0.5rem; font-size:16px; color:$lightBlack; font-weight:400; font-family:'latoregular';  }   
+                a { 
+                    height:32px; width:32px; border-radius:50%; background: $darkBlue; display: flex;justify-content: center; align-items: center;  margin: 0 4px;text-decoration: none; color: #fff; font-size:16px; @include transition(ease-out);
+                    &:hover { background: $lightBlue; @include transition(ease-in); }
+                }
+            }
+         }
+    }
+}
+
+
+
+
+
+@media only screen and (max-width:1565px) 
+{
+    .boxpart .boxpartInner div ul  li { margin:2px 0 2px 20px; }
+}
+
+@media only screen and (max-width:1300px) 
+{
+    .boxpart .boxpartInner div {padding: 1.5rem;}
+}
+
+
+
+@media only screen and (max-width:1255px) 
+{
+
+    .boxpart { 
+        padding:3rem 0;  
+        .boxpartInner { 
+            div 
+            { 
+                padding:1.5rem;
+                h2 { font-size:24px; }
+                h3 {  margin:1rem 0 1rem 0; font-size:18px;}
+                h4 {  font-size:18px; }
+                ul {
+                     margin:0 0 1rem 0;
+                    li { font-size:18px;  }
+                }
+            }
+        }
+    }
+ 
+
+    .boxpart .boxpartInner {
+        .boxpartWEB { width: 80%; }
+        div { width: 47%; }
+    }
+
+    .boxpart.application .boxpartInner {
+        .boxpartWEB { width: 90%; }
+        div { width: 50%; }
+    }
+}
+
+@media only screen and (max-width:1023px) 
+{
+ 
+    .boxpart .boxpartInner {
+        width: 100%;display: flex;flex-wrap: wrap; flex-direction: column;
+        .boxpartWEB { width: 100%;}
+        div {
+            position: relative;top: 0;left: 0; transform: translateY(0);width: 90%;padding: 1.5rem;float: left; margin: 0 5%; margin-top: -100px; 
+            h2{text-align:center;}
+            h3{text-align:center;}
+            p {text-align: center;}
+            h4 {text-align: center;}
+        }
+    }
+
+    .boxpart.testimonialstory{
+        padding: 3rem 0 6rem 0;
+        .boxpartInner {
+            width: 90%;
+            .boxpartstory { width:100%;  }
+            div {
+                h6 {left: 0; bottom: -3rem; width: 100%; justify-content: center; }
+            }
+        }  
+    }
+
+    .boxpart.application .boxpartInner {
+        .boxpartWEB { width: 100%; }
+        div { width: 90%; }
+    }
+
+    
+    
+    
+}
+
+ 
+@media only screen and (max-width:479px) 
+{
+
+    .boxpart .boxpartInner {
+         div { padding: 1rem; margin-top: -50px; }
+         .boxpartWEB { display:none;  }
+        .boxpartMOB { display:block;  }
+    }
+
+    .boxpart.testimonialstory {
+        padding:0 0 5rem 0;
+        .boxpartInner {
+            width: 100%; margin-top:0px;
+            div {
+                padding: 1rem;
+                h6 {left: 0; bottom: -3rem; width: 100%; justify-content: center; }
+            }  
+        }
+    } 
+
+    .boxpart.application {
+        padding: 2rem 0 2rem 0;
+        .boxpartInner {
+            .boxpartstory { width:100%;  }
+            div p a {
+                width: 245px;
+                &.shareopportunity { margin: 10px 0 0 0; }
+            }
+        }  
+    }
+ 
+}
+

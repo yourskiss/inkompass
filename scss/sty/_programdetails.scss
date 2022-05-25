@@ -1,0 +1,118 @@
+/* internshipexperiencewrap   === start */
+.internshipexperiencewrap {
+    padding:3rem 0; width:100%; float:left; background:$white;
+    .internshipexperiencecontainer {
+        display: flow-root; float:none; position: relative; width:95%; max-width:1372px; margin:0 auto;
+        h2 { width:100%; float:left; text-align:center; font-size:30px; color:$lightBlack; font-weight:700; font-family:'latobold'; }
+        p.programText { width:100%; float:left; margin:1rem 0 3rem 0; padding:0 10%; text-align:center; font-size:18px; line-height: 1.4; color:$lightBlack; font-weight:400; font-family:'latoregular'; }
+        ul {
+            width:100%; float:left; margin-top:2rem; @include display(space-between, stretch); flex-wrap:wrap;
+            li {
+                list-style:none; position:relative; width:49%; margin:0.6rem 0; overflow:hidden;
+                &:before { opacity:1;  content:''; z-index:1; position:absolute; top:0; left:0; width:100%; height:100%; background: transparent linear-gradient(0deg, #000000 0%, #54545400 40%) 0% 0% no-repeat padding-box; transition:all 0.5s ease-out; }
+                img { width:100%;height:100%; margin:0; }
+                .items {
+                    z-index:2; position:absolute; left:0; bottom:0; padding:2.5rem; width:100%; height:auto; overflow:hidden; background:trasparent; transition:all 0.5s ease-out;
+                    h3 { width:100%; float:left; font-size:30px; color:$white; font-weight:700; font-family:'latobold'; }
+                    p { width:100%; float:left; margin:0.3rem 0 1rem 0; font-size:18px; color:$white; font-weight:600; font-family:'latosemibold'; }
+                    aside { 
+                        width:100%; float:left; transition:all 0.5s ease-out;
+                        a { @include display(left, center); float: left; text-decoration:none; letter-spacing:2px; color:$white; font-size:14px; font-weight:400; font-family:'latoregular'; 
+                            span { 
+                                @include display(center, center); margin-right:0.7rem; width:36px; height:36px; border-radius:50%; background: $white; color: $darkBlue; 
+                                b { display:inline-block; font-size:0; width:10px; height:10px; background:url('../Images/go-blue.png') no-repeat left top; background-size:100% 100%; }
+                            }
+                        }
+                    }
+                    .item {
+                        width:100%; height:1px; overflow:hidden; float:left; transition:all 0.5s ease-out;
+                        h4 {  width:100%; float:left; font-size:18px; margin:0; color:$white; font-weight:700; font-family:'latobold'; }
+                        p {  font-size:16px; font-weight:400; font-family:'latoregular';  }
+                    } 
+                }
+                &:hover {
+                    &:before {  background:rgba(0,0,0,0.5); transition:all 0.5s ease-in; }
+                    .items {
+                        overflow:hidden; top:0; bottom:auto; transition:all 0.5s ease-in;
+                        aside { display:none; transition:all 0.5s ease-in; }
+                        .item { height:auto; transition:all 0.5s ease-in;  }
+                    }
+                }
+            }
+        }
+        
+
+    }
+}
+
+ 
+@media only screen and (max-width:1255px) 
+{
+   
+    /* internshipexperiencewrap   === start */
+    .internshipexperiencewrap {
+        .internshipexperiencecontainer {
+            h2 { font-size:24px; }
+            p.programText { font-size:18px;  }
+            ul {
+                margin-top: 1rem;
+                li {
+                    &:before { display:none; }
+                    border: 1px solid $whiteLight;
+                    img {  height:auto; margin:0; }
+                    .items {
+                        position:static; left:0; top:0%; padding:1rem; width:100%; height:auto; background:$white;
+                        h3 { font-size:18px; color: $darkBlue; }
+                        p { font-size:16px; font-family:'latoregular'; font-weight:400; color: $lightBlack2; margin: 0.1rem 0 0.6rem 0; }
+                        aside {  display:none; }
+                        .item {
+                              height: auto;  position:static;
+                            h4 {  font-size:16px; color: $lightBlack2; }
+                        } 
+                    }
+                    &:hover {
+                        .items { background:$white; }
+                    } 
+                }
+            }
+        }
+    }
+
+
+ 
+}
+
+
+ 
+
+@media only screen and (max-width:767px) 
+{
+ 
+    /* internshipexperiencewrap   === start */
+    .internshipexperiencewrap {
+        padding: 2rem 0; 
+    }
+
+
+    /* internshipexperiencewrap   === start */
+    .internshipexperiencewrap .internshipexperiencecontainer  p.programText { padding:0 2%;}
+
+
+}
+
+ 
+
+
+@media only screen and (max-width:479px) 
+{
+    /* internshipexperiencewrap   === start */
+    .internshipexperiencewrap {
+        .internshipexperiencecontainer {
+            p.programText { padding:0;}
+            ul {
+                li {width:100%;}
+            }
+        }
+    }
+
+}

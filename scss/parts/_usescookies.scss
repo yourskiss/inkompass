@@ -1,0 +1,54 @@
+.siteusescookies { display:none; z-index:7; position: fixed;bottom: 0;left: 0;right: 0;width: 100%;max-width: 1920px;float: none;margin: 0 auto;padding: 1rem; background: $black; text-align:center; overflow: hidden; 
+    .sitecookies { 
+        @include display(space-evenly, center); width:100%; max-width:1600px; margin:0 auto; float:none; 
+        p { 
+            list-style:none; display:inline-block; text-align:left; 
+            font-size:18px; font-weight:400; font-family:'latoregular'; line-height: 1.2; color: $white;
+            a { 
+                display: inline-block; text-decoration:underline; color: $white; @include transition(ease-out); 
+                &:hover { text-decoration:none; color:$white; @include transition(ease-in); }
+            }
+        }
+        aside {
+            display:inline-block; margin-left:10px;
+            span {
+                width: 124px; background:$darkBlue; padding:15px 20px; font-weight:600; line-height:1; font-family:'latosemibold'; font-size:14px; text-transform:uppercase; color:$white; cursor:pointer; @include transition(ease-out); line-height: 1; letter-spacing: 2px; @include display(center, center); display: inline-flex;
+                b { display:inline-block; font-size:0; width:8px; height:8px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%;  margin-left:5px; @include transition(ease-out); }
+                &:hover { 
+                    background:$darkBlue2;  padding:15px 15px 15px 20px; @include transition(ease-in);
+                    b { margin-left:10px; @include transition(ease-in); } 
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1565px) 
+{
+    .siteusescookies .sitecookies p { font-size: 16px; }
+}
+
+
+@media only screen and (max-width:767px) 
+{
+    .siteusescookies .sitecookies p { font-size: 14px; }
+}
+
+
+@media only screen and (max-width:599px) 
+{
+    .siteusescookies { 
+        padding: 0.7rem;
+        .sitecookies { 
+           flex-wrap:wrap; 
+           p { width:100%; text-align:center; }
+           aside { 
+               width:100%; text-align:center; margin-left: 0; margin-top:0.7rem; 
+               span { 
+                   width: 100px; padding:12px 12px;font-size: 12px; 
+                   &:hover { padding: 12px 7px 12px 12px; }
+                }
+            }
+        }
+    }
+}

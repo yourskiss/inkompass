@@ -1,0 +1,181 @@
+
+/* #################### internship wrap  #################### */
+.internshipwrap  { 
+    width:100%; float:left; padding:3rem 0; background: $white;
+    .internshipcontainer { 
+        width:95%; max-width:1270px; float:none; margin:0 auto; 
+        .livemarkets {
+            width:100%; float:left;
+            h2 { width:100%; float:left; margin-bottom:1rem; text-align:center; font-size:30px; color:$lightBlack; font-weight:700; font-family:'latobold'; }
+            p { width:100%; float:left; padding:0 10%; font-size:18px;  text-align:center; color:$lightBlack; font-weight:400; font-family:'latoregular'; } 
+            h3 { width:100%; float:left; margin:3rem 0 2rem 0; text-align:center; font-size:30px; color:$lightBlack; font-weight:700; font-family:'latobold'; }
+            ul { 
+                width:100%; float:left; padding:0 10%; @include display(center, flex-start); flex-wrap:wrap;
+                li { 
+                    list-style:none; width:23%; margin:0 1% 2% 1%;
+                    img { width:100%; } 
+                    aside {  
+                        margin:0.5rem 0 0.2rem 0; @include display(space-between, flex-start); 
+                        b { line-height:1; color:$darkBlue; font-size:16px; font-weight:700;  font-family:'latobold'; }
+                        span {  line-height:1; color:$green; font-size:12px; margin-left: 0.5rem; font-weight:400;  font-family:'latoregular'; }
+                    }
+                    h4 { margin-top: 5px; font-size:14px;  color:$lightBlack; font-weight:400; font-family:'latoregular'; }
+
+                }
+            }
+        }
+        .searchbycountry {
+            width:100%; float:left; margin:2rem 0 2rem 0;
+            h2 { width:100%; float:left; margin-bottom:1rem; text-align:center; font-size:30px; color:$lightBlack; font-weight:700; font-family:'latobold'; }
+            aside { position:relative; padding-left:2rem;
+                width:100%; float:left; border-bottom:1px solid $superultralightBlack; 
+                input[type='text'] { width:100%; float:left; padding:1rem; width:100%; float:left; background:$white; border:none; outline:0; border-radius:0; font-weight:400; font-family:'latoregular'; font-size:18px; color:$ultralightBlack; }
+                &:before { content: "\f002"; position:absolute; top:50%; left:0; transform: translateY(-50%); font-weight:300; font-family:'latolight'; font-size:1.4rem; color:$superultralightBlack; font-family:'FontAwesome'; }
+            }
+        }
+        .countrylist {
+            width:100%; float:left;
+            .countrynotfound { display:none; width:100%; float:left; text-align:center; font-size:24px; color:$darkBlue; font-weight:700; font-family:'latobold';  }
+            ul { 
+                width:100%; float:left;  @include display(space-between, flex-start); flex-wrap:wrap;
+                li { display:none; list-style:none; width:15.5%; float:left; margin:0 0 1% 0;
+                    img { width:100%; } 
+                    p { margin-top: 0.2rem; font-size:16px; color:$black; font-weight:400; font-family:'latoregular';   text-transform: capitalize; }
+                }
+            }
+            .show_more_less { 
+                width:100%; float:left; @include display(center, center); margin:1.5rem 0 0 0; padding:1rem; border:solid 1px $whiteUltraLight; background:$white; font-size:14px; color:$ultralightBlack; font-weight:400; font-family:'latoregular'; text-transform: uppercase; cursor:pointer; @include transition(ease-out);
+                span { display:inline-block; }
+                &:hover { border-color:$darkBlue; background:$white; color:$darkBlue; @include transition(ease-in); }
+            }
+
+        }
+        
+        
+    }
+}
+ 
+
+
+@media only screen and (max-width:1565px)
+{
+    .internshipwrap .internshipcontainer .livemarkets ul {  padding: 0 2%; }
+}
+
+
+
+@media only screen and (max-width:1255px)
+{
+    /* #################### internship wrap  #################### */
+    .internshipwrap  { 
+        padding:2rem 0; 
+        .internshipcontainer { 
+            .livemarkets {
+                h2 { font-size: 26px; padding:0 3%; line-height:1.2; }
+                p {  padding:0 3%; }
+                h3 { font-size: 26px; padding:0 3%; margin:2rem 0 1rem 0; line-height:1.2; }
+                ul { 
+                    li { 
+                         
+                        aside { 
+                            flex-wrap:wrap; margin:0rem 0 0.2rem 0;
+                            span { width:100%; display: block; margin: 5px 0 0 0; }
+                        }
+                    }
+                }
+            }
+            .searchbycountry {
+                h2 {  font-size:26px; }
+                aside { 
+                    padding-left:1.5rem;
+                    input[type='text'] {  padding:0.7rem; }
+                }
+            }
+            .countrylist {
+                ul { 
+                    li { 
+                        p {margin-top: 0; }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+}
+ 
+
+@media only screen and (max-width:1023px)
+{
+    /* #################### internship wrap  #################### */
+    .internshipwrap  { 
+        .internshipcontainer { 
+            .livemarkets {
+                ul { 
+                    li { 
+                        width:31%; margin:0 1% 2% 1%;
+                    }
+                }
+            }
+            .countrylist {
+                ul { 
+                    li { 
+                        width:23%;  margin:0 0 2% 0; 
+                        p { margin-top: 0; }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+    
+    
+
+    
+
+}
+
+
+
+
+@media only screen and (max-width:599px)
+{
+    /* #################### internship wrap  #################### */
+    .internshipwrap  { 
+        .internshipcontainer { 
+            .livemarkets {
+                ul { 
+                    li { width:46%; margin:0 2% 4% 2%;}
+                }
+            }
+            .countrylist {
+                ul { 
+                    li { width:29%;  margin:0 0 4% 0; }
+                }
+            }
+            
+            
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width:479px)
+{
+
+    /* #################### internship wrap  #################### */
+    .internshipwrap  { 
+        .internshipcontainer { 
+            .countrylist {
+                ul { 
+                    li { width:46%;   }
+                }
+            }
+            
+            
+        }
+    }
+
+}

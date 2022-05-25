@@ -1,0 +1,215 @@
+/* #################### opportunities  wrap  #################### */
+.opportunitieswrap  { 
+    width:100%; float:left; padding:3rem 0; background: $whiteLight;
+    .opportunitiescontainer { 
+        width:95%; max-width:1272px; float:none; margin:0 auto; 
+        h2 { width:100%; float:left; margin-bottom:1.3rem; text-align:center; font-size:30px; color:$lightBlack; font-weight:700;font-family:'latobold'; }
+        .opportunitiesfilter {
+            width:100%; float:left; margin-bottom:2.3rem; @include display(space-between, flex-start);  
+            div {
+                width:28%;
+                .error_msg { width:100%; float:left; }
+                input[type='text'] { padding: 0.7rem 1rem; width:100%; float:left; background:$white; border:1px solid $superDuperLightBlack; outline:0; border-radius:0; font-weight:400;font-family:'latoregular'; font-size:14px; color:$lightBlack;  }
+                select { padding:0.7rem 2rem 0.7rem 1rem; width:100%; float:left; background:$white url('../Images/down-arrow.png') no-repeat; background-position:right 7px center; text-indent: 2px;text-overflow: '';appearance: none; border:1px solid $superDuperLightBlack; outline:0; border-radius:0; font-weight:400;font-family:'latoregular'; font-size:14px; color:$lightBlack;  }
+                &:first-child { width:40%;}
+            }
+        }
+        .opportunitiestable {
+            width:100%; float:left;
+            table {
+                width:100%; float:left; border:0; border-collapse: collapse;
+                th { 
+                    background: $lightBlue2; padding:0.8rem; text-align:left; vertical-align: middle;font-weight:700;font-family:'latosemibold'; font-size:18px; color:$white;  
+                    &:last-child { font-size:0; }
+                }
+                td { 
+                    background: $white; padding:0.8rem; text-align:left; vertical-align: middle;border-bottom:1px solid $superDuperLightBlack; font-weight:400;font-family:'latoregular'; font-size:18px; font-style: italic; color:$superultralightBlack; 
+                    span { 
+                        font-style: normal; text-decoration:none; color:$darkBlue; cursor:pointer; @include transition(ease-out);
+                        &:hover {   color:$lightBlue; @include transition(ease-in);  }
+                     }
+                    a { 
+                        font-style: normal;  text-decoration:none; color:$darkBlue; font-weight:400;font-family:'latoregular'; font-size:14px;  @include transition(ease-out); text-transform:uppercase;
+                        &:hover { color:$lightBlue; @include transition(ease-in); }
+                    }
+                    i.fa.fa-share-alt { 
+                        font-style: normal;  margin-left:0.7rem; color:$darkBlue; font-weight:400; font-size:14px; cursor:pointer; @include transition(ease-out);
+                        &:hover { color:$lightBlue; @include transition(ease-in); }
+                    }
+                &:nth-of-type(1) { width:28%; }
+                &:nth-of-type(2) { width:18%; }
+                &:nth-of-type(3) { width:18%; }
+                &:nth-of-type(4) { width:14%; }
+                &:nth-of-type(5) {  text-align:right; }
+                }
+            }
+        }
+        p { 
+            width:100%; float:left; margin:1.5rem 0; font-weight:400; font-family:'latoregular'; font-size:18px; color:$superultralightBlack; 
+            a { 
+                display:inline-block; text-decoration:none; color:$darkBlue;@include transition(ease-out);
+                &:hover { color:$black; @include transition(ease-in); }
+            }
+        }
+        .opportunitiespaging {
+            width:100%; float:left;  @include display(space-between, center);
+            aside { 
+                width:auto; 
+                a { 
+                    text-decoration:none; @include display(space-between, center); line-height:1; font-weight:400; font-family:'latoregular';
+                    b { color:$pagingFL; font-size:1.4rem; font-weight:300;font-family:'latolight'; }
+                    span { margin: 0 0.7rem; color:$pagingArror;  font-size:0.8rem;  }
+                    &:hover { 
+                        b { color:$pagingArror; }
+                        span { color:$pagingFL; }
+                    }
+                }
+            }
+            ul {
+                width:auto;
+                li { 
+                    list-style:none; margin:0 0.3rem; display:inline-block; font-weight:400;font-family:'latoregular'; font-size:0.8rem; color:$lightBlack; 
+                    a { text-decoration:underline; color:$lightBlack; } 
+                    &.active { 
+                        a {text-decoration:none; color:$darkBlue; } 
+                    }
+                    &.spread {  margin:0; }
+                }
+            }
+
+        }
+
+
+    }
+}
+
+/* #################### opportunities  wrap  #################### */
+/*  subscriptionPopup part */
+.jobOpeningPopup { 
+    display:none; z-index:7; position: fixed; absolute: 0; top: 0; height: 100%; width:100%; background-color: #000; background: rgba(0,0,0,0.3); 
+    .jobOpeningPopupBG { display:block; z-index:8; position: fixed; left: 0; top: 0; height:100%; width: 100%; opacity:0; }
+    .jobOpeningPopupContainte { 
+        display: block;  z-index:9; position:fixed; left:50%; top:50%; transform: translate(-50%, -50%); width: 95%; max-width: 750px; height: 90%; background-color: #fff;  border-radius:0px; margin:0 auto; padding:1rem;  
+        aside { @include display(center, center);
+            z-index: 4; position:absolute; right:-10px; top:-10px; width:30px; height: 30px; border-radius:0; padding: 0; font-size: 24px; line-height: 1; background:$darkBlue; text-align: center; border: none; color: $white; cursor: pointer; transition:all 0.5s ease-out; 
+            &:hover { background:$lightBlue; transition:all 0.5s ease-in;  }
+        } 
+        h2 {  
+            width:100%; float:left; margin:0 0 1rem 0; font-size:1.4rem; color:$darkBlue; font-weight:700;font-family:'latobold';
+        }
+        p{
+            width:100%; float:left; margin:0 0 1rem 0; font-size:1rem; line-height: 1.3; color:$lightBlack2; font-weight:400;font-family:'latoregular';
+        }
+        ul {
+            width:100%; float:left; margin:0 0 1rem 0;
+            li { list-style:disc; margin:3px 0 3px 20px; font-size:1rem; line-height: 1.3; color:$lightBlack2; font-weight:400;font-family:'latoregular'; }
+        }
+        .slimscrollerHolder { 
+            z-index:2;  float: left; margin:0 ; padding:0 8px 0  0; border:none; background:none; overflow: hidden; 
+            .slimscroller {   float: left; margin:0; padding: 0; border:none; background:none; overflow: hidden; }
+        }
+        
+    }
+    
+}
+ 
+
+@media only screen and (max-width:1255px)
+{
+    .opportunitieswrap .opportunitiescontainer h2 { font-size: 26px; }
+}
+
+@media only screen and (max-width:1023px)
+{
+
+    /* #################### opportunities  wrap  #################### */
+    .opportunitieswrap  { 
+        padding:2rem 0; 
+        .opportunitiescontainer { 
+            h2 {  margin-bottom:1rem;   }
+            .opportunitiesfilter {
+                  margin-bottom:2rem; 
+            }
+            .opportunitiestable {
+                table {
+                    th { padding:0.5rem;   }
+                    td { 
+                        padding:0.5rem; 
+                        i.fa.fa-share-alt { margin-left:0.5rem;  }
+                    }
+                }
+            }
+            p { margin:1rem 0; text-align: center; }
+            .opportunitiespaging {
+                justify-content: center;
+                aside  { display:none; }
+            }
+            
+        }
+    }
+}
+
+
+@media only screen and (max-width:767px)
+{
+    /* #################### opportunities  wrap  #################### */
+    .opportunitieswrap  { 
+        .opportunitiescontainer { 
+            .opportunitiestable {
+                width:100%; float:left;
+                table {
+                    th { 
+                        display: none; 
+                        &:last-child { padding:0.7rem; font-size:1rem; display:block;   }
+                    }
+                    td { 
+                        display:block; float:left; border-bottom:none;  color:$lightBlack; font-size:14px;
+                        span { 
+                            color:$black2; font-size:16px; font-family:'latosemibold'; font-weight:600;
+                            &:hover { color:$lightBlue;  }
+                         }
+                    &:nth-of-type(1) { width:100%; padding:0.3rem 0.5rem; font-weight:900;font-family:'latoblack'; border-top:solid 1px $superDuperLightBlack; }
+                    &:nth-of-type(2) { width:40%; padding:0 0.5rem; }
+                    &:nth-of-type(3) { width:40%; padding:0; }
+                    &:nth-of-type(4) { width:20%; padding:0 0.5rem; }
+                    &:nth-of-type(5) { width:100%; text-align:left; padding:0.3rem 0.5rem; }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:599px)
+{
+    /* #################### opportunities  wrap  #################### */
+    .opportunitieswrap  { 
+        .opportunitiescontainer { 
+            .opportunitiesfilter {
+                flex-wrap: wrap;
+                div { width:100%; 
+                    input[type='text'] {  font-size: 16px; }
+                    select {  font-size: 16px; }
+                   &:first-child { width:100%; }
+                   &:nth-of-type(2) { margin:1rem 0; }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:479px)
+{
+
+    .jobOpeningPopup {
+        .jobOpeningPopupContainte { 
+            padding:0.5rem; 
+            aside { right:-5px; top:-15px; }
+        }
+    }
+}
+
+ 
