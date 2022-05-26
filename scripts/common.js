@@ -416,33 +416,40 @@ function clearSearch()
 
 
 /* ############################ exploreopportunities === start ############################ */  
-
-if($("#internshipTitle").length > 0)
+if($("#internshipTitle").length > 0 && $("#internshipLocation").length > 0 && $("#internshipFunction").length > 0 )
 {
     $('#internshipTitle').on('keypress', function (e) 
     {
         if (e.keyCode == '13' || e.charCode == '13') return false;
     });
-    $("#internshipTitle").keyup(function() 
-    {
-        var filter = $(this).val(),
-        count = 0;
-        if (count == 0) { $('#internshipNotFound').hide(); }
-        $('#internshipData tbody tr').each(function() 
-        {
-            if ($(this).text().search(new RegExp(filter, "i")) < 0) 
-            {
-                $(this).hide();
-                if (count == 0) $('#internshipNotFound').show();
-                else $('#internshipNotFound').hide();
-            } 
-            else 
-            {
-                $(this).show();
-                count++;
-            }
-        });
+    $("#internshipTitle").keyup(function() {
+        selectjob();
     });
+    $("#internshipLocation").change(function() {
+        selectjob();
+    });
+    $("#internshipFunction").change(function() {
+        selectjob();
+    });
+    selectjob = function() {
+        var designationtitle = $("#internshipTitle").val();
+        var countryname = $("#internshipLocation").val();
+        var departmentname = $("#internshipFunction").val();
+        $('#internshipData tbody tr').hide();
+        var tablerow =$('#internshipData tbody tr').filter(function(index) {
+          return (countryname === '0' || $(this).attr("data-location") === countryname) &&
+            (!designationtitle || $(this).attr("data-title").toLowerCase().indexOf(designationtitle.toLowerCase()) >= 0 ) && (departmentname === '0' || $(this).attr("data-function") === departmentname);
+        });
+        if(tablerow == '' || tablerow.length == 0)
+        {
+            $("#internshipNotFound").show();
+        }
+        else 
+        {
+            $("#internshipNotFound").hide();
+            tablerow.show();
+        }
+    }
 }
 
 if($("#show_more_country").length > 0)
