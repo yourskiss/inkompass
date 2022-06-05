@@ -568,11 +568,13 @@ function lookbackGallery(type, posision)
     if(type == 0) // close gallery
     {
         $(".lookbackGalleryPopup").fadeOut(500);
+        $('.lookbackGallerySlider').slick('unslick');
     }
     else if(type == 1) // open gallery
     {
         $(".lookbackGalleryPopup").fadeIn(500);
-         $('.lookbackGallerySlider').slick('slickGoTo', posision);
+        lookbackSliderPopup(posision)
+        // $('.lookbackGallerySlider').slick('slickGoTo', posision);
     }
     else 
     {
@@ -580,9 +582,11 @@ function lookbackGallery(type, posision)
     }
 }
 
-if($(".lookbackGallerySlider").length > 0)
+function lookbackSliderPopup(val)
 {
-    $('.lookbackGallerySlider').slick({ // lookback slider
+    if($(".lookbackGalleryPopup").length > 0)
+    {
+        $('.lookbackGallerySlider').slick({  
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: false,
@@ -593,9 +597,13 @@ if($(".lookbackGallerySlider").length > 0)
             adaptiveHeight: true,
             centerMode: false,
             centerPadding: '0',
-            initialSlide: 0
-    });
+            initialSlide: val
+        });
+    }  
 }
+   
+
+ 
     
 
 

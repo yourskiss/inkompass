@@ -5028,13 +5028,15 @@ main {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 750px;
+  max-width: 850px;
   height: auto;
   max-height: 90%;
   background-color: #fff;
-  border-radius: 0px;
+  border-radius: 10px;
   margin: 0 auto;
   padding: 0;
+  overflow: hidden;
+  border: solid 3px #1F3C84;
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGalleryClosed {
@@ -5049,8 +5051,8 @@ main {
           align-items: center;
   z-index: 4;
   position: absolute;
-  right: -10px;
-  top: -10px;
+  right: 5px;
+  top: 5px;
   width: 30px;
   height: 30px;
   border-radius: 0;
@@ -5114,18 +5116,19 @@ main {
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide div {
+  float: left;
   height: 100%;
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items {
   width: 100%;
+  float: left;
   position: relative;
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items img {
   width: 100%;
   float: left;
-  height: initial;
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items aside {
@@ -5135,7 +5138,7 @@ main {
   bottom: 0;
   left: 0;
   background: #000;
-  background: rgba(31, 60, 132, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 1rem;
 }
 
