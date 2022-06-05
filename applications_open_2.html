@@ -247,7 +247,7 @@
 
    
 <!-- journey start -->
-<section class="journeywrap applications"  id="section_schedule">
+<section class="journeywrap applications" >
     <h4>
         How to apply?
         <span>
@@ -328,7 +328,7 @@
 
 
 <!--  recruitment deadlines  start -->
-<section  class="recruitment_deadlines_wrap">
+<section  class="recruitment_deadlines_wrap"  id="section_schedule">
     <div class="recruitment_deadlines_container">
         <h2>
             Key dates and deadlines for recruitment
@@ -664,35 +664,36 @@
 
 
 
+
 <!-- lookback_activities start -->
-<section class="lookback_activities">
+<section class="lookback_activities" >
     <div class="lookback_activities_inner">
         <h2>A lookback at our activities</h2>
         <h3>Here is a glimpse of our past activities and events in Australia.</h3>
 
         <div class="lookbackwrap">
-            <div class="lookbackbox one">
+            <div class="lookbackbox one" onclick="lookbackGallery(1, 0);">
                 <img class="lookbackWeb" src="images/applications/1_normal.jpg" alt="application" />
                 <img class="lookbackMob" src="images/applications/1_thumb.jpg" alt="application" />
                 <h4>First Day Excitement</h4>
                 <p>INKOMPASS intern looks snappy and ready for the first day of her internship in the marketing function.</p>
             </div>
-            <div class="lookbackbox two">
+            <div class="lookbackbox two" onclick="lookbackGallery(1, 1);">
                 <img src="images/applications/2_thumb.jpg" alt="application" />
                 <h4>Gaga at OGA</h4>
                 <p>Candidates enjoying and having a great time at the INKOMPASS On-Ground Assessment where they engaged in a number of fun activities!</p>
             </div>
-            <div class="lookbackbox three">
+            <div class="lookbackbox three" onclick="lookbackGallery(1, 2);">
                 <img src="images/applications/3_thumb.jpg" alt="application" />
                 <h4>Ideation before action</h4>
                 <p>An INKOMPASS intern in an ideation discussion with his buddy regarding his project that directly contributes towards a smoke-free future.</p>
             </div>
-            <div class="lookbackbox four">
+            <div class="lookbackbox four"  onclick="lookbackGallery(1, 3);">
                 <img src="images/applications/4_thumb.jpg" alt="application" />
                 <h4>Mentor session</h4>
                 <p>A mentor involved in an active brainstorming session with the interns and guiding them through the basics of a project.</p>
             </div>
-            <div class="lookbackbox five">
+            <div class="lookbackbox five"  onclick="lookbackGallery(1, 4);">
                 <img src="images/applications/5_thumb.jpg" alt="application" />
                 <h4>Day begins with a smile</h4>
                 <p>INKOMPASS interns excited to work, learn and grow.</p>
@@ -858,6 +859,55 @@
         
 </main>
 
+
+
+
+
+<!-- lookback Popup  start -->
+<div class="lookbackGalleryPopup">
+    <div class="lookbackGalleryBG"></div>
+    <div class="lookbackGalleryContainer">
+        <aside class="lookbackGalleryClosed" onclick="lookbackGallery(0)"><i class="fa fa-times"></i></aside>
+        <div class="lookbackGallerySlider"> 
+            <div class="items">
+                <img src="images/applications/1_large.jpg" alt="lookback" />
+                <aside>
+                    <b>First Day Excitement</b>
+                    <span>INKOMPASS intern looks snappy and ready for the first day of her internship in the marketing function.</span>
+                </aside>
+            </div>
+            <div class="items">
+                <img src="images/applications/2_large.jpg" alt="lookback" />
+                <aside>
+                    <b>Gaga at OGA</b>
+                    <span>Candidates enjoying and having a great time at the INKOMPASS On-Ground Assessment where they engaged in a number of fun activities!</span>
+                </aside>
+            </div>
+            <div class="items">
+                <img src="images/applications/3_large.jpg" alt="lookback" />
+                <aside>
+                    <b>Ideation before action</b>
+                    <span>An INKOMPASS intern in an ideation discussion with his buddy regarding his project that directly contributes towards a smoke-free future.</span>
+                </aside>
+            </div>
+            <div class="items">
+                <img src="images/applications/4_large.jpg" alt="lookback" />
+                <aside>
+                    <b>Mentor session</b>
+                    <span>A mentor involved in an active brainstorming session with the interns and guiding them through the basics of a project.</span>
+                </aside>
+            </div>
+            <div class="items">
+                <img src="images/applications/5_large.jpg" alt="lookback" />
+                <aside>
+                    <b>Day begins with a smile</b>
+                    <span>INKOMPASS interns excited to work, learn and grow.</span>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- lookback  Popup  end -->
 
 
 

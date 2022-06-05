@@ -339,8 +339,16 @@ if($(".faqscontainer").length > 0)
 {
     $(".faqscontainer ul li").click(function()
     {
+        var faqsjump;
+        if($(window).width() > 1255)  faqsjump = 90;
+        else  faqsjump = 60;
         var getName = $(this).attr("data-id");
-        $('html, body').animate({scrollTop: $("#" + getName + "_top").offset().top - 80 }, 1000);
+        var faqsDuration;
+        if(getName == 'faqsapplication') faqsDuration = 500;
+        else if(getName == 'faqsselection') faqsDuration = 1000;
+        else if(getName == 'faqsprojectwork') faqsDuration = 1500;
+        else faqsDuration = 0;
+        $('html, body').animate({scrollTop: $("#" + getName + "_top").offset().top - faqsjump }, faqsDuration);
     });
     $(".faqsbody aside").click(function()
     {
@@ -484,16 +492,26 @@ if($("#show_more_country").length > 0)
     });
     $('#show_less_country').on('click', function () 
     {
-        if($(window).width() > 1023) count = 12;
-        else if($(window).width() < 1023 && $(window).width() > 599) count = 8;
-        else if($(window).width() < 599 && $(window).width() > 479) count = 6;
-        else count = 4;
-        $("#show_more_country").show();
-        $("#show_less_country").hide();
-        $('#listofcountry li').slideUp(300);
-        $('#listofcountry li').slice(0, counter).show(300);
+        var showLessShowMoreJump;
+        if($(window).width() > 1255)  showLessShowMoreJump = 45;
+        else  showLessShowMoreJump = 25;
+        $('html, body').animate({ scrollTop: $(".searchbycountry").offset().top - showLessShowMoreJump }, 500); 
+
+
+        setTimeout(function() {
+            if($(window).width() > 1023) count = 12;
+            else if($(window).width() < 1023 && $(window).width() > 599) count = 8;
+            else if($(window).width() < 599 && $(window).width() > 479) count = 6;
+            else count = 4;
+            $("#show_more_country").show();
+            $("#show_less_country").hide();
+            $('#listofcountry li').slideUp(500);
+            $('#listofcountry li').slice(0, count).show(500);
+        }, 500);
     });
 }
+ 
+
 
 if($("#findcountry").length > 0)
 {
@@ -545,6 +563,42 @@ if($("#findcountry").length > 0)
 
 
 /* ############################ application === start ############################ */
+function lookbackGallery(type, posision)
+{
+    if(type == 0) // close gallery
+    {
+        $(".lookbackGalleryPopup").fadeOut(500);
+    }
+    else if(type == 1) // open gallery
+    {
+        $(".lookbackGalleryPopup").fadeIn(500);
+         $('.lookbackGallerySlider').slick('slickGoTo', posision);
+    }
+    else 
+    {
+        // nothing
+    }
+}
+
+if($(".lookbackGallerySlider").length > 0)
+{
+    $('.lookbackGallerySlider').slick({ // lookback slider
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true,
+            adaptiveHeight: true,
+            centerMode: false,
+            centerPadding: '0',
+            initialSlide: 0
+    });
+}
+    
+
+
 $(function($) 
 {
     if($(".lookbackwrap").length > 0)
@@ -613,7 +667,12 @@ function gotothe(tabID, sectionID, scrollDuration) // click to jump
 {
     $("#margket_nav_menu li").removeClass('active');
     $("#"+tabID).addClass('active');
-    $('html,body').animate({ scrollTop: $("#section_"+sectionID).offset().top - 50 }, scrollDuration);
+    var gototheJump;
+    if($(window).width() > 1255)  gototheJump = 90;
+    else  gototheJump = 60;
+
+
+    $('html,body').animate({ scrollTop: $("#section_"+sectionID).offset().top - gototheJump }, scrollDuration);
 }
 function isOnScreen(elem)  // element is visible in viewport 
 {
@@ -796,7 +855,7 @@ $(function($)
             size: "5px",
             color: "#14A0D2",
             position: "right",
-            distance: "1px",
+            distance: "0",
             start: "top",
             opacity: 0.8,
             alwaysVisible: false,
@@ -819,12 +878,10 @@ $(function($)
 function viewOpeningDetails(val) // post popup open
 {
     $(".jobOpeningPopup").fadeIn(500);
-    $("body").css("overflow","hidden");
 }
 function closeOpeningDetails() // post popup close
 {
     $(".jobOpeningPopup").fadeOut(500);
-    $("body").css("overflow","auto");
 }
 /* ############################ job opening popup === end  ############################ */
 
