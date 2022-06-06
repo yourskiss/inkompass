@@ -481,16 +481,16 @@ if($("#show_more_country").length > 0)
         count = 4;
     }
     $("#show_less_country").hide();
-    $('#listofcountry li').slice(0, counter).show();
+    $('#listofcountry li').slice(0, counter).slideDown();
     $('#show_more_country').on('click', function (e) 
     {
         e.preventDefault();
         count = count+counter;
-        $('#listofcountry li').slice(0, count).show();
+        $('#listofcountry li').slice(0, count).slideDown();
         if(count > noofcountry)
         {
-            $("#show_more_country").hide();
-            $("#show_less_country").show();
+            $("#show_more_country").fadeOut();
+            $("#show_less_country").fadeIn();
         }
     });
     $('#show_less_country').on('click', function () 
@@ -500,16 +500,11 @@ if($("#show_more_country").length > 0)
         else  showLessShowMoreJump = 25;
         $('html, body').animate({ scrollTop: $(".searchbycountry").offset().top - showLessShowMoreJump }, 500); 
 
-
         setTimeout(function() {
-            if($(window).width() > 1023) count = 12;
-            else if($(window).width() < 1023 && $(window).width() > 599) count = 8;
-            else if($(window).width() < 599 && $(window).width() > 479) count = 6;
-            else count = 4;
-            $("#show_more_country").show();
-            $("#show_less_country").hide();
+            $("#show_more_country").fadeIn();
+            $("#show_less_country").fadeOut();
             $('#listofcountry li').slideUp(500);
-            $('#listofcountry li').slice(0, count).show(500);
+            $('#listofcountry li').slice(0, counter).slideDown(500);
         }, 500);
     });
 }

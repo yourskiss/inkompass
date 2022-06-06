@@ -2531,7 +2531,7 @@ main {
 .boxpart .boxpartInner div p a.shareopportunity span.copyurltext {
   display: none;
   position: absolute;
-  bottom: -50px;
+  bottom: -60px;
   left: 0;
   width: 100%;
   padding: 5px;
@@ -5092,7 +5092,7 @@ main {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 90%;
+  width: 95%;
   max-width: 850px;
   height: auto;
   max-height: 90%;
@@ -5118,8 +5118,8 @@ main {
   position: absolute;
   right: 5px;
   top: 5px;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 0;
   padding: 0;
   font-size: 24px;
@@ -5150,12 +5150,38 @@ main {
   display: block;
   top: 50%;
   bottom: auto;
-  width: 40px;
-  height: 14px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 40px;
+  line-height: 1;
   margin: 0;
   padding: 0;
   border: 0;
-  line-height: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider.slick-slider .slick-arrow.slick-prev {
+  left: 5px;
+}
+
+.lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider.slick-slider .slick-arrow.slick-next {
+  right: 5px;
+}
+
+.lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider.slick-slider .slick-arrow:before {
+  font-family: 'FontAwesome';
+  line-height: 40px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider.slick-slider .slick-arrow.slick-prev:before {
+  content: "\f104";
+}
+
+.lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider.slick-slider .slick-arrow.slick-next:before {
+  content: "\f105";
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-list {
@@ -5184,7 +5210,14 @@ main {
   float: left;
 }
 
-.lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items img {
+.lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items .lookGalleryWeb {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items .lookGalleryMob {
+  display: none;
   width: 100%;
   float: left;
 }
@@ -5317,6 +5350,24 @@ main {
   .lookbackwrap.slick-slider .slick-dots li.slick-active {
     background: #1F3C84;
     border-color: #1F3C84;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items .lookGalleryWeb {
+    display: none;
+  }
+  .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items .lookGalleryMob {
+    display: block;
+  }
+  .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items aside {
+    padding: 0.5rem;
+  }
+  .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items aside b {
+    font-size: 16px;
+  }
+  .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items aside span {
+    font-size: 12px;
   }
 }
 
@@ -5998,6 +6049,96 @@ main {
   margin-left: 10px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+.recruitment_button a.shareopportunity {
+  position: relative;
+  margin-left: 5px;
+  color: #1F3C84;
+  background: #ffffff;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #1F3C84;
+          box-shadow: inset 0px 0px 0px 1px #1F3C84;
+}
+
+.recruitment_button a.shareopportunity i.fa.fa-share-alt {
+  margin-left: 5px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.recruitment_button a.shareopportunity span.copyalerttext {
+  opacity: 0;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 150px;
+  padding: 5px;
+  background: #333333;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: none;
+  word-break: break-all;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: 'latolight';
+  line-height: 1.2;
+  font-size: 12px;
+}
+
+.recruitment_button a.shareopportunity span.copyalerttext:after {
+  content: "\f0d7";
+  position: absolute;
+  bottom: -12px;
+  left: 48%;
+  font-family: 'FontAwesome';
+  color: #333333;
+  font-size: 18px;
+}
+
+.recruitment_button a.shareopportunity span.copyurltext {
+  display: none;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  background: #333333;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: none;
+  word-break: break-all;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: 'latolight';
+  line-height: 1.2;
+  font-size: 12px;
+}
+
+.recruitment_button a.shareopportunity span.copyurltext:after {
+  content: "\f0d8";
+  position: absolute;
+  top: -17px;
+  left: 48%;
+  font-family: 'FontAwesome';
+  color: #333333;
+  font-size: 22px;
+}
+
+.recruitment_button a.shareopportunity:hover {
+  color: #ffffff;
+  background: #1F3C84;
+}
+
+.recruitment_button a.shareopportunity:hover i.fa.fa-share-alt {
+  margin-left: 10px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.recruitment_button a.shareopportunity:hover span.copyalerttext {
+  opacity: 1;
 }
 
 .recruitment_button a.sharebtn {
@@ -7295,9 +7436,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -7308,9 +7449,9 @@ main {
 .internshipwrap .internshipcontainer .countrylist ul li {
   display: none;
   list-style: none;
-  width: 15.5%;
+  width: 15.6%;
   float: left;
-  margin: 0 0 1% 0;
+  margin: 0 0.5% 1% 0.5%;
 }
 
 .internshipwrap .internshipcontainer .countrylist ul li img {
@@ -7421,7 +7562,7 @@ main {
   }
   .internshipwrap .internshipcontainer .countrylist ul li {
     width: 23%;
-    margin: 0 0 2% 0;
+    margin: 0 1% 2% 1%;
   }
   .internshipwrap .internshipcontainer .countrylist ul li p {
     margin-top: 0;
@@ -7435,8 +7576,8 @@ main {
     margin: 0 2% 4% 2%;
   }
   .internshipwrap .internshipcontainer .countrylist ul li {
-    width: 29%;
-    margin: 0 0 4% 0;
+    width: 30.3%;
+    margin: 0 1.5% 4% 1.5%;
   }
 }
 
@@ -7444,6 +7585,7 @@ main {
   /* #################### internship wrap  #################### */
   .internshipwrap .internshipcontainer .countrylist ul li {
     width: 46%;
+    margin: 0 2% 4% 2%;
   }
 }
 
