@@ -2483,6 +2483,7 @@ main {
 }
 
 .boxpart .boxpartInner div p a.shareopportunity {
+  position: relative;
   margin-left: 5px;
   color: #1F3C84;
   background: #ffffff;
@@ -2496,6 +2497,66 @@ main {
   transition: all 0.3s ease-out;
 }
 
+.boxpart .boxpartInner div p a.shareopportunity span.copyalerttext {
+  opacity: 0;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 150px;
+  padding: 5px;
+  background: #333333;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: none;
+  word-break: break-all;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: 'latolight';
+  line-height: 1.2;
+  font-size: 12px;
+}
+
+.boxpart .boxpartInner div p a.shareopportunity span.copyalerttext:after {
+  content: "\f0d7";
+  position: absolute;
+  bottom: -12px;
+  left: 48%;
+  font-family: 'FontAwesome';
+  color: #333333;
+  font-size: 18px;
+}
+
+.boxpart .boxpartInner div p a.shareopportunity span.copyurltext {
+  display: none;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  background: #333333;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: none;
+  word-break: break-all;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: 'latolight';
+  line-height: 1.2;
+  font-size: 12px;
+}
+
+.boxpart .boxpartInner div p a.shareopportunity span.copyurltext:after {
+  content: "\f0d8";
+  position: absolute;
+  top: -17px;
+  left: 48%;
+  font-family: 'FontAwesome';
+  color: #333333;
+  font-size: 22px;
+}
+
 .boxpart .boxpartInner div p a.shareopportunity:hover {
   color: #ffffff;
   background: #1F3C84;
@@ -2505,6 +2566,10 @@ main {
   margin-left: 10px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+.boxpart .boxpartInner div p a.shareopportunity:hover span.copyalerttext {
+  opacity: 1;
 }
 
 .boxpart .boxpartInner div h4 {
@@ -5005,7 +5070,7 @@ main {
   height: 100%;
   width: 100%;
   background-color: #000;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .lookbackGalleryPopup .lookbackGalleryBG {
@@ -5032,11 +5097,11 @@ main {
   height: auto;
   max-height: 90%;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
-  border: solid 3px #1F3C84;
+  border: solid 1px #14A0D2;
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGalleryClosed {
@@ -5059,7 +5124,7 @@ main {
   padding: 0;
   font-size: 24px;
   line-height: 1;
-  background: #1F3C84;
+  background: #14A0D2;
   text-align: center;
   border: none;
   color: #ffffff;
@@ -5069,7 +5134,7 @@ main {
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGalleryClosed:hover {
-  background: #14A0D2;
+  background: #1F3C84;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
@@ -5101,29 +5166,22 @@ main {
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-track {
   padding: 0 !important;
   margin: 0 !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide {
-  height: initial;
   padding: 0 !important;
   margin: 0 !important;
+  position: relative;
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide div {
   float: left;
-  height: 100%;
+  width: 100%;
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items {
   width: 100%;
   float: left;
-  position: relative;
 }
 
 .lookbackGalleryPopup .lookbackGalleryContainer .lookbackGallerySlider .slick-slide .items img {
@@ -5259,6 +5317,12 @@ main {
   .lookbackwrap.slick-slider .slick-dots li.slick-active {
     background: #1F3C84;
     border-color: #1F3C84;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) and (orientation: landscape) {
+  .lookbackGalleryContainer {
+    max-width: 480px;
   }
 }
 
@@ -7965,6 +8029,8 @@ main {
   width: 100%;
   height: 100%;
   background: transparent;
+  background: transparent -webkit-gradient(linear, left bottom, left top, from(#000), color-stop(60%, #54545400)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(0deg, #000 0%, #54545400 60%) 0% 0% no-repeat padding-box;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -8066,8 +8132,8 @@ main {
   height: 1px;
   overflow: hidden;
   float: left;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out;
 }
 
 .internshipexperiencewrap .internshipexperiencecontainer ul li .items .item h4 {
@@ -8096,8 +8162,8 @@ main {
   overflow: hidden;
   top: 0;
   bottom: auto;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+  -webkit-transition: height 0.5s ease-in;
+  transition: height 0.5s ease-in;
 }
 
 .internshipexperiencewrap .internshipexperiencecontainer ul li:hover .items aside {

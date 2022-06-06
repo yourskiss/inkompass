@@ -114,6 +114,9 @@ $("#headerMenu").click(function(e)
 });
 /* header Menu === end */
 
+
+
+
 /* application open on header === start */
 $("#headerApplication").hover(function(e)
 {
@@ -737,6 +740,31 @@ $(window).scroll(function()  // add remove active class by element position
         }
     }
 });
+
+if($(".shareopportunity").length > 0)
+{
+    $(".shareopportunity").append("<span class='copyalerttext'>Click to copy url</span>");
+    $("#hidclipboard").val(window.location.href);
+    $(".shareopportunity").append("<span class='copyurltext'>Url copied : "+ $("#hidclipboard").val() + "</span>");
+}
+function CopyToClipBoard() {
+    /* Get the text field */
+    var copyText = $("#hidclipboard");
+    /* Select the text field */
+    copyText.select();
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.val());
+
+    $(".shareopportunity .copyalerttext").fadeOut(300);
+    $(".shareopportunity .copyurltext").fadeIn(300);
+}
+
+function CopyToClipBoardOut() {
+    $(".shareopportunity .copyalerttext").fadeIn(300);
+    $(".shareopportunity .copyurltext").fadeOut(300);
+}
+
+
 /* ############################ application === end ############################ */
 
 
