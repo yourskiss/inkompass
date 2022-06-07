@@ -466,7 +466,7 @@ if($("#internshipTitle").length > 0 && $("#internshipLocation").length > 0 && $(
 if($("#show_more_country").length > 0)
 {
     var noofcountry = parseInt($('#listofcountry li').length);
-    let counter, count;
+    var counter, count;
     if($(window).width() > 1023){
         counter = 12;
         count = 12;
@@ -496,13 +496,25 @@ if($("#show_more_country").length > 0)
     $('#show_less_country').on('click', function () 
     {
         var showLessShowMoreJump;
-        if($(window).width() > 1255)  showLessShowMoreJump = 45;
-        else  showLessShowMoreJump = 25;
-        $('html, body').animate({ scrollTop: $(".searchbycountry").offset().top - showLessShowMoreJump }, 500); 
-
+        if($(window).width() > 1255)  showLessShowMoreJump = 100;
+        else  showLessShowMoreJump = 60;
+        $('html, body').animate({ scrollTop: $(".searchbycountry").offset().top - showLessShowMoreJump }, 300); 
         setTimeout(function() {
-            $("#show_more_country").fadeIn();
-            $("#show_less_country").fadeOut();
+            if($(window).width() > 1023){
+                counter = 12;
+                count = 12;
+            }else if($(window).width() < 1023 && $(window).width() > 599){
+                counter = 8;
+                count = 8;
+            }else if($(window).width() < 599 && $(window).width() > 479){
+                counter = 6;
+                count = 6;
+            }else{
+                counter = 4;
+                count = 4;
+            }
+            $("#show_more_country").fadeIn(300);
+            $("#show_less_country").fadeOut(300);
             $('#listofcountry li').slideUp(500);
             $('#listofcountry li').slice(0, counter).slideDown(500);
         }, 500);
@@ -802,36 +814,6 @@ function toggelTranscript()
 
 
 
-/* ############################ home/program last slide removed === start ############################ */
-if($(window).width() > 479)
-{
-    var peoplesSliderIndex = $(".ourpeoplesSlider > *").length;
-    var peoplesSliderLast = peoplesSliderIndex - 1;
-}
-
-var latestSliderIndex = $(".latestatHereSlider > *").length;
-var latestSliderLast = latestSliderIndex - 1;
-
-$(window).on("load", function()
-{
-    if($("#peoplesSlickSlider").length > 0 || $("#ctl03_CLContentDataViewMeetOurInterns").length > 0 || $("#ctl03_CLContentDataViewMeetOurCoaches").length > 0)
-    {
-        if($(window).width() > 479)
-        {
-            $('.ourpeoplesSlider').slick('slickRemove', peoplesSliderLast);
-        }
-        else 
-        {
-            $('.ourpeoplesSlider').find(".items:last-child").remove();
-        }
-    }
-    if($("#latestSlickSlider").length > 0 || $("#ctl03_CLContentDataViewLatestatInkompass").length > 0)
-    {
-        $('.latestatHereSlider').slick('slickRemove', latestSliderLast);
-    }
-});
-/* ############################ home/program last slide removed === end ############################ */
-
 
 
 /* ############################ our peoples Slider === start ############################ */
@@ -861,11 +843,6 @@ $(function($)
                     breakpoint: 479,
                     settings: "unslick"
                 }
-                // ,
-                // {
-                //     breakpoint: 479,
-                //     settings: { centerPadding: '6px', arrows: false, slidesToShow: 1, slidesToScroll: 1 }
-                // } 
             ]
         });
     }
@@ -915,6 +892,39 @@ function closeOpeningDetails() // post popup close
     $(".jobOpeningPopup").fadeOut(500);
 }
 /* ############################ job opening popup === end  ############################ */
+
+
+
+
+/* ############################ home/program last slide removed === start ############################ */
+if($(window).width() > 479)
+{
+    var peoplesSliderIndex = $(".ourpeoplesSlider > *").length;
+    var peoplesSliderLast = peoplesSliderIndex - 1;
+}
+
+var latestSliderIndex = $(".latestatHereSlider > *").length;
+var latestSliderLast = latestSliderIndex - 1;
+
+$(window).on("load", function()
+{
+    if($("#peoplesSlickSlider").length > 0 || $("#ctl03_CLContentDataViewMeetOurInterns").length > 0 || $("#ctl03_CLContentDataViewMeetOurCoaches").length > 0)
+    {
+        if($(window).width() > 479)
+        {
+            $('.ourpeoplesSlider').slick('slickRemove', peoplesSliderLast);
+        }
+        else 
+        {
+            $('.ourpeoplesSlider').find(".items:last-child").remove();
+        }
+    }
+    if($("#latestSlickSlider").length > 0 || $("#ctl03_CLContentDataViewLatestatInkompass").length > 0)
+    {
+        $('.latestatHereSlider').slick('slickRemove', latestSliderLast);
+    }
+});
+/* ############################ home/program last slide removed === end ############################ */
 
 
 
