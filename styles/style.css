@@ -4516,6 +4516,7 @@ main {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .opportunitieswrap .opportunitiescontainer .opportunitiestable table td a:hover {
@@ -4525,6 +4526,7 @@ main {
 }
 
 .opportunitieswrap .opportunitiescontainer .opportunitiestable table td i.fa.fa-share-alt {
+  display: none;
   font-style: normal;
   margin-left: 0.7rem;
   color: #1F3C84;
@@ -4542,23 +4544,23 @@ main {
 }
 
 .opportunitieswrap .opportunitiescontainer .opportunitiestable table td:nth-of-type(1) {
-  width: 33%;
+  width: 35%;
 }
 
 .opportunitieswrap .opportunitiescontainer .opportunitiestable table td:nth-of-type(2) {
-  width: 21%;
+  width: 22%;
 }
 
 .opportunitieswrap .opportunitiescontainer .opportunitiestable table td:nth-of-type(3) {
-  width: 21%;
+  width: 22%;
 }
 
 .opportunitieswrap .opportunitiescontainer .opportunitiestable table td:nth-of-type(4) {
-  width: 15%;
+  text-align: left;
 }
 
 .opportunitieswrap .opportunitiescontainer .opportunitiestable table td:nth-of-type(5) {
-  text-align: right;
+  text-align: center;
 }
 
 .opportunitieswrap .opportunitiescontainer p {
@@ -4990,6 +4992,7 @@ main {
 
 .lookback_activities .lookback_activities_inner .lookbackbox {
   background: #ffffff;
+  cursor: pointer;
 }
 
 .lookback_activities .lookback_activities_inner .lookbackbox img {
@@ -5378,7 +5381,7 @@ main {
 }
 
 .latestatHere {
-  padding: 3rem 0;
+  padding: 2rem 0 3rem 0;
   width: 100%;
   float: left;
   background: #14A0D2;
@@ -5407,7 +5410,7 @@ main {
   width: 114%;
   float: left;
   margin: 0 !important;
-  padding: 0 0 2rem 0;
+  padding: 0 0 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7436,9 +7439,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
