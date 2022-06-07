@@ -1,3 +1,5 @@
+
+
 /* page refresh on orientation change === START */
 $(window).on('orientationchange', function (event) 
 {
@@ -772,6 +774,14 @@ function CopyToClipBoardOut() {
 }
 
 
+
+$(function()
+{
+    if($(".lookbackwrap").length > 0)
+    { 
+        $('.lookbackwrap a').simpleLightbox({navText: ['&lsaquo;','&rsaquo;']});
+    }
+ });
 /* ############################ application === end ############################ */
 
 
