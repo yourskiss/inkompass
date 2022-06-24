@@ -434,7 +434,7 @@ main {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 24px 0;
   float: none;
   background: #ffffff;
 }
@@ -547,7 +547,6 @@ main {
           align-items: center;
   float: right;
   width: auto;
-  margin-top: 5px;
 }
 
 .header-right .headerMenu {
@@ -619,7 +618,7 @@ main {
 
 .header-right .headerApplication {
   background: #1F3C84;
-  padding: 15px 20px;
+  padding: 20px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -643,18 +642,19 @@ main {
 
 .header-right .headerApplication b {
   display: inline-block;
+  margin-top: -2px;
   font-size: 0;
   margin-left: 5px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: url("../Images/go-white.png") no-repeat left top;
   background-size: 100% 100%;
 }
 
 .header-right .headerApplication:hover {
-  padding: 15px 15px 15px 20px;
+  padding-right: 15px;
   background: #0f2867;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -668,7 +668,7 @@ main {
 
 .header-right .headerApplication.active {
   background: #0f2867;
-  padding: 15px 15px 15px 20px;
+  padding-right: 15px;
 }
 
 .header-right .headerApplication.active b {
@@ -680,7 +680,7 @@ main {
   z-index: 6;
   position: absolute;
   right: 0;
-  top: 60px;
+  top: 65px;
   width: 250px;
   float: right;
   height: auto;
@@ -818,7 +818,7 @@ main {
 
 @media only screen and (max-width: 1255px) {
   .header {
-    padding: 0.7rem 0;
+    padding: 11px 0;
   }
   .header aside {
     width: 138px;
@@ -1426,7 +1426,7 @@ main {
 .siteusescookies .sitecookies aside span {
   width: 124px;
   background: #1F3C84;
-  padding: 15px 20px;
+  padding: 20px;
   font-weight: 600;
   line-height: 1;
   font-family: 'latosemibold';
@@ -1455,8 +1455,9 @@ main {
 .siteusescookies .sitecookies aside span b {
   display: inline-block;
   font-size: 0;
-  width: 8px;
-  height: 8px;
+  margin-top: -2px;
+  width: 10px;
+  height: 10px;
   background: url("../Images/go-white.png") no-repeat left top;
   background-size: 100% 100%;
   margin-left: 5px;
@@ -1466,7 +1467,7 @@ main {
 
 .siteusescookies .sitecookies aside span:hover {
   background: #0f2867;
-  padding: 15px 15px 15px 20px;
+  padding-right: 15px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -1508,12 +1509,12 @@ main {
     margin-top: 0.7rem;
   }
   .siteusescookies .sitecookies aside span {
-    width: 100px;
-    padding: 12px 12px;
+    width: 110px;
+    padding: 15px;
     font-size: 12px;
   }
   .siteusescookies .sitecookies aside span:hover {
-    padding: 12px 7px 12px 12px;
+    padding-right: 10px;
   }
 }
 
@@ -1625,7 +1626,7 @@ main {
 
 .home-block p a {
   background: #1F3C84;
-  padding: 17px 20px;
+  padding: 20px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -1656,15 +1657,16 @@ main {
   transition: all 0.3s ease-out;
   display: inline-block;
   font-size: 0;
-  width: 8px;
-  height: 8px;
+  margin-top: -2px;
+  width: 10px;
+  height: 10px;
   background: url("../Images/go-white.png") no-repeat left top;
   background-size: 100% 100%;
 }
 
 .home-block p a:hover {
   background: #0f2867;
-  padding: 17px 15px 17px 20px;
+  padding-right: 15px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -1763,7 +1765,7 @@ main {
 
 /* applicaton block */
 .mainbanner.applicaton {
-  margin-top: 40px;
+  margin-top: 70px;
 }
 
 .applications-block {
@@ -1934,7 +1936,7 @@ main {
   }
   /* applications block */
   .mainbanner.applicaton {
-    margin-top: 31px;
+    margin-top: 38px;
   }
   .applications-block h2 {
     font-size: 30px;
@@ -2402,7 +2404,7 @@ main {
           transform: translateY(-50%);
   background: #ffffff;
   width: 45%;
-  padding: 2rem;
+  padding: 2rem 1rem 2rem 2rem;
 }
 
 .boxpart .boxpartInner div h2 {
@@ -2432,7 +2434,7 @@ main {
 
 .boxpart .boxpartInner div p a {
   background: #1F3C84;
-  padding: 15px 20px;
+  padding: 20px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -2463,15 +2465,16 @@ main {
   transition: all 0.3s ease-out;
   display: inline-block;
   font-size: 0;
-  width: 8px;
-  height: 8px;
+  margin-top: -2px;
+  width: 10px;
+  height: 10px;
   background: url("../Images/go-white.png") no-repeat left top;
   background-size: 100% 100%;
 }
 
 .boxpart .boxpartInner div p a:hover {
   background: #0f2867;
-  padding: 15px 15px 15px 20px;
+  padding-right: 15px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -2600,6 +2603,10 @@ main {
   color: #393939;
   font-weight: 400;
   font-family: 'latoregular';
+}
+
+.boxpart.discover .boxpartInner div {
+  padding: 2rem;
 }
 
 .boxpart.testimonialstory .boxpartInner .boxpartstory {
@@ -3244,7 +3251,7 @@ main {
   bottom: 10px;
   display: inline-block;
   background: #1F3C84;
-  padding: 15px 20px;
+  padding: 20px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -3261,20 +3268,20 @@ main {
 .videosection .videosection_btn b {
   font-size: 125%;
   display: inline-block;
-  margin-left: 2px;
+  margin-left: 5px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
 .videosection .videosection_btn:hover {
   background: #0f2867;
-  padding: 15px 15px 15px 20px;
+  padding-right: 15px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
 
 .videosection .videosection_btn:hover b {
-  margin-left: 7px;
+  margin-left: 10px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -3309,7 +3316,7 @@ main {
 .videostranscripts {
   width: 100%;
   float: left;
-  margin: 0.5rem 0 1rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .videostranscripts span {
@@ -3347,7 +3354,7 @@ main {
   display: none;
   width: 100%;
   float: left;
-  margin: 0 0 1rem 0;
+  margin: 0 0 2rem 0;
   border: solid 1px #ECEFEF;
   padding: 1rem;
 }
@@ -4209,7 +4216,7 @@ main {
 .registeruswrap .registeruscontainer .registerform .formField .formfieldSubmit {
   display: inline-block;
   background: #1F3C84;
-  padding: 15px 20px;
+  padding: 20px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -4237,8 +4244,9 @@ main {
 .registeruswrap .registeruscontainer .registerform .formField .formfieldSubmit b {
   display: inline-block;
   font-size: 0;
-  width: 8px;
-  height: 8px;
+  margin-top: -2px;
+  width: 10px;
+  height: 10px;
   background: url("../Images/go-white.png") no-repeat left top;
   background-size: 100% 100%;
   margin-left: 5px;
@@ -4248,7 +4256,7 @@ main {
 
 .registeruswrap .registeruscontainer .registerform .formField .formfieldSubmit:hover {
   background: #0f2867;
-  padding: 15px 15px 15px 20px;
+  padding-right: 15px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -4575,13 +4583,14 @@ main {
 
 .opportunitieswrap .opportunitiescontainer p a {
   display: inline-block;
-  text-decoration: none;
+  text-decoration: underline;
   color: #1F3C84;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
 .opportunitieswrap .opportunitiescontainer p a:hover {
+  text-decoration: none;
   color: #000000;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -5457,6 +5466,7 @@ body.hidden-scroll {
 .latestatHere .latestatHereInner h2 {
   width: 100%;
   float: left;
+  margin-bottom: 1rem;
   text-align: center;
   font-size: 30px;
   color: #ffffff;
@@ -5846,7 +5856,7 @@ body.hidden-scroll {
 /* #################### market navigation wrap  #################### */
 .market_navigation_wrap {
   position: fixed;
-  top: 78px;
+  top: 100px;
   left: 0;
   right: 0;
   z-index: 4;
@@ -5890,7 +5900,7 @@ body.hidden-scroll {
 .market_navigation_wrap .market_navigation_container div p {
   background: #1F9CD4;
   color: #ffffff;
-  padding: 0.7rem 1.5rem;
+  padding: 0.85rem 1.5rem;
   font-weight: 700;
   font-family: 'latobold';
   font-size: 1rem;
@@ -5926,7 +5936,7 @@ body.hidden-scroll {
 .market_navigation_wrap .market_navigation_container ul {
   width: auto;
   float: right;
-  padding: 0.6rem 0;
+  padding: 14px 0;
 }
 
 .market_navigation_wrap .market_navigation_container ul li {
@@ -6063,7 +6073,7 @@ body.hidden-scroll {
 .recruitment_button a {
   display: inline-block;
   background: #1F3C84;
-  padding: 15px 20px;
+  padding: 20px;
   font-weight: 700;
   font-family: 'latobold';
   font-size: 0.8rem;
@@ -6093,15 +6103,16 @@ body.hidden-scroll {
   transition: all 0.3s ease-out;
   display: inline-block;
   font-size: 0;
-  width: 8px;
-  height: 8px;
+  margin-top: -2px;
+  width: 10px;
+  height: 10px;
   background: url("../Images/go-white.png") no-repeat left top;
   background-size: 100% 100%;
 }
 
 .recruitment_button a:hover {
   background: #0f2867;
-  padding: 15px 15px 15px 20px;
+  padding-right: 15px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -6231,7 +6242,7 @@ body.hidden-scroll {
 .introducing_assessment {
   width: 100%;
   float: left;
-  padding: 3rem 0 0 0;
+  padding: 3rem 0 1rem 0;
   background: #ffffff;
 }
 
@@ -6349,7 +6360,7 @@ body.hidden-scroll {
 
 .careerquizWrap .careerquizContainer .careerquiz div aside a {
   background: #1F3C84;
-  padding: 15px 20px 15px 20px;
+  padding: 20px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -6377,8 +6388,9 @@ body.hidden-scroll {
 .careerquizWrap .careerquizContainer .careerquiz div aside a b {
   display: inline-block;
   font-size: 0;
-  width: 8px;
-  height: 8px;
+  margin-top: -2px;
+  width: 10px;
+  height: 10px;
   background: url("../Images/go-white.png") no-repeat left top;
   background-size: 100% 100%;
   margin-left: 5px;
@@ -6388,7 +6400,7 @@ body.hidden-scroll {
 
 .careerquizWrap .careerquizContainer .careerquiz div aside a:hover {
   background: #0f2867;
-  padding: 15px 15px 15px 20px;
+  padding-right: 15px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -6539,22 +6551,17 @@ body.hidden-scroll {
     display: block;
     margin-left: 0;
     padding: 0.9rem 0;
-    border-bottom: solid 1px #D9D9D9;
+    border-top: solid 1px #D9D9D9;
+  }
+  .market_navigation_wrap .market_navigation_container ul li:first-child {
+    border-top: none;
   }
   .market_navigation_wrap .market_navigation_container ul li.marketNavMobile {
-    display: block;
     border-bottom: none;
     padding-bottom: 1.5rem;
     cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    /* @include display(flex-start, center); */
+    display: none;
   }
   .market_navigation_wrap .market_navigation_container ul li.marketNavMobile img {
     width: 33px;
@@ -6718,12 +6725,12 @@ body.hidden-scroll {
   width: 100%;
   float: left;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .certificatePMI .certificatePMIinsider h3 a {
   background: #1F3C84;
-  padding: 15px 20px;
+  padding: 20px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -6751,8 +6758,9 @@ body.hidden-scroll {
 .certificatePMI .certificatePMIinsider h3 a b {
   display: inline-block;
   font-size: 0;
-  width: 8px;
-  height: 8px;
+  margin-top: -2px;
+  width: 10px;
+  height: 10px;
   background: url("../Images/go-white.png") no-repeat left top;
   background-size: 100% 100%;
   margin-left: 5px;
@@ -6762,7 +6770,7 @@ body.hidden-scroll {
 
 .certificatePMI .certificatePMIinsider h3 a:hover {
   background: #0f2867;
-  padding: 15px 15px 15px 20px;
+  padding-right: 15px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -6786,7 +6794,7 @@ body.hidden-scroll {
   float: none;
   position: relative;
   width: 95%;
-  max-width: 1300px;
+  max-width: 1372px;
   margin: 0 auto;
 }
 
@@ -7478,6 +7486,7 @@ body.hidden-scroll {
 .internshipwrap .internshipcontainer .countrylist {
   width: 100%;
   float: left;
+  margin-top: 1rem;
 }
 
 .internshipwrap .internshipcontainer .countrylist .countrynotfound {
@@ -7510,9 +7519,9 @@ body.hidden-scroll {
 .internshipwrap .internshipcontainer .countrylist ul li {
   display: none;
   list-style: none;
-  width: 15.6%;
+  width: 15.2%;
   float: left;
-  margin: 0 0.5% 1% 0.5%;
+  margin: 0 0.7% 1.5% 0.7%;
 }
 
 .internshipwrap .internshipcontainer .countrylist ul li img {
@@ -7622,8 +7631,8 @@ body.hidden-scroll {
     margin: 0 1% 2% 1%;
   }
   .internshipwrap .internshipcontainer .countrylist ul li {
-    width: 23%;
-    margin: 0 1% 2% 1%;
+    width: 22.4%;
+    margin: 0 1.3% 2.5% 1.3%;
   }
   .internshipwrap .internshipcontainer .countrylist ul li p {
     margin-top: 0;
@@ -7637,8 +7646,8 @@ body.hidden-scroll {
     margin: 0 2% 4% 2%;
   }
   .internshipwrap .internshipcontainer .countrylist ul li {
-    width: 30.3%;
-    margin: 0 1.5% 4% 1.5%;
+    width: 30.1%;
+    margin: 0 1.6% 4% 1.6%;
   }
 }
 

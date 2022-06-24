@@ -688,10 +688,8 @@ function gotothe(tabID, sectionID, scrollDuration) // click to jump
     $("#margket_nav_menu li").removeClass('active');
     $("#"+tabID).addClass('active');
     var gototheJump;
-    if($(window).width() > 1255)  gototheJump = 90;
-    else  gototheJump = 60;
-
-
+    if($(window).width() > 1255)  gototheJump = 125;
+    else  gototheJump = 72;
     $('html,body').animate({ scrollTop: $("#section_"+sectionID).offset().top - gototheJump }, scrollDuration);
 }
 function isOnScreen(elem)  // element is visible in viewport 
@@ -779,7 +777,9 @@ $(function()
 {
     if($(".lookbackwrap").length > 0)
     { 
-        $('.lookbackwrap a').simpleLightbox({navText: ['&lsaquo;','&rsaquo;']});
+        $('.lookbackwrap a').simpleLightbox({
+            navText: ['&lsaquo;','&rsaquo;']
+        });
     }
  });
 /* ############################ application === end ############################ */
