@@ -1,31 +1,69 @@
+* { 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+} 
+
 @import "parts/_normalize.scss";
 @import "parts/_fonts.scss";
 @import "parts/_var.scss";
 @import "parts/_mixin.scss"; 
+
+body {
+    margin:0; 
+    padding:0; 
+    @include Arial();
+    line-height:1.2; 
+    letter-spacing: normal;
+    letter-spacing: normal;
+    color: $blk1;
+    background-color: $wht1;
+    box-sizing:border-box;
+}
+main {
+  display: block;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 136px 0 0 0;
+  overflow: hidden;
+}
+.wrapper { 
+    display: flow-root;
+    width: 96%;
+    max-width: 1640px;
+    float: none;
+    margin: 0 auto; 
+}
+
+@media only screen and (max-width:1565px) 
+{
+  main { padding:112px 0 0 0; }
+}
+
+@media only screen and (max-width:1255px) 
+{
+  main { padding:102px 0 0 0; }
+  .wrapper { width: 92%; }
+
+}
+@media only screen and (max-width:479px) 
+{
+  main { padding:87px 0 0 0; }
+}
+
 @import "parts/_header.scss";
 @import "parts/_footer.scss";
-@import "parts/_usescookies.scss";
+@import "parts/_wishtoconnect.scss";
 @import "parts/_banners.scss";
 @import "parts/_breadcrumbs.scss"; 
-@import "parts/_box.scss"; 
-@import "parts/_slick.scss"; 
-@import "parts/_video.scss";
-@import "parts/_ourpeople.scss"; 
-@import "parts/_journey.scss"; 
-@import "parts/_registerform.scss";
-@import "parts/_opening.scss";
- 
-@import "sty/_home.scss";
-@import "sty/_about.scss";
-@import "sty/_applications.scss";
-@import "sty/_discover.scss";
-@import "sty/_error.scss";
-@import "sty/_exploreopportunities.scss";
-@import "sty/_faqs.scss";
-@import "sty/_programdetails.scss";
-@import "sty/_termandpolicy.scss";
-@import "sty/_testimonial.scss";
+@import "parts/_quicklinks.scss";
+@import "parts/_header-menu.scss";
+@import "parts/_slick.scss";
+@import "parts/_satisfaction-slider.scss";
+@import "parts/_knowledge-and-resources.scss";
 
-  
- 
 
+
+
+@import "pages/_home.scss";

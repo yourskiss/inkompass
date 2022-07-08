@@ -1,0 +1,146 @@
+.highlightservices {
+    z-index: 2; position: relative; margin-top: -80px; width: 100%; float: left; padding: 0 0 4rem 0;
+    .highlightcontent {
+        width: 100%; float: left; @include fBS(); 
+        .highlight {
+            float: left;  width: auto;
+            &.png { 
+                width:56%;
+                ul{
+                    li { width: 23%;}
+                }
+            }
+            &.lpg { 
+                width:42%;
+                ul{
+                    li { width: 31.3%;}
+                }
+            }
+
+            h2 { 
+                width: 100%; float: left;
+                span {  display: inline-block; background-color: $blu1; padding: 10px 20px; text-align: center; color: $wht1; @include Arial(); font-size:14px; line-height: 20px; }
+            }
+            ul {
+                width: 100%; float: left;   @include fBS(); 
+                li {
+                    list-style: none; padding: 1rem;  background-color: $wht1; border-bottom: solid 2px $ong1; border-radius:0 0 3px 3px; cursor: pointer;@include outT();
+                    aside {
+                        width: 100%; float: left;  text-align: center; 
+                        img { max-width: 100%; filter:none;  @include outT(); }
+                    }
+                    p { width: 100%; float: left; margin-top: 0.2rem; text-align: center;  color:$blu1; font-size:16px; line-height: 36px; @include aBold(); @include outT(); }
+                    &:hover { 
+                        border-color: $blu1; background-color: $blu1; @include inT();
+                        img { filter: brightness(0) invert(1);  @include inT();  }
+                        p { color:$wht1; @include inT(); }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+.infomain {
+    width: 100%; float: left; background-color: $ong1; padding: 3rem 0;
+    .wrapper {
+            h2 { width: 100%; float: left; text-align: center; @include eurostile(); color:$wht1; font-size:26px; letter-spacing: 0.78px; line-height:32px; }
+            h3 { 
+                width: 100%; float: left; margin: 1rem 0 2rem 0; text-align: center; color:$wht1; @include Arial(); font-size:18px; letter-spacing:0.45px; line-height:28px; 
+                span { display: block; margin-top: 1px;  @include aBold();  }
+            }
+            ul {
+                width: 100%; float: left; @include fCS();
+                li {
+                    list-style: none; 
+                    aside { 
+                        width: 100%; float: left;  text-align: center;
+                        img { max-width: 100%; }
+                    }
+                    p { margin-top: 0.7rem; width: 100%; float: left;  text-align: center; color:$wht1; font-size:20px; line-height: 28px; @include aBold();  } 
+                }
+            }
+    }
+}
+
+
+
+
+.weoffers {
+    width: 100%; float: left; background-color: $wht1; padding:6rem 0;
+    .wrapper {
+        h2 { 
+            width: 100%; float: left; text-align: left; margin-bottom: 1.5rem; @include fSC(); 
+            span {  color:$blk1; font-size:28px; letter-spacing: 1.68px; line-height: 35px; @include eurostile();  }
+            img { margin-left:5px; max-width: 100%;}
+        }
+        .offergrid { 
+            width:100%; float:left; display: grid; gap:1rem; grid-auto-rows: minmax(auto, auto);
+            .itemgrid { 
+                background:transparent; display: block; position: relative;
+                img { width: 100%; float: left; }
+                section { 
+                    z-index: 2; position:absolute; background-color: $wht1; padding:2rem 1.5rem;  box-shadow: 0px 6px 12px #00000014;
+                    h3 { width: 100%; float: left; text-align: left; color:$blk1; font-size:22px; line-height: 26px;  @include aBold(); }
+                    p { width: 100%; float: left;  margin:0.5rem 0 1rem 0; text-align:left; color:$blk2; font-size:18px; line-height: 28px; @include Arial();  }
+                    aside {
+                        width: 100%; float: left; text-align: left;
+                        a { 
+                            display: inline-block; width:auto; text-align: center; text-decoration: none; @include outT(); padding:10px 25px; border:none; background-color:$ong1; color: $wht1; @include eurostile(); font-size:16px; letter-spacing: 0.4px; line-height: 20px; text-transform: uppercase;
+                            &:hover {  @include inT(); background-color:$blk1;  color: $wht1; }
+                        }
+                    }
+                }
+                &.one { 
+                    grid-column:1;grid-row:1; 
+                    section { width: 580px; top:30%; left:90%; }
+                 }
+                &.two { 
+                    grid-column: 1; grid-row: 2; 
+                    img { width: 85%; float: right; }
+                    section { width: 450px; top:25%; left:0%; }
+                }
+                &.four { 
+                    grid-column: 1; grid-row:3;
+                    section { width: 550px; top: auto; bottom:-20px; left:90%; }
+                }
+                &.three {
+                     margin-top: 100px; margin-bottom: -100px; grid-row-start: 2; grid-row-end:3; grid-column-start:2; grid-column-end:2;
+                     section { width: 450px; top: -90px; left: 6%; }
+                 }
+                
+            }
+        }
+    }
+}
+
+
+.safetyispriority{
+    width: 100%; float: left; background-color:$wht1; position: relative;
+    img { width: 100%;}
+    .wrapper {
+        padding:3rem 0 3rem 0; position:absolute; z-index:1; left: 50%; top: 50%; transform: translate(-50%, -50%);
+        h2 { width: 100%; float: left; text-align: center;  color:$wht1; font-size:28px; line-height: 44px; text-shadow: 0px 3px 6px #00000077;
+            text-transform: uppercase; @include eurostile(); }
+        h3 { width: 100%; float: left; margin: 0.5rem 0 1rem 0; text-align: center; color:$wht1; font-size:18px; line-height: 28px; text-shadow: 0px 3px 6px #0000003d; @include Arial();  }
+        p { 
+            width: 100%; float: left; text-align: center; color:$wht1; font-size:22px;  line-height: 26px; @include aBold(); text-shadow: 0px 3px 6px #00000041;
+            a {
+                text-decoration: none; color: $wht1;
+                &:hover { color: $blu1; }
+            }
+        }
+        aside {
+            width: 100%; float: left; margin: 1rem 0 0 0;  text-align: center;
+            a { 
+                display: inline-block; width:auto; text-align: center; text-decoration: none; @include outT(); padding:10px 25px; border:none; background-color:$ong1; color: $wht1; @include eurostile(); font-size:16px; line-height: 0.4px; line-height: 20px; text-transform: uppercase;
+                &:hover {  @include inT(); background-color:$blk1;  color: $wht1; }
+            }
+        }
+    }
+}
+
+
+

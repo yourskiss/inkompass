@@ -1,0 +1,95 @@
+.mobilemenuBG { display:none;  z-index:6; position: fixed; top:0; left: 0; width: 100%; height: 100%; background-color: $blk1;  background:rgba(0,0,0,.9); }
+.mobilemenu { 
+    display: none; z-index: 7; position: fixed; top: 0; right:0; width: 320px; height: 100vh; float: left; overflow: hidden; overflow-y: scroll; padding:1rem 0 1rem 0; box-shadow: 0px 0px 6px #00000029; background-color: $wht1;
+    aside { 
+        width: 100%; float: left; padding: 0  1.5rem; text-align: right; 
+        i.fa { 
+            font-size: 25px; color: $blk1; @include outT();
+            &:hover { color:$ong1; @include inT(); }
+        }
+    }
+    h4 { 
+        width: 100%; float: left; @include fSC(); padding:1rem 1.5rem;
+        i.fa { color:$ong1; font-size: 42px;margin-right: 1rem; }
+        a {
+            text-decoration: none; color: $blk1; 
+            span{ 
+                color: $blk1; line-height:24px;
+                &:first-child { @include aBold(); font-size: 18px; display: block; }
+                &:last-child {  @include Arial(); opacity: 0.7; font-size: 14px; border-bottom: solid 1px #333; }
+            }
+        }
+    }
+    ul {
+        width: 100%; float: left; 
+        li {
+            list-style: none; width: 100%; float: left; border-bottom: solid 1px $blk8;
+            h2 {  
+                position:relative; width: 100%; float: left; padding:1rem 1.5rem;  background-color: $wht1; @include fSC(); font-size: 18px; line-height:1; @include Arial(); color: $blk1;  @include outT(); cursor: pointer;
+                img { width: 25px; filter: grayscale(1); }
+                span { margin-left: 1rem; } 
+                &:after { content: "\f107"; position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); font-size: 20px; color: $blk1; @include FA();  }
+                &.active {
+                    color: $ong1; 
+                    img { filter: grayscale(0);  }
+                    &:after { content: "\f106"; color: $ong1; }
+                }
+                &.more_h2 { 
+                    background-color: $blk6; color: $wht1;
+                    img { filter: grayscale(0);  }
+                    &:after { color: $wht1; }
+                 }
+                &.nosubmenu { 
+                    &:after { display: none; }
+                    &:hover { color: $ong1; }
+                }
+            } 
+            a {
+                text-decoration: none; width: 100%; float: left; padding:0 1.5rem; font-size: 18px; line-height:45px; @include Arial(); color: $blk1;  @include outT();
+                &:hover { color: $ong1; @include inT(); }
+            }
+            ul {
+                display:none; width: 100%; float: left; padding-bottom: 0.5rem; padding-left:4rem;
+                li { 
+                    list-style: none; width: 100%; float: left;  background-color: $wht1; border-bottom:none;
+                    h3 {  width:auto; float: left; border-bottom: solid 2px $blu1; margin:0 0 5px 0; background-color: $wht1; font-size: 16px; line-height:30px; @include aBold(); color: $blu1; } 
+                    a { 
+                        text-decoration: none;  width: 100%; float: left; padding:0; font-size: 16px; line-height:30px; @include Arial(); color:$blk3;  @include outT();
+                        &:hover { color: $ong1; @include inT();  }
+                    }
+                    ol {
+                        padding-bottom: 0.5rem;
+                    }
+                }
+                &.more_ul{
+                      background-color: $blk6;
+                    li { 
+                        background-color: $blk6; border-bottom:none;
+                        a { 
+                            color:$wht1;  
+                            &:hover { color: $ong1; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menusocial{
+        width: 100%; float: left;  padding:3rem 1.5rem 1rem 1.5rem; 
+        h5{
+            width: 100%; float: left; @include fSC();
+            a { 
+                margin-right: 2rem; text-decoration: none; @include outT(); color: $blu1; font-size: 24px; 
+                &:hover {  @include inT(); color:$ong1; }
+            }
+        }
+    }
+    p { width: 100%; float: left; margin-top:0.5rem; text-align: left; color: $blk2; font-size: 12px; @include Arial(); }
+}
+
+ 
+
+@media only screen and (max-width:359px) 
+{
+    .mobilemenu {  width: 100%; }
+}

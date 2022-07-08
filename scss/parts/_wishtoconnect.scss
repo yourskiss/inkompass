@@ -1,0 +1,41 @@
+
+
+.wishtoconnect { 
+    width: 100%; float: left; padding:3rem 0; background-color:$ong1;
+    .wrapper { 
+         @include fSS();
+        .wishtoconnectposter {
+            width: 25%; float: left; margin-right: 120px; 
+            img { width: 100%; margin-top:-70px; }
+        }
+        .wishtoconnectcontent {
+            width: 55%; float:left;
+            h2 {width: 100%; float: left; text-align: left;  font-size: 28px; letter-spacing:1.68px; line-height: 35px; color: $wht1; @include eurostile(); text-transform: uppercase;  }
+            p {width: 100%; float: left; text-align: left; margin:0.5rem 0 2rem 0;  font-size: 18px; line-height: 24px;  color: $wht1;  @include aBold();  }
+            ul {
+                width: 100%; float: left; @include fSS(); flex-wrap: wrap;
+                li {
+                    list-style: none; margin:0 2% 2rem 0;
+                    &.width25 { width: 23%; }
+                    &.width75 { width: 73%; }
+                    &:last-child { width: 100%; margin: 0; }
+                    .errorMsg { display: none; width: 100%; float: left; margin-top: 5px; font-size: 14px; color: $blk1; @include Arial(); text-align: left; }
+                    input[type='text'] {  
+                        width: 100%; float: left; padding:5px 0; background:transparent; outline: none; border:none; border-bottom: solid 1px $wht1; text-align: left; font-size: 18px; line-height: 24px; color: $wht1; @include Arial();
+                        &::placeholder { color: $wht1; opacity: 0.9; }      
+                        &:-ms-input-placeholder { color: $wht1; opacity: 0.9; }
+                        &::-ms-input-placeholder { color: $wht1; opacity: 0.9;  }
+                    }
+                    select {  
+                        width: 100%; float: left; padding:5px 0; background:transparent; outline: none; border:none; border-bottom: solid 1px $wht1; text-align: left; font-size: 18px;  line-height: 24px; color: $wht1;  @include Arial();
+                        option { color: $blk1; }
+                    }
+                    input[type='submit'], input[type='button'] { 
+                        display: inline-block; width:auto; text-align: center; text-decoration: none; @include outT(); padding:10px 25px; border:none; background-color:$blu1; color: $wht1; @include eurostile(); font-size:16px; letter-spacing: 0.4px; line-height: 20px; text-transform: uppercase; cursor: pointer;
+                        &:hover {  @include inT(); background-color:$wht1;  color: $blu1; }
+                    }
+                }
+            }
+        }
+    }
+}

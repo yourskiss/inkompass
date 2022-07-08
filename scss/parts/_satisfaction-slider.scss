@@ -1,0 +1,77 @@
+
+
+.satisfactionwrap {
+    width: 100%; float: left; background-color:$wht1; padding:4rem 0 7rem 0;
+    .wrapper {
+        h2 { 
+            width: 100%; float: left; margin-bottom: 1.5rem; text-align: left; @include fSC(); 
+            span {  color:$blk1; font-size:28px; letter-spacing: 1.68px; line-height: 35px; @include eurostile(); }
+            img { margin-left:5px; max-width: 100%;}
+        }
+        .satisfactionLarge {
+            width: 100%; float: left; position: relative;
+            .satisfactionVideo { 
+                z-index: 3; display: none; position:absolute; left: 0; top: 0; height: 100%; width: 100%; background:$wht1 url('../Images/loader.gif') no-repeat center center;
+                iframe {  display:block; z-index:4; position: absolute;left:0px; top:0px;width:100%; height:100%; border:0; margin:0; padding:0; background:none;   }
+                span { 
+                    display:block; z-index:5; position: absolute;right:-7px;top:-15px; text-align:center; height:32px; width:32px; font-size: 21px; line-height: 30px; border-radius: 0; background:$ong1; border:0; color:$wht1;  cursor: pointer; @include outT();
+                    &:hover { background:$blu1; color:$wht1; @include inT(); }
+                }
+            }
+            .satisfactionSlider { 
+                width: 100%; float: left;  
+                    .items { 
+                        background-color: $blu1;  @include fBS(); width: 100%; display: flex !important; align-items: stretch; height: 100%;
+                        .satisfactionMedia { 
+                            width: 50%; float: left; position: relative;
+                            .playiconsbig { 
+                                z-index: 3; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background:rgba(62,62,62,0.5); border-radius: 50%; @include fCC(); cursor: pointer;
+                                i.fa { color: $wht1; font-size: 24px;  @include outT(); } 
+                                &:hover {
+                                    i.fa { color: $ong1; @include inT(); } 
+                                }
+                            }
+                            img { width: 100%;}
+                        }
+                        .satisfactionContent { 
+                            width: 50%; float: left; padding: 0; position: relative;
+                            .textb {
+                                position:absolute; top:10%; left:-7%; width:100%; height: 80%; float: left; border: solid 6px $wht1; border-left: none; padding:4rem 4rem 4rem 8rem; @include fSC(); background:transparent;
+                                &:before { content: ''; position: absolute; left: 0; top: 0; width:6px; height: 18%; background-color: $wht1; }
+                                &:after { content: ''; position: absolute; left: 0; bottom: 0; width:6px; height: 48%; background-color: $wht1; }
+                                p {
+                                    position: relative; color:$wht1;  @include Arial(); font-size:18px; line-height:30px;
+                                    b{  @include aBold(); }
+                                    &:after { content: ''; position: absolute;left: -31%; top: -10px;   width:100px; height: 108px;  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAAB2CAYAAAAp3qYNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMy4wIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxRTNGNDY1Q0ZEMUExMUVDQjJFNEJFMDk3OTU3OThCQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxRTNGNDY1REZEMUExMUVDQjJFNEJFMDk3OTU3OThCQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFFM0Y0NjVBRkQxQTExRUNCMkU0QkUwOTc5NTc5OEJDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFFM0Y0NjVCRkQxQTExRUNCMkU0QkUwOTc5NTc5OEJDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+0eznewAAA4tJREFUeNrsndFR20AQQC2P/3EHUSpAqSBKBdCBnQriVBB1gDuwOwgd2FSAqQBTQUwFF93MMePxGGNrV9o78d6Mhi8Ord7t3t3KQOacG0B6DHkEiAPEAeIQB4gDxCEOEAeIA8QhDhAHiEMcIA4QB4hDHCAOEIc4QBwgDhCHOEAcIK7XjATfuzK6599Zlm20BnPOzesv15ZxNPnFG4m40kjcWHm8or6+pxYHpZI1DhAHiEMcIA4QhzhAHCAOEIc4QBwgDnGAOEAcIA5xgDjoUtwLjy9NcVseH6USEIe4z8IOcWmyQRywq4TTjIzEPdRXFUlpk6xxT/U1s4hjZDVjsixb92CNc1ZxDI1mal8oUlzjJDP1C8eBNDMuj+UBSH+71TmXJyVOIeAiogksaZgXqWXc264qufVBeYecpLhdT8RJdoZliuIkAd/0JOOu67I//kzi8ojWOUkcXtptauKkXYxZDNbqjdZWuEGZJCWuDngn3KDcWJSZNta5ro8FQ+OAx7FknTAOz12nVaLp/wGvs23/APosvI+voVyZETLf38OVYJgfTXqXTRyIMy488AfhMIsI1jlf9u+lcXRV+rVepC6F3+/XCHN5CnH46rPqqkQ0uo6Ms3Vy5tbm6ntYK8SxaNuBprip0+HOWFypFMffc8umqTjFrPM8WnXdQxz3SnE8n9NkiEGc1mz1/KuviZE439XZKcbx51T2mYsLNzF3uvhZe2sgb9ZCHJNoxYUb2Th9Vj7wLjstiiXzUOCv/ThiElcolppjpWfRxRroH67iun109xmWl4uffysfiA1vx6ctPc9xGLv1NwvhUO7L9GtLP8LHUZq0vD6YsdOWuiIv9c/POyyZRehlXikP/RoO7Re/kB62PGN9J+JnC0NXHbfDNiEztDNvHrLarnPyUeYprgtmzWjltXv3tkGJZo17J/O+Kc3YykpcyDxfNp8UhrtvnG1dZdzBjJUcFaL48GrYbUqPCnl0x4EzAq8aBlsNIiIc0puUzmWUB/ALmrnbJmtCZPLyBm8U8mTF7ZWc6sxZWw0iJmzAtpdmW5LiLhAYZbadEHhqIpa9EXcgcH4k8OUgIUIcsyMZuI66yaw4c9fH1oTEJJZ7O9BSS1yrLS+t2Ss670S0iXnvk2xNHGRdZA/ow5/LQBwgDhCHOEAcIA5xgDhAHCAOcYA4QBziAHGAOEAc4gBxgDjEQcz8F2AAbU7nAlam7dwAAAAASUVORK5CYII=') no-repeat; background-position: 20% 0; background-size: 100% 100%; }
+                                }
+                            }
+                        }
+                }
+            }
+        }
+         .satisfactionThumb{
+            width:80%; float: left; margin:2rem 10% 0 10%; 
+            .satisfactionNav { 
+                position: relative; width:100%; float: left; margin:0; 
+                .slick-slide { 
+                    margin: 0 10px; cursor: pointer;
+                    .item { 
+                        position: relative;
+                        .playicons { 
+                            z-index: 3; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; background:rgba(62,62,62,0.5); border-radius: 50%; @include fCC();  cursor: pointer;
+                            i.fa { color: $wht1; font-size: 18px;  @include outT(); } 
+                            &:hover {
+                                i.fa { color: $ong1; @include inT(); } 
+                            }
+                        }
+                        img { width: 100%; padding: 5px; border: solid 1px $wht1; }
+                    }
+                    &.slick-current {
+                        img { border-color:$ong1; }
+                    }
+                }
+            }
+         }
+        
+    }
+}

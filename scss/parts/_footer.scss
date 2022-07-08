@@ -1,127 +1,128 @@
-.share-nav { width:100%; float:left; padding:1rem; background:$shareNavBg; @include display(center, center); overflow: hidden; }
-.share-nav aside { margin-left:1rem; @include display(center, center);  }
-.share-nav aside a { @include borderradius(50%); @include display(center, center); background:$darkBlue; height: 50px; width: 50px; margin: 0 10px; text-decoration:none;   color:$white; cursor:pointer; @include transition(ease-out); }
-.share-nav aside a:hover { background:$white; color:$darkBlue;  @include transition(ease-in); }
-.share-nav aside a i.fa { font-size:1.5rem;}
-.share-nav p { font-weight:400; font-family:'latoregular'; font-size:18px; color:$white;  }
-
-.share-nav .sharethis-inline-share-buttons { z-index:1 !important; @include display(center, center);  display:flex !important; margin-left:5px !important; }
-.share-nav .sharethis-inline-share-buttons .st-btn {  @include display(center, center); display:flex !important; background:$darkBlue; height:50px !important; width: 50px !important; margin: 0 0 0 10px !important; border-radius:50% !important; padding:0 !important; line-height:1 !important; text-decoration:none; color:$white; cursor:pointer; position: static !important; opacity: 1 !important; transition: all 0.5s ease-out  !important;   }
-.share-nav .sharethis-inline-share-buttons .st-btn:hover { background:$lightBlue !important; position: static !important; top: 0 !important; opacity: 1 !important; color:$white; transition: all 0.5s ease-in  !important; }
-.share-nav .sharethis-inline-share-buttons .st-btn img { position: static !important; width:1.5rem  !important; height:auto !important; filter: none !important; }
 
 
-
-.footer { width:100%; float:left; background: $footerBG; text-align:center; overflow: hidden; }
-.footer-inner { display:inline-block; width:95%; max-width:1372px; margin:0 auto; float:none; }
-
-.footer section { 
-    width:100%; float:left; padding: 1.5rem 0; @include display(space-between, flex-start); align-items: stretch; 
-    ul { 
-        height: inherit; width:25%; border-right:solid 1px $footerLine; padding: 0 2rem 0 4rem; 
-        &:first-child { padding-left:0; }
-        li { 
-            list-style:none;  text-align:left; margin-bottom:.4rem; 
-            &:last-child { margin-bottom:0; }
-            h2 { margin-bottom:1rem; font-size:18px; font-weight:700; font-family:'latobold'; color:$lightBlack }
-            a { 
-                text-decoration:none; font-size:16px; color: $ultralightBlack;  font-weight:400; font-family:'latoregular'; @include transition(ease-out); 
-                &:hover { color:$footerLiA; @include transition(ease-in); }
+.footer { 
+    width: 100%; float: left; padding:3rem 0; background-color: $wht1;
+    .wrapper { 
+         max-width: 1440px; @include fBS();
+        .footerleft {
+            width: 300px; float: left; margin-right: 50px;
+            aside { 
+                width: 100%; float: left;
+                img { max-width: 100%;}
             }
+            dl {
+                width: 100%; float: left; margin-top:1.5rem;  
+                dt { 
+                    width: 100%; float: left; margin-bottom:0.6rem;
+                    a { 
+                        display: inline-block; width:190px; text-align: center; text-decoration: none;@include outT(); padding:7px 0; border: solid 2px $ong1; background-color:$ong1; color: $wht1; @include eurostile(); font-size:14px; text-transform: uppercase;
+                        &:hover {  @include inT(); background-color:$blu1; border-color:$blu1; color: $wht1; }
+                    }
+                }
+                dd { 
+                    width: 100%; float: left;
+                    a { 
+                        display: inline-block; width: 190px; text-align: center; text-decoration: none;@include outT(); padding:7px 0; border: solid 2px $ong1; background-color:$wht1; color: $ong1; @include eurostile(); font-size:14px;  text-transform: uppercase;
+                        &:hover {  @include inT(); background-color:$blu1; border-color:$blu1; color: $wht1; }
+                    }
+                }
+            }
+            ul{
+                width: 100%; float: left; margin-top:2.5rem; @include fSC();
+                li{
+                    list-style: none;  margin:0 25px 0 0;
+                    a { 
+                        text-decoration: none;@include outT(); color: $blu1; font-size: 24px; 
+                        &:hover {  @include inT(); color:$ong1; }
+                    }
+                }
+            }
+            p { display: block; width: 100%; float: left; margin-top: 1rem; text-align: left; color: $blk2; font-size: 12px; @include Arial(); }
         }
-    &.followus { 
-        border-right:none; 
-        li{
-            a { 
-                margin-right:9%; font-size:2rem; color:$lightBlue2; 
-                &:hover { color: $ultralightBlack;  }
+        .footerright {
+            width:100%; float:right;
+            ul{
+                width: 100%; @include fSS(); flex-wrap: wrap;
+                li{
+                    list-style: none; width:25%; padding:0.5rem 0;
+                    h2 { width: 100%; float: left;  padding:0 0 5px 0; @include aBold(); color:$blu1;  font-size: 16px; }
+                    h3 { 
+                        width: 100%; float: left;  padding:0 0 5px 0; @include aBold(); color:$blu1;  font-size: 16px; 
+                        a { 
+                            text-decoration: none; color:$blu1; @include outT();  
+                            &:hover { color:$ong1; @include inT(); }
+                        }
+                    }
+                    ul {
+                        width: 100%; float: left;
+                        li { 
+                            list-style: none; width: 100%; float: left; padding:3px 0;
+                            a { 
+                                text-decoration: none; @include Arial(); color:$blk2;  font-size: 16px;   @include outT();  
+                                &:hover { color:$ong2; @include inT(); }
+                            }
+                         }
+                    }
+                }
             }
-        } 
-    }
+            h4{
+               display: none;  width: 100%; float: left; margin-top:2.5rem; @include fSC();
+                a { 
+                    margin:0 25px 0 0; text-decoration: none; @include outT(); color: $blu1; font-size: 24px; 
+                    &:hover {  @include inT(); color:$ong1; }
+                }
+            }
+            p { display: none; width: 100%; float: left; margin-top: 1rem; text-align: left; color: $blk2; font-size: 12px; @include Arial(); }
+        }
     }
 }
- 
 
-.footer .copyrightpart { 
-    width:100%; float:left; padding: 1.5rem 0; border-top:solid 1px $footerLine; @include display(space-between, center); 
-    ul { 
-        @include display(flex-start, center); 
-        li { 
-            list-style:none; display:inline-block; text-align:left; margin-right:2rem; 
-            &:last-child { margin-right:0; }
-            a { 
-                text-decoration:none; font-size:14px; letter-spacing: 3px; color: $ultralightBlack; text-transform: uppercase; font-weight:400; font-family:'latoregular'; @include transition(ease-out); 
-                &:hover { color: $copyrightLiA; @include transition(ease-in); }
-            }
-        }
-    }
-    p { font-size:14px;  color: $ultralightBlack; font-weight:400; font-family:'latoregular'; }
-}
-  
 
 @media only screen and (max-width:1255px) 
 {
-    .footer section ul {padding: 0 1rem 0 2rem;}
-}   
-@media only screen and (max-width:1023px) 
-{
-    .share-nav aside a {height: 42px;width: 42px; }
-    .share-nav .sharethis-inline-share-buttons .st-btn { height: 42px !important; width: 42px !important;  }
- 
- 
-    .footer-inner { width: 100%; }
-    .footer section {
-        padding:2rem 0; flex-wrap: wrap; align-items: flex-start;
-        ul {
-            padding: 0; width: 100%; border-right: 0; margin-bottom:2.5rem;
-            li {
-                text-align: center; margin-bottom:0.6rem;
-                h2 {
-                    margin-bottom:1rem; 
+    .footer { 
+        .wrapper { 
+            flex-wrap: wrap;
+            .footerleft {
+                width: 100%;   margin-right: 0; margin-bottom: 1rem;
+                aside {
+                    img { width: 96px; }
                 }
+                dl {  margin-top: 0.5rem; }
+                ul{ display: none; }
+                p { display: none;  }
             }
-         &.followus { 
-             margin-bottom: 0;
-             li a { margin: 0 15px; font-size: 2.3rem; }
+            .footerright {
+                ul{
+                    li{
+                        width:100%; padding:0; 
+                        h2 { 
+                            position: relative; padding:10px 0; border-bottom: solid 1px $blk8; color: $blk2; line-height:24px; text-indent: 0.3rem;
+                            &:after { content: "\f067"; position: absolute; right:0.5rem; top: 50%; transform: translateY(-50%); font-size: 20px; color:$blk2; @include FA(); }
+                            &.active { 
+                                color: $ong1; border-bottom: none;
+                                &:after { content: "\f068"; color: $ong1; }
+                            }
+                        }
+                        h3 { 
+                              padding:10px 0; border-bottom: solid 1px $blk8; color: $blk2;  line-height: 24px;  text-indent: 0.3rem;
+                              &:last-child { border-bottom: none; }
+                        }
+                        ul {
+                            display: none; padding: 0 0.3rem; margin-bottom: 0.5rem;
+                            li { 
+                                list-style: none; width: 100%; float: left; padding:3px 0;
+                                a { 
+                                    text-decoration: none; @include Arial(); color:$blk2;  font-size: 16px;   @include outT();  
+                                    &:hover { color:$ong2; @include inT(); }
+                                }
+                             }
+                        }
+                    }
+                }
+                h4{ display: flex; }
+                p { display: block;  }
             }
         }
     }
-    .footer .copyrightpart {padding:2rem 0 1rem 0; flex-wrap: wrap;justify-content: center;}
-    .footer .copyrightpart ul li {margin:0 0.7rem; }
-    .footer .copyrightpart ul li a { letter-spacing:2px; }
-    .footer .copyrightpart p { width:100%; text-align:center; margin-top: 1.5rem; }
-}
-
-@media only screen and (max-width:767px) 
-{
-    
-}
-
-@media only screen and (max-width:599px) 
-{
-    .share-nav {  
-        flex-wrap: wrap; flex-direction: column;
-        p {  margin-bottom:0.7rem;}
-        aside a { height: 38px;width:38px;  margin: 0 7px; }  
-    }
-    .share-nav .sharethis-inline-share-buttons {margin-left:0 !important; width:100%; }
-    .share-nav .sharethis-inline-share-buttons .st-btn { height:38px !important; width:38px !important; margin:0 7px !important; }
-
- 
-
-
-    .footer .copyrightpart ul{
-        width:100%;
-        justify-content: center; align-items:flex-start; flex-direction: column;
-        li {
-            width:100%; margin:0.3rem 0; text-align:center;
-            a { letter-spacing:3px; }
-        }
-    }
- 
-    
- 
-    
-    
-
 }
