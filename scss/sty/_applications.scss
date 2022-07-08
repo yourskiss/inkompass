@@ -2,21 +2,21 @@
 
 /* #################### market navigation wrap  #################### */
 .market_navigation_wrap  { 
-    position:fixed; top:78px; left:0; right:0; z-index:4; width:100%; max-width:1920px; margin:0 auto; float:none;  background: $whiteLight;
+    position:fixed; top:100px; left:0; right:0; z-index:4; width:100%; max-width:1920px; margin:0 auto; float:none;  background: $whiteLight;
     .market_navigation_container { 
          width:95%; max-width:1372px; float:none; margin:0 auto; 
         @include display(space-between, center);
         div {
                 width:auto; float:left; @include display(flex-start, center);
-            p { background:$lightBlue2; color:$white; padding:0.7rem 1.5rem; font-weight:700; font-family:'latobold'; font-size:1rem;  }
+            p { background:$lightBlue2; color:$white; padding:0.85rem 1.5rem; font-weight:700; font-family:'latobold'; font-size:1rem;  }
             aside {
                 cursor:pointer; margin-left:1rem; @include display(flex-start, center);
                 img { width:33px; margin-right: 5px; }
-                span { color:$black3; font-weight:400; font-family:'latoregular'; font-size:0.9rem; }
+                span { display: none; color:$black3; font-weight:400; font-family:'latoregular'; font-size:0.9rem; }
             }
         }
         ul {
-            width:auto; float:right; padding: 0.6rem 0;
+            width:auto; float:right; padding: 14px 0;
             li {
                 list-style:none; display:inline-block; margin-left:1rem; color:$black3; font-weight:400; font-family:'latoregular'; font-size:0.9rem; cursor:pointer; @include transition(ease-out);
                 &:hover { color:$darkBlue; @include transition(ease-in); }
@@ -53,12 +53,30 @@
 .recruitment_button  { 
     width:100%; float:left; padding:0; background:$white; text-align:center;
     a { 
-        display:inline-block; background:$darkBlue; padding:15px 20px; font-weight:700; font-family:'latobold'; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
-        b{ margin-left:5px; @include transition(ease-out); display:inline-block; font-size:0; width:8px; height:8px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; }
+        background:$darkBlue; margin: 0 10px; padding:21px 26px; font-weight:700; font-family:'latobold'; font-size:14px; letter-spacing:1px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); display: inline-flex; align-items: center; justify-content: center;
+        b{ margin-left:5px; @include transition(ease-out); display:inline-block; font-size:0; margin-top:-2px; width:10px; height:10px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; }
         &:hover { 
-            background:$darkBlue2; padding:15px 15px 15px 20px; @include transition(ease-in);
+            background:$darkBlue2; padding-right:21px; @include transition(ease-in);
             b { margin-left:10px; @include transition(ease-in); } 
         }
+        &.shareopportunity { position:relative;
+            color:$darkBlue; background:$white; box-shadow: inset 0px 0px 0px 1px $darkBlue;
+            i.fa.fa-share-alt { margin-left:5px; @include transition(ease-out); }
+            span.copyalerttext { 
+                opacity:0; position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 150px; padding: 5px;background:$lightBlack; border-radius: 3px; text-align: center; text-transform: none;  word-break: break-all; color:$white; font-weight:300; font-family:'latolight'; line-height: 1.2; font-size: 12px; 
+                &:after { content: "\f0d7"; position: absolute; bottom: -12px;left: 48%; font-family: 'FontAwesome'; color:$lightBlack; font-size: 18px; }
+            }
+            span.copyurltext { 
+                display: none; position: absolute; bottom: -60px;left: 0; width: 100%; padding: 5px;background:$lightBlack; border-radius: 3px; text-align: center; text-transform: none;  word-break: break-all; color:$white; font-weight:300; font-family:'latolight'; line-height: 1.2; font-size: 12px; 
+                &:after { content: "\f0d8"; position: absolute;top: -17px;left: 48%; font-family: 'FontAwesome'; color:$lightBlack; font-size:22px; }
+            }
+            &:hover { 
+                color:$white; background:$darkBlue;  
+                i.fa.fa-share-alt { margin-left:10px; @include transition(ease-in); } 
+                span.copyalerttext { opacity:1; }
+            } 
+        }
+
         &.sharebtn {
             margin-left:0.5rem;  color:$darkBlue; background:$white; box-shadow: inset 0px 0px 0px 1px $darkBlue;
             i.fa.fa-share-alt { margin-left:5px; @include transition(ease-out); }
@@ -73,9 +91,13 @@
 
 
 
+
+
+
+
 /* #################### introducing assessment  #################### */
 .introducing_assessment  { 
-    width:100%; float:left; padding:3rem 0 0 0; background:$white;
+    width:100%; float:left; padding:3rem 0 1rem 0; background:$white;
     .introducing_assessment_inner { 
         display: flow-root; width:95%; max-width:1372px; float:none; margin:0 auto; 
         h2 { width:100%; float:left;  padding:0 5%; text-align:center; font-size:30px;  color:$lightBlack; font-weight:600; font-family:'latosemibold'; line-height:1.2; }
@@ -84,29 +106,6 @@
 }
 
 
-/* #################### lookback activities  #################### */
-.lookback_activities  { 
-    width:100%; float:left; padding:3.5rem 0; background:$whiteLight;
-    .lookback_activities_inner { 
-        display: flow-root; width:95%; max-width:1372px; float:none; margin:0 auto; 
-        h2 { width:100%; float:left; text-align:center; font-size:32px;  color:$lightBlack; font-weight:600; font-family:'latosemibold'; }
-        h3 { width:100%; float:left; margin:0.5rem 0 1.5rem 0;  text-align:center;  font-size:18px;  color:$lightBlack2; font-weight:400; font-family:'latoregular'; }
-        .lookbackwrap { width:100%; float:left; display: grid;gap: 1rem; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(auto, auto); }
-        .lookbackbox { 
-            background:$white; 
-            img { width:100%;padding-bottom:1rem; }
-            .lookbackWeb { display:block; }
-            .lookbackMob { display:none; }
-            h4 { padding:0 1rem; width:100%; font-size:18px;  color:$darkBlue; font-weight:700; font-family:'latobold'; }
-            p { padding:0.2rem 1rem 1rem 1rem; width:100%; font-size:16px;  color:$lightBlack; font-weight:400; font-family:'latoregular'; }
-            &.one { grid-row-start: 1; grid-row-end: 3; grid-column-start: 1; grid-column-end: 3;  }
-            &.two { grid-column: 3; grid-row: 1; }
-            &.three {grid-column:4;grid-row: 1; }
-            &.four { grid-column: 3; grid-row: 2;}
-            &.five { grid-column: 4;grid-row: 2;}
-        }
-    }
-}
 
 
 
@@ -128,10 +127,10 @@
                 aside { 
                     width:100%; float:left; text-align:center;
                     a { 
-                        background:$darkBlue; padding:15px 20px 15px 20px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
-                        b { display:inline-block; font-size:0; width:8px; height:8px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; margin-left:5px; @include transition(ease-out); }
+                        background:$darkBlue; padding:20px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
+                        b { display:inline-block; font-size:0; margin-top:-2px; width:10px; height:10px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; margin-left:5px; @include transition(ease-out); }
                         &:hover { 
-                            background:$darkBlue2; padding:15px 15px 15px 20px; @include transition(ease-in);
+                            background:$darkBlue2;padding-right:15px; @include transition(ease-in);
                             b { margin-left:10px; @include transition(ease-in); } 
                         }
                     }
@@ -183,14 +182,7 @@
         }
     }
 
-    
-    /* #################### lookback activities  #################### */
-    .lookback_activities  { 
-        padding:3rem 0;
-        .lookback_activities_inner {  
-            h2 { font-size:24px;  }
-        }
-    }
+ 
 
     
     /* #################### career quiz   #################### */
@@ -237,9 +229,10 @@
             ul {
                 display:none; width:100%; padding:0 1rem; background: $whiteLight; z-index:4;  position:absolute; left:0; top:38px;
                 li {
-                    width:100%; float:left; display:block; margin-left:0; padding:0.9rem 0; border-bottom:solid 1px $superDuperLightBlack;
+                    width:100%; float:left; display:block; margin-left:0; padding:0.9rem 0; border-top:solid 1px $superDuperLightBlack;
+                    &:first-child { border-top:none; }
                     &.marketNavMobile { 
-                        display:block; border-bottom:none; padding-bottom:1.5rem; cursor:pointer; @include display(flex-start, center);
+                        border-bottom:none; padding-bottom:1.5rem; cursor:pointer; /* @include display(flex-start, center); */ display:none; 
                         img { width:33px; margin-right: 5px; }
                         span { color:$black3; font-weight:400; font-family:'latoregular'; }
                     }
@@ -248,37 +241,6 @@
         }
     }
 
-
-
-
-    /* #################### lookback activities  #################### */
-    .lookback_activities  { 
-        padding:2.5rem 0; 
-        .lookback_activities_inner { 
-            h3 { margin:0 0 1rem 0; }
-            .lookbackwrap { width:100%; float:left; display: block; gap: 0;   }
-            .lookbackbox { 
-                .lookbackWeb { display:none; }
-                .lookbackMob { display:block; }
-                h4 { padding:0 1rem; width:100%;  color:$darkBlue; font-weight:700; font-family:'latobold'; }
-                p { padding:0.2rem 1rem 1rem 1rem; width:100%;color:$lightBlack; font-weight:400; font-family:'latoregular'; }
-
-                &.one { grid-row-start: none; grid-row-end: none; grid-column-start:none; grid-column-end:none;  }
-                &.two { grid-column: none; grid-row: none; }
-                &.three {grid-column:none;grid-row: none; }
-                &.four { grid-column: none; grid-row:none;}
-                &.five { grid-column: none;grid-row:none;}
-            }
-        }
-    }
-    .lookbackwrap.slick-dotted.slick-slider { margin-bottom: 0; padding-bottom: 2rem; }
-    .lookbackwrap .slick-list {  padding:5px 40px 5px 20px !important;   }
-    .lookbackwrap .slick-track { display: flex; align-items:stretch; }
-    .lookbackwrap .slick-slide { height:initial; margin: 0 10px;  }
-    .lookbackwrap .slick-slide div { height:100%;   }
-    .lookbackwrap.slick-slider .slick-dots {  bottom: 0;    }
-    .lookbackwrap.slick-slider .slick-dots li { background:$white; border:solid 1px $lightBlue; }
-    .lookbackwrap.slick-slider .slick-dots li.slick-active { background:$darkBlue; border-color:$darkBlue; }
 
     /* #################### career quiz   #################### */
     .careerquizWrap  { 
@@ -301,10 +263,10 @@
 {
     /* #################### recruitment button  #################### */
     .recruitment_button  { 
+        display: flex; flex-wrap: wrap; justify-content: center;
         a { 
-            width:230px; padding:0.9rem; letter-spacing:1px;  
-            &:hover { padding:0.9rem 0.6rem 0.9rem 0.9rem; }
-            &.sharebtn { margin: 9px 0 0 0;}
+            width: 265px; clear: both; margin: 0 10px;
+            &.shareopportunity { margin-top: 10px; }
         }
     }
 }

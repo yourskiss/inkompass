@@ -29,26 +29,27 @@
                         &:hover {   color:$lightBlue; @include transition(ease-in);  }
                      }
                     a { 
-                        font-style: normal;  text-decoration:none; color:$darkBlue; font-weight:400;font-family:'latoregular'; font-size:14px;  @include transition(ease-out); text-transform:uppercase;
+                        font-style: normal;  text-decoration:none; color:$darkBlue; font-weight:400;font-family:'latoregular'; font-size:14px;  @include transition(ease-out); text-transform:uppercase; white-space: nowrap;
                         &:hover { color:$lightBlue; @include transition(ease-in); }
                     }
                     i.fa.fa-share-alt { 
+                        display: none;
                         font-style: normal;  margin-left:0.7rem; color:$darkBlue; font-weight:400; font-size:14px; cursor:pointer; @include transition(ease-out);
                         &:hover { color:$lightBlue; @include transition(ease-in); }
                     }
-                &:nth-of-type(1) { width:28%; }
-                &:nth-of-type(2) { width:18%; }
-                &:nth-of-type(3) { width:18%; }
-                &:nth-of-type(4) { width:14%; }
-                &:nth-of-type(5) {  text-align:right; }
+                &:nth-of-type(1) { width:35%; }
+                &:nth-of-type(2) { width:22%; }
+                &:nth-of-type(3) { width:22%; }
+                &:nth-of-type(4) {  text-align:left; }
+                &:nth-of-type(5) {  text-align:center; }
                 }
             }
         }
         p { 
             width:100%; float:left; margin:1.5rem 0; font-weight:400; font-family:'latoregular'; font-size:18px; color:$superultralightBlack; 
             a { 
-                display:inline-block; text-decoration:none; color:$darkBlue;@include transition(ease-out);
-                &:hover { color:$black; @include transition(ease-in); }
+                display:inline-block; text-decoration:underline; color:$darkBlue; @include transition(ease-out);
+                &:hover { text-decoration:none; color:$black; @include transition(ease-in); }
             }
         }
         .opportunitiespaging {
@@ -86,10 +87,10 @@
 /* #################### opportunities  wrap  #################### */
 /*  subscriptionPopup part */
 .jobOpeningPopup { 
-    display:none; z-index:7; position: fixed; absolute: 0; top: 0; height: 100%; width:100%; background-color: #000; background: rgba(0,0,0,0.3); 
+    display:none; z-index:7; position: fixed; left: 0; top: 0; height: 100%; width:100%; background-color: #000; background: rgba(0,0,0,0.3); 
     .jobOpeningPopupBG { display:block; z-index:8; position: fixed; left: 0; top: 0; height:100%; width: 100%; opacity:0; }
     .jobOpeningPopupContainte { 
-        display: block;  z-index:9; position:fixed; left:50%; top:50%; transform: translate(-50%, -50%); width: 95%; max-width: 750px; height: 90%; background-color: #fff;  border-radius:0px; margin:0 auto; padding:1rem;  
+        display: block;  z-index:9; position:fixed; left:50%; top:50%; transform: translate(-50%, -50%); width: 95%; max-width: 750px; height:60%;  background-color: #fff;  border-radius:0px; margin:0 auto; padding:2rem;  
         aside { @include display(center, center);
             z-index: 4; position:absolute; right:-10px; top:-10px; width:30px; height: 30px; border-radius:0; padding: 0; font-size: 24px; line-height: 1; background:$darkBlue; text-align: center; border: none; color: $white; cursor: pointer; transition:all 0.5s ease-out; 
             &:hover { background:$lightBlue; transition:all 0.5s ease-in;  }
@@ -203,13 +204,22 @@
 
 @media only screen and (max-width:479px)
 {
-
+     /*  subscriptionPopup part */
     .jobOpeningPopup {
         .jobOpeningPopupContainte { 
-            padding:0.5rem; 
+            padding:1rem;  height:80%;
             aside { right:-5px; top:-15px; }
         }
     }
 }
-
  
+
+@media screen and (min-device-width: 480px) and (max-device-width: 1023px) and (orientation : landscape)
+{
+     /*  subscriptionPopup part */
+     .jobOpeningPopup {
+        .jobOpeningPopupContainte { 
+            padding:1.5rem;  height:90%;
+        }
+    }
+}

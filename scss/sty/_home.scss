@@ -1,13 +1,13 @@
 .latestatHere { 
-    padding:3rem 0; width:100%; float:left; background:$lightBlue; overflow: hidden;
+    padding:2rem 0 3rem 0; width:100%; float:left; background:$lightBlue; overflow: hidden;
     .latestatHereInner { 
         display: flow-root; position: relative; width:95%; max-width:1372px; margin:0 auto; 
         h2 {  
-            width:100%; float:left; text-align:center; font-size:30px; color: $white; font-weight:600; font-family:'latosemibold';
+            width:100%; float:left; margin-bottom: 1rem; text-align:center; font-size:30px; color: $white; font-weight:600; font-family:'latosemibold';
         }
      }
 }
-.latestatHereSlider { width: 114%; float: left; margin: 0 !important; padding: 0 0 2rem 0;
+.latestatHereSlider { width: 114%; float: left; margin: 0 !important; padding: 0 0 1rem 0;
     @include display(center, flex-start); flex-wrap:nowrap; overflow: visible;}
 .latestatHereSlider .slick-list{ padding:1rem 180px 1rem 0px !important; }
 .latestatHereSlider .slick-track{display: flex !important; justify-content:space-between; }

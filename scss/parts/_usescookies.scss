@@ -12,10 +12,10 @@
         aside {
             display:inline-block; margin-left:10px;
             span {
-                width: 124px; background:$darkBlue; padding:15px 20px; font-weight:600; line-height:1; font-family:'latosemibold'; font-size:14px; text-transform:uppercase; color:$white; cursor:pointer; @include transition(ease-out); line-height: 1; letter-spacing: 2px; @include display(center, center); display: inline-flex;
-                b { display:inline-block; font-size:0; width:8px; height:8px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%;  margin-left:5px; @include transition(ease-out); }
+                width: 124px; background:$darkBlue; padding:20px; font-weight:600; line-height:1; font-family:'latosemibold'; font-size:14px; text-transform:uppercase; color:$white; cursor:pointer; @include transition(ease-out); line-height: 1; letter-spacing: 2px; @include display(center, center); display: inline-flex;
+                b { display:inline-block; font-size:0; margin-top:-2px; width:10px; height:10px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%;  margin-left:5px; @include transition(ease-out); }
                 &:hover { 
-                    background:$darkBlue2;  padding:15px 15px 15px 20px; @include transition(ease-in);
+                    background:$darkBlue2; padding-right:15px; @include transition(ease-in);
                     b { margin-left:10px; @include transition(ease-in); } 
                 }
             }
@@ -45,8 +45,8 @@
            aside { 
                width:100%; text-align:center; margin-left: 0; margin-top:0.7rem; 
                span { 
-                   width: 100px; padding:12px 12px;font-size: 12px; 
-                   &:hover { padding: 12px 7px 12px 12px; }
+                   width: 110px; padding:15px;font-size: 12px; 
+                   &:hover { padding-right:10px; }
                 }
             }
         }

@@ -18,13 +18,13 @@
             }
         }
         h3 {
-            width:100%; float:left; text-align:center; margin-top:2rem;
+            width:100%; float:left; text-align:center; margin-top:3rem;
             a { 
-                background:$darkBlue; padding:15px 20px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out);
+                background:$darkBlue; padding:20px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out);
                 @include display(center, center); display: inline-flex;
-                b{ display:inline-block; font-size:0; width:8px; height:8px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; margin-left:5px; @include transition(ease-out); }
+                b{ display:inline-block; font-size:0; margin-top:-2px; width:10px; height:10px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; margin-left:5px; @include transition(ease-out); }
                 &:hover { 
-                    background:$darkBlue2;  padding:15px 15px 15px 20px; @include transition(ease-in);
+                    background:$darkBlue2; padding-right:15px; @include transition(ease-in);
                     b { margin-left:10px; @include transition(ease-in); } 
                 }
             }
@@ -37,7 +37,7 @@
 .whoweare {
     padding:3rem 0; width:100%; float:left; background: $white;
     .whowearecontainer{
-        display: flow-root; float:none; position: relative; width:95%; max-width:1300px; margin:0 auto;
+        display: flow-root; float:none; position: relative; width:95%; max-width:1372px; margin:0 auto;
         h2 { width:100%; float:left; text-align:center; margin-bottom:1rem; font-size:30px; color: $lightBlack; font-weight:700; font-family:'latobold'; }
         p { width:100%; float:left; padding:0 10%; text-align:center; font-size:18px; color: $lightBlack; font-weight:400; font-family:'latoregular'; }
         ul {

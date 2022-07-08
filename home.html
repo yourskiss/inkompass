@@ -7,1019 +7,437 @@
 
     <title>Home</title>
 
- 
     <link rel="stylesheet" href="styles/fontawesome.min.css" />
     <link rel="stylesheet" href="styles/style.min.css" />
-    
-    
+ 
 </head>
 <body>
 <main>
 
-<!-- header  =====  start -->
-<header class="header" id="header">
-
-    <div class="nav">
-        <div class="wrapper">
-                <p>We are taking care of all COVID protocols.</p>
-                <ul>
-                    <li><a href="tell:1800567677111" class="callat"><i class="fa fa-mobile" aria-hidden="true"></i><span>1800 567 677 111</span></a></li>
-                    <li class="line">|</li>
-                    <li><a href="#">Investors</a></li>
-                    <li class="line">|</li>
-                    <li><a href="#">Careers</a></li>
-                    <li class="line">|</li>
-                    <li><a href="#">FAQs</a></li>
-                    <li class="line">|</li>
-                    <li><a href="#">New Connection</a></li>
-                    <li class="line">|</li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-                <i class="fa fa-search" aria-hidden="true"></i>
-        </div>
-    </div>
-
-
-
-    <div class="navigation">
-        <div class="wrapper">
-            <a href="/"><img class="logo" src="Images/logo.png" alt="agp" /></a>
-            <aside>
-                <span class="quickmenu" id="quickmenu"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMy4wIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowNzJBRjlBRUZFMkIxMUVDQTNBN0RBMDRCRkNCQUE2OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowNzJBRjlBRkZFMkIxMUVDQTNBN0RBMDRCRkNCQUE2OSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA3MkFGOUFDRkUyQjExRUNBM0E3REEwNEJGQ0JBQTY5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA3MkFGOUFERkUyQjExRUNBM0E3REEwNEJGQ0JBQTY5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+OgeRbgAAAtFJREFUeNqslk1oE0EUgGfz0zSlPRU8aAriwZT4e9BDAmKqR5UWJD2IYNuDEotYvVRoYGYxQgtW0UPBi0T0Ys2hpXg0TS/xoGBFxbQXxcQgRT2YuElMNuObNbOZbIl0QgeGzbx5O9+b97dRfl3cj9odSlcPdoUmiePwCWNdXU2g8rMZQrW8Kuo52gXY+vpx1/WHBECmzBkYRPY+L9HujCERZNsugLCH2J6tdyduG2IFVN8uM4sVNmvZtbgJisQJ05WGMOtEQOXlouo4NED4vjY7Og6gjXq8kDt8j+liKUjnyK0mgNM/SMT97rupjTqIG4Wc/iEiBbHvPdIIsgUggOKV1GLjHe/R9gLPLW0dN29D9/tXOQgE2QAU564gff0VBRHVZsco389fOnC89CiyDLc01rRY0CsvHl+VqpNSbEpR3N3YHb7PMuefO+DJDoefxDU8Gew4eZ6rF8rz0+dqP3JLjhZZhMQqBkW+1QSA4MNcQJBhSWdgyHwHRg5udApis2qsWFsRZ3lpDlPL+H17FOUn/Fj/8tGU/UktUJBRUcZGTcu/KcamPOKZtuYUjeKO0+GmrGHW1rJpoz7EG5RiERXcg7isHoPnkMLH4AbZph7HGyQDiGlpHJ5ZM9wBAGQFsBjA3Af9KmTr3RWCXpUA3Ql46psaKYNYAeDPFbCG9Dx4l4RDKc8WBijPz6hwEJHqFGCJCFgBwEDnhWiQAQwXaHkRwG6FIcBU6pOgZ9LU5jGLR2mlWLgW8AHgA3Obvv6a9SllyzcRAP9X9PSHeFwUSHEpdzGrtjJcZy4PC21FlYJAXYgvvIeYYKhgnyWNMTRHXz1N1fLTaanA22/sribpz5wCwQzCegd7QkqOa9FQsJJ48tm+5+AIyAgHQCxI7dsnuf8CvE4gywhkFW6laAIyafnPtekSqAtwlbrdgE2fXwaC1q0KDZGlq6rdPNs2gI2/AgwARGKjjcdOEOMAAAAASUVORK5CYII=" alt="quickmenu" /></span>
-                <span class="mainmenu" id="mainmenu"><i class="fa fa-bars" aria-hidden="true"></i></span>
-            </aside>
-            <ul>
-                <li class="megamenu">
-                    <a href="#">About Us<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    <div class="dropdownmenu">
-                        <div class="dropdowninner">
-                            <ul>
-                                <li><a href="#">About AG&P Pratham</a></li>
-                                <li><a href="#">Financials</a></li>
-                                <li><a href="#">CSR</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Compliances & Regulations</a></li>
-                            </ul>
-                            <img src="images/menu/about.png" alt="about" />
-                            <span class="dropdownclose"><i class="fa fa-times" aria-hidden="true"></i></span>
-                        </div>
-                    </div>
-                </li>
-                <li class="megamenu">
-                    <a href="#">CNG<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    <div class="dropdownmenu">
-                        <div class="dropdowninner">
-                            <ul>
-                                <li><a href="#">Product Information</a></li>
-                                <li><a href="#">OEM’s</a></li>
-                                <li><a href="#">Offers and Promotions</a></li>
-                                <li><a href="#">Retrofitments</a></li>
-                                <li><a href="#">Calculator</a></li>
-                                <li><a href="#">CNG Stations</a></li>
-                                <li><a href="#">Do’s and Dont’s</a></li>
-                            </ul>
-                            <img src="images/menu/cng.png" alt="cng" />
-                            <span class="dropdownclose"><i class="fa fa-times" aria-hidden="true"></i></span>
-                        </div>
-                    </div>
-                </li>
-                <li class="megamenu">
-                    <a href="#">PNG<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    <div class="dropdownmenu">
-                        <div class="dropdowninner">
-                            <ul>
-                                <li>
-                                    <h2>Household</h2>
-                                    <ul>
-                                        <li><a href="#">Product Information</a></li>
-                                        <li><a href="#">Connection Process</a></li>
-                                        <li><a href="#">PNG Availability</a></li>
-                                        <li><a href="#">Do’s and Dont’s</a></li>
-                                        <li><a href="#">Offers and Promotions</a></li>
-                                        <li><a href="#">Calculator</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <h2>Commercial</h2>
-                                    <ul>
-                                        <li><a href="#">Product Information</a></li>
-                                        <li><a href="#">Connection Process</a></li>
-                                        <li><a href="#">PNG Availability</a></li>
-                                        <li><a href="#">Do’s and Dont’s</a></li>
-                                        <li><a href="#">Calculator</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <h2>Industries</h2>
-                                    <ul>
-                                        <li><a href="#">Product Information</a></li>
-                                        <li><a href="#">Connection Process</a></li>
-                                        <li><a href="#">PNG Availability</a></li>
-                                        <li><a href="#">Do’s and Dont’s</a></li>
-                                        <li><a href="#">Calculator</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <img src="images/menu/png.png" alt="png" />
-                            <span class="dropdownclose"><i class="fa fa-times" aria-hidden="true"></i></span>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="#">Health and Safety</a></li>
-                <li><a href="#">Resources</a></li>
-                <li class="loginsignup"><a href="#"><span>Login/Signup</span><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
-    </div>
-
-
-</header>
-<!-- header  =====  end -->
-
-
-
-
-
-<!-- banner  =====  start -->
-<div class="bannerhome" id="bannerhome">
-    <div class="bannerhomeslider">
-
-        <div class="slides">
-            <picture>
-            <!--
-                <source media="(min-width: 1024px)" srcset="images/home/banner-web-1.jpg" type="image/jpg">
-                <source media="(min-width: 480px) and (max-width:1023px) " srcset="images/home/banner-web-1.jpg" type="image/jpg">
-                <source media="(max-width: 479px)" srcset="images/home/banner-web-1.jpg" type="image/jpg"> 
-            -->
-                <img  src="images/home/banner-web-1.jpg" alt="home"  />
-            </picture>
-            <div class="bannerhomescontent">
-                <div class="banenrtext">
-                    <h2>SHORTER WORRIES,<br>LONGER JOURNEYS</h2>
-                    <h3>FOR HIGHER VEHICLE PERFORMANCE AND GREATER MILEAGE</h3>
-                    <p><a href="#">KNOW MORE</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slides">
-            <picture>
-            <!--
-                <source media="(min-width: 1024px)" srcset="images/home/banner-web-2.jpg" type="image/jpg">
-                <source media="(min-width: 480px) and (max-width:1023px) " srcset="images/home/banner-web-2.jpg" type="image/jpg">
-                <source media="(max-width: 479px)" srcset="images/home/banner-web-2.jpg" type="image/jpg"> 
-            -->
-                <img  src="images/home/banner-web-2.jpg" alt="home"  />
-            </picture>
-            <div class="bannerhomescontent">
-                <div class="banenrtext">
-                    <h2>Convenient Cooking<br>And Stronger Bonds</h2>
-                    <h3>Create safer homes by opening the doors for png pipelines</h3>
-                    <p><a href="#">KNOW MORE</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slides">
-            <picture>
-            <!--
-                <source media="(min-width: 1024px)" srcset="images/home/banner-web-3.jpg" type="image/jpg">
-                <source media="(min-width: 480px) and (max-width:1023px) " srcset="images/home/banner-web-3.jpg" type="image/jpg">
-                <source media="(max-width: 479px)" srcset="images/home/banner-web-3.jpg" type="image/jpg"> 
-            -->
-                <img  src="images/home/banner-web-3.jpg" alt="home"  />
-            </picture>
-            <div class="bannerhomescontent">
-                <div class="banenrtext">
-                    <h2>STAY POWERED,<br>STAY CONNECTED</h2>
-                    <h3>Continuous supply of gas that never lets you disconnect</h3>
-                    <p><a href="#">KNOW MORE</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slides">
-            <picture>
-            <!--
-                <source media="(min-width: 1024px)" srcset="images/home/banner-web-4.jpg" type="image/jpg">
-                <source media="(min-width: 480px) and (max-width:1023px) " srcset="images/home/banner-web-4.jpg" type="image/jpg">
-                <source media="(max-width: 479px)" srcset="images/home/banner-web-4.jpg" type="image/jpg"> 
-            -->
-                <img  src="images/home/banner-web-4.jpg" alt="home"  />
-            </picture>
-            <div class="bannerhomescontent">
-                <div class="banenrtext">
-                    <h2>BEST FOR YOUR<br>BUSINESS</h2>
-                    <h3>Fuel that requires less investment and gets more returns</h3>
-                    <p><a href="#">KNOW MORE</a></p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!-- banner  =====  end -->
-
-
-
-<!-- highlight services  =====  start -->
-<div class="highlightservices">
-    <div class="wrapper">
-        <div class="highlightcontent">
-            <div class="highlight png">
-                <h2><span>PNG Users</span></h2>
-                <ul>
-                    <li>
-                        <aside><img src="images/home/icon1.png" alt="New Connection" /></aside>
-                        <p>New Connection</p>
-                    </li>
-                    <li>
-                        <aside><img src="images/home/icon2.png" alt="Availability" /></aside>
-                        <p>Availability</p>
-                    </li>
-                    <li>
-                        <aside><img src="images/home/icon3.png" alt="Calculator" /></aside>
-                        <p>Calculator</p>
-                    </li>
-                    <li>
-                       <aside><img src="images/home/icon4.png" alt="Bill Pay" /></aside>
-                        <p>Bill Pay</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="highlight lpg">
-                <h2><span>CNG Users</span></h2>
-                <ul>
-                    <li>
-                        <aside><img src="images/home/icon5.png" alt="Stations" /></aside>
-                        <p>Stations</p>
-                    </li>
-                    <li>
-                        <aside><img src="images/home/icon3.png" alt="Calculator" /></aside>
-                        <p>Calculator</p>
-                    </li>
-                    <li>
-                        <aside><img src="images/home/icon6.png" alt="Rate Card" /></aside>
-                        <p>Rate Card</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- highlight services  =====  end -->
-
-
-
-
-
-<!-- infomain  =====  start -->
-<div class="infomain">
-    <div class="wrapper">
-        <h2>AG&P, THE LEADING NATURAL GAS SUPPLIER</h2>
-        <h3>
-            Fueling your homes, restaurants, commercial kitchens, industries, and 
-            <span>vehicles with cleaner, low-cost natural gas, produced safely and delivered proficiently</span>
-        </h3>
-        <ul>
-            <li>
-                <aside><img src="images/home/info_1.png" alt="24x7 supply" /></aside>
-                <p>24/7 supply</p>
-            </li>
-            <li>
-                <aside><img src="images/home/info_2.png" alt="Safety first" /></aside>
-                <p>Safety first</p>
-            </li>
-            <li>
-                <aside><img src="images/home/info_3.png" alt="Technical excellence" /></aside>
-                <p>Technical excellence</p>
-            </li>
-            <li>
-                <aside><img src="images/home/info_4.png" alt="Customer first approach" /></aside>
-                <p>Customer first approach</p>
-            </li>
-        </ul>
-    </div>
-</div>
-<!-- infomain  =====  end -->
-
-
-
-<!-- weoffers  =====  start -->
-<div class="weoffers">
-    <div class="wrapper">
-        <h2>
-            <span>WHAT WE OFFER</span>
-            <img src="images/icon.png" alt="WHAT WE OFFER" />
-        </h2>
-        <div class="offergrid">
-            <div class="itemgrid one">
-                <img src="images/home/weoffer1.png" alt="WE OFFER" />
-                <section>
-                    <h3>CNG For Vehicles</h3>
-                    <p>Enjoy fuel efficient journeys with AG&P Pratham. CNG gives you more mileage per kilometer, saving fuel cost and increasing the earnings.</p>
-                    <aside><a href="#">KNOW MORE</a></aside>
-                </section>
-            </div>
-            <div class="itemgrid two">
-                <img src="images/home/weoffer2.png" alt="WE OFFER" />
-                <section>
-                    <h3>PNG For Industries</h3>
-                    <p>We provide seamless operations with PNG. PNG is a dependable power source for industries.</p>
-                    <aside><a href="#">KNOW MORE</a></aside>
-                </section>
-            </div>
-            <div class="itemgrid four">
-                <img src="images/home/weoffer4.png" alt="WE OFFER" />
-                <section>
-                    <h3>PNG For Commercial Use</h3>
-                    <p>We guarantee advantageous business with PNG. PNG is known for its versatility and can be used for cooking, cooling, power generation and many more.</p>
-                    <aside><a href="#">KNOW MORE</a></aside>
-                </section>
-            </div>
-            <div class="itemgrid three">
-                <img src="images/home/weoffer3.png" alt="WE OFFER" />
-                <section>
-                    <h3>PNG For Industries</h3>
-                    <p>We provide seamless operations with PNG. PNG is a dependable power source for industries.</p>
-                    <aside><a href="#">KNOW MORE</a></aside>
-                </section>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- weoffers  =====  end -->
-
-
-
-
-<!-- safetyispriority  =====  start -->
-<div class="safetyispriority">
-    <img src="images/home/safetyispriority.png" alt="YOUR SAFETY IS OUR PRIORITY" />
-    <div class="wrapper">
-        <h2>YOUR SAFETY IS OUR PRIORITY</h2>
-        <h3>
-            AG&P Pratham team ensures safety throughout the process of installation. Each staff member that handles your fuel is trained and authorised to address every issue.<br>
-            With our consistent maintenance measures and safety checks, we give you the surety of security.
-        </h3>
-        <p>Reach out to us at: <a href="tell:1800567677111">1800 567 677 111</a></p>
+<!-- header start -->
+<header class="header">
+    <div class="headercontainer">
         <aside>
-            <a href="#">KNOW MORE</a>
+            <a href="home.html"><img src="images/logo.png" alt="logo" /></a>
+            <span>Intern at PMI</span>
         </aside>
-    </div>
-</div>
-<!-- safetyispriority  =====  end -->
-
-
-
-<!-- satisfactionwrap  =====  start -->
-<div class="satisfactionwrap">
-    <div class="wrapper">
-        <h2>
-            <span>YOUR SATISFACTION IS OUR MISSION</span>
-            <img src="images/icon.png" alt="YOUR SATISFACTION IS OUR MISSION" />
-        </h2>
-        <div class="satisfactionLarge">
-            <div class="satisfactionVideo">
-                <span onclick="satisfactionHideVideo()"><i class="fa fa-times" aria-hidden="true"></i></span>
-                <iframe src="" frameborder="0" allowtransparency="true" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <nav id="mainmenu">
+            <ul>
+                <li><a href="explore-opportunities.html" class="active">EXPLORE OPPORTUNITIES</a></li>
+                <li><a href="program-details.html">PROGRAM DETAILS</a></li>
+                <li><a href="discover-PMI.html">DISCOVER PMI</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact-us.html">CONTACT US</a></li>
+                <li class="navlastmenu"><a href="applications_open_1.html">APPLICATION OPEN <b>&#8594;</b></a></li>
+            </ul>
+            <img class="menu-mobile-img" src="Images/menu-mobile-img.jpg" alt="mobile menu" />
+        </nav>
+        <div class="header-right">
+            <div class="headerMenu open" id="headerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="satisfactionSlider">
-                <div class="items">
-                    <div class="satisfactionMedia">
-                        <img src="images/home/satisfaction_large1.png" alt="satisfaction" />
-                        <span class="playiconsbig" onclick="satisfactionShowVideo('ruLvcGzFXPY')"><i class="fa fa-play" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="satisfactionContent">
-                        <div class="textb">
-                            <p>
-                                By switching to CNG, I am able to save almost 50% of running cost of my vehicles which helps me in growing my business further. CNG as an alternate is not only cost effective but also safe, eco friendly and delivers a high performance. Every business person like me should switch to CNG at the earliest.
-                                <br><br> 
-                                <b>- Ashok Kumar Transporter, <br>Jodhpur</b>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="satisfactionMedia">
-                        <img src="images/home/satisfaction_large2.png" alt="satisfaction" />
-                        <span class="playiconsbig" onclick="satisfactionShowVideo('8q1yz9P25XE')"><i class="fa fa-play" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="satisfactionContent">
-                        <div class="textb">
-                            <p>
-                                By switching to CNG, I am able to save almost 50% of running cost of my vehicles which helps me in growing my business further. CNG as an alternate is not only cost effective but also safe, eco friendly and delivers a high performance. Every business person like me should switch to CNG at the earliest.
-                                <br><br> 
-                                <b>- Ashok Kumar Transporter, <br>Jodhpur</b>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="satisfactionMedia">
-                        <img src="images/home/satisfaction_large3.png" alt="satisfaction" />
-                        <span class="playiconsbig" onclick="satisfactionShowVideo('ruLvcGzFXPY')"><i class="fa fa-play" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="satisfactionContent">
-                        <div class="textb">
-                            <p>
-                                By switching to CNG, I am able to save almost 50% of running cost of my vehicles which helps me in growing my business further. CNG as an alternate is not only cost effective but also safe, eco friendly and delivers a high performance. Every business person like me should switch to CNG at the earliest.
-                                <br><br> 
-                                <b>- Ashok Kumar Transporter, <br>Jodhpur</b>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="satisfactionMedia">
-                        <img src="images/home/satisfaction_large4.png" alt="satisfaction" />
-                        <span class="playiconsbig" onclick="satisfactionShowVideo('8q1yz9P25XE')"><i class="fa fa-play" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="satisfactionContent">
-                        <div class="textb">
-                            <p>
-                                By switching to CNG, I am able to save almost 50% of running cost of my vehicles which helps me in growing my business further. CNG as an alternate is not only cost effective but also safe, eco friendly and delivers a high performance. Every business person like me should switch to CNG at the earliest.
-                                <br><br> 
-                                <b>- Ashok Kumar Transporter, <br>Jodhpur</b>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="satisfactionMedia">
-                        <img src="images/home/satisfaction_large1.png" alt="satisfaction" />
-                        <span class="playiconsbig" onclick="satisfactionShowVideo('ruLvcGzFXPY')"><i class="fa fa-play" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="satisfactionContent">
-                        <div class="textb">
-                            <p>
-                                By switching to CNG, I am able to save almost 50% of running cost of my vehicles which helps me in growing my business further. CNG as an alternate is not only cost effective but also safe, eco friendly and delivers a high performance. Every business person like me should switch to CNG at the earliest.
-                                <br><br> 
-                                <b>- Ashok Kumar Transporter, <br>Jodhpur</b>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="satisfactionMedia">
-                        <img src="images/home/satisfaction_large2.png" alt="satisfaction" />
-                        <span class="playiconsbig" onclick="satisfactionShowVideo('8q1yz9P25XE')"><i class="fa fa-play" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="satisfactionContent">
-                        <div class="textb">
-                            <p>
-                                By switching to CNG, I am able to save almost 50% of running cost of my vehicles which helps me in growing my business further. CNG as an alternate is not only cost effective but also safe, eco friendly and delivers a high performance. Every business person like me should switch to CNG at the earliest.
-                                <br><br> 
-                                <b>- Ashok Kumar Transporter, <br>Jodhpur</b>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="satisfactionMedia">
-                        <img src="images/home/satisfaction_large3.png" alt="satisfaction" />
-                        <span class="playiconsbig" onclick="satisfactionShowVideo('ruLvcGzFXPY')"><i class="fa fa-play" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="satisfactionContent">
-                        <div class="textb">
-                            <p>
-                                By switching to CNG, I am able to save almost 50% of running cost of my vehicles which helps me in growing my business further. CNG as an alternate is not only cost effective but also safe, eco friendly and delivers a high performance. Every business person like me should switch to CNG at the earliest.
-                                <br><br> 
-                                <b>- Ashok Kumar Transporter, <br>Jodhpur</b>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="satisfactionMedia">
-                        <img src="images/home/satisfaction_large4.png" alt="satisfaction" />
-                        <span class="playiconsbig" onclick="satisfactionShowVideo('8q1yz9P25XE')"><i class="fa fa-play" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="satisfactionContent">
-                        <div class="textb">
-                            <p>
-                                By switching to CNG, I am able to save almost 50% of running cost of my vehicles which helps me in growing my business further. CNG as an alternate is not only cost effective but also safe, eco friendly and delivers a high performance. Every business person like me should switch to CNG at the earliest.
-                                <br><br> 
-                                <b>- Ashok Kumar Transporter, <br>Jodhpur</b>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="satisfactionThumb">
-            <div class="satisfactionNav">
-                <div class="item">
-                    <img src="images/home/satisfaction_thumb1.png" alt="satisfaction" />
-                    <span class="playicons"><i class="fa fa-play" aria-hidden="true"></i></span>
-                </div>
-                <div class="item">
-                    <img src="images/home/satisfaction_thumb2.png" alt="satisfaction" />
-                    <span class="playicons"><i class="fa fa-play" aria-hidden="true"></i></span>
-                </div>
-                <div class="item">
-                    <img src="images/home/satisfaction_thumb3.png" alt="satisfaction" />
-                    <span class="playicons"><i class="fa fa-play" aria-hidden="true"></i></span>
-                </div>
-                <div class="item">
-                    <img src="images/home/satisfaction_thumb4.png" alt="satisfaction" />
-                    <span class="playicons"><i class="fa fa-play" aria-hidden="true"></i></span>
-                </div>
-                <div class="item">
-                    <img src="images/home/satisfaction_thumb1.png" alt="satisfaction" />
-                    <span class="playicons"><i class="fa fa-play" aria-hidden="true"></i></span>
-                </div>
-                <div class="item">
-                    <img src="images/home/satisfaction_thumb2.png" alt="satisfaction" />
-                    <span class="playicons"><i class="fa fa-play" aria-hidden="true"></i></span>
-                </div>
-                <div class="item">
-                    <img src="images/home/satisfaction_thumb3.png" alt="satisfaction" />
-                    <span class="playicons"><i class="fa fa-play" aria-hidden="true"></i></span>
-                </div>
-                <div class="item">
-                    <img src="images/home/satisfaction_thumb4.png" alt="satisfaction" />
-                    <span class="playicons"><i class="fa fa-play" aria-hidden="true"></i></span>
-                </div>
-            </div>
+            <span class="headerApplication" id="headerApplication">APPLICATION OPEN <b>&#8594;</b></span>
         </div>
 
+        <div class="header-application-box" id="applicationBox">
+            <div class="marketserch">
+                <input type="text" id="findmarket" name="findmarket" placeholder="Find your market" />
+            </div>
+            <p id="marketnotfound">No result found</p>
+            <ul id="listofmarket">
+                <li class="firstresult">
+                    <a href="#">
+                        <img src="images/flag/argentina.png" alt="argentina" /> 
+                        <span>Argentina</span> 
+                    </a>
+                </li>
+                <li class="firstresult">
+                    <a href="#">   
+                        <img src="images/flag/australia.png" alt="australia" />
+                        <span>Australia</span> 
+                    </a>
+                </li>
+                <li class="firstresult">
+                    <a href="#">  
+                        <img src="images/flag/Belgium.png" alt="Belgium" /> 
+                        <span>Belgium</span> 
+                    </a>
+                </li>
+                <li class="firstresult">
+                    <a href="#"> 
+                        <img src="images/flag/canada.png" alt="canada" /> 
+                        <span>Canada</span> 
+                    </a>
+                </li>
+                <li class="firstresult">
+                    <a href="#">
+                        <img src="images/flag/Egypt.png" alt="Egypt" /> 
+                        <span>Egypt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/flag/ukraine.png" alt="ukraine" /> 
+                        <span>Ukraine</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/flag/Germany.png" alt="Germany" /> 
+                        <span>Germany</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/flag/hongkong.png" alt="hongkong" /> 
+                        <span>Hongkong</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/flag/hungary.png" alt="hungary" /> 
+                        <span>Hungary</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/flag/jordan.png" alt="jordan" /> 
+                        <span>Jordan</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/flag/kazaksthan.png" alt="kazaksthan" /> 
+                        <span>Kazaksthan</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/flag/malaysia.png" alt="malaysia" /> 
+                        <span>Malaysia</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/flag/moldova.png" alt="moldova" /> 
+                        <span>Moldova</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/flag/russia.png" alt="russia" /> 
+                        <span>Russia</span> 
+                    </a>
+                </li>
+                <li></li>
+            </ul>
+            <h4><a href="applications_open_2.html">VIEW ALL OPEN MARKETS</a></h4>
+        </div>
     </div>
-</div>
-<!-- satisfactionwrap  =====  end -->
+</header>
+<!-- header end -->       
 
 
 
 
-<!-- knowledgeresources  =====  start -->
-<div class="knowledgeresources">
-    <div class="wrapper">
-        <h2>
-            <span>KNOWLEDGE AND RESOURCES</span>
-            <img src="images/icon.png" alt="KNOWLEDGE AND RESOURCES" />
-        </h2>
+
+<!-- banner start -->
+<section class="mainbanner home">
+    <div class="bannersection">
+        <img class="banner_web" src="images/home/banner1.jpg" alt="home" />
+        <img class="banner_ipad" src="images/home/banner2.jpg" alt="home" />
+        <img class="banner_mobile" src="images/home/banner3.jpg" alt="home" />
+    </div>
+        <div class="home-block">
+            <div class="makehistory_mob">
+                <img src="images/make-history.png" alt="make history" />
+            </div>
+            <h2>
+                <span>An internship<br>that’s challenging? </span>
+                <strong>How about delivering<br>a smoke-free future<br>with us?</strong> 
+            </h2>
+            <p><a href="#">EXPLORE NOW<b>&#8594;</b></a></p>
+            <div class="makehistory_web">
+                <img src="images/make-history.png" alt="make history" />
+            </div>
+        </div>
+</section>
+<!-- banner end -->
+
+
+
+
+
+
+<!-- gain experience start -->
+<section class="boxpart">
+    <div class="boxpartInner">
+        <img class="boxpartWEB" src="images/home/gainexperience_web.jpg" alt="gain experience" />
+        <img class="boxpartMOB" src="images/home/gainexperience_mob.jpg" alt="gain experience" />
+        <div>
+            <h2>
+                Gain hands-on experience from our PMI internships
+            </h2>
+            <h3>
+                PMI is changing faster than ever to deliver a smoke-free future. For ambitious students, an internship here could be a transformative experience. Every year, we offer a variety of internship opportunities all over the world and across our business: from digital, marketing, and IT, to finance, operations, sales, and more. 
+            </h3>
+            <p><a href="#">EXPLORE NOW<b>&#8594;</b></a></p>
+        </div>
+    </div>
+</section>
+<!-- gain experience end -->
+
+
+
+
+
+<!-- ourpeoples start -->
+<section class="ourpeoples">
+    <div class="ourpeoplesInner">
+        <h2>Meet our interns</h2>
         <h3>
-            All you need to know about natural gas, its uses, benefits, and industry trends is here. Our repository will provide you with the basic and advanced information on the fuel industry
+            The unique thing about INKOMPASS internship program is, no matter where you intern with us across the world, your internship experience is aimed at helping you discover your potential. Hear from some of our interns about their unique journeys, experiences, and discoveries.
         </h3>
-        <div class="knowledgeresourcesslider">
+        <div id="peoplesSlickSlider" class="ourpeoplesSlider">
             <div class="items">
-                <img src="images/home/knowledgeresources1.png" alt="knowledge and resources" />
-                <h4>Transition to cleaner energy</h4>
-                <p>AG&P Pratham, India, the City Gas Distribution (CGD) arm and a critical pillar of Singapore based AG&P Group is a leading LNG and Gas distribution company.</p>
-                <aside>
-                    <a href="#">
-                        <span>Know more</span>
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    </a>
-                </aside>
+                <img src="images/home/intern1.png" alt="interns" />
+                <div class="item">
+                    <h4>Pamela, Marketing, Russia</h4>
+                    <p>
+                        Pamela’s distinctive touch to any presentation enchants even the naysayers. Learn more about her journey at INKOMPASS.
+                    </p>
+                    <aside><a href="testimonial-interns.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
             </div>
             <div class="items">
-                <img src="images/home/knowledgeresources2.png" alt="knowledge and resources" />
-                <h4>What to do when you fear gas leak?</h4>
-                <p>Enjoy Fuel efficient journeys with AG&P Pratham. CNG gives you more mileage per kilometer, saving fuel cost and increasing the earnings.</p>
-                <aside>
-                    <a href="#">
-                        <span>Know more</span>
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    </a>
-                </aside>
+                <img src="images/home/intern2.png" alt="interns" />
+                <div class="item">
+                    <h4>Jack, Operations, UK</h4>
+                    <p>
+                        A keen observer with an eye for detailing, Jack pursues perfection every time. Read more about his internship experience at INKOMPASS.
+                    </p>
+                    <aside><a href="testimonial-interns.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
             </div>
             <div class="items">
-                <img src="images/home/knowledgeresources3.png" alt="knowledge and resources" />
-                <h4>CNG and your pocket</h4>
-                <p>This pocket-friendly choice lets you embark on longer and safer journeys that are not just beneficial to you but also to the environment.</p>
-                <aside>
-                    <a href="#">
-                        <span>Know more</span>
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    </a>
-                </aside>
+                <img src="images/home/intern3.png" alt="interns" />
+                <div class="item">
+                    <h4>Andres, International Technology, Ecuador</h4>
+                    <p>
+                        Expressive in the truest sense, Andres always has a solution for everything and everyone. Learn more about his INKOMPASS journey.
+                    </p>
+                    <aside><a href="testimonial-interns.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
             </div>
             <div class="items">
-                <img src="images/home/knowledgeresources1.png" alt="knowledge and resources" />
-                <h4>Transition to cleaner energy</h4>
-                <p>AG&P Pratham, India, the City Gas Distribution (CGD) arm and a critical pillar of Singapore based AG&P Group is a leading LNG and Gas distribution company.</p>
-                <aside>
-                    <a href="#">
-                        <span>Know more</span>
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    </a>
-                </aside>
+                <img src="images/home/intern1.png" alt="interns" />
+                <div class="item">
+                    <h4>Pamela, Marketing, Russia</h4>
+                    <p>
+                        Pamela’s distinctive touch to any presentation enchants even the naysayers. Learn more about her journey at INKOMPASS.
+                    </p>
+                    <aside><a href="testimonial-interns.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
             </div>
             <div class="items">
-                <img src="images/home/knowledgeresources2.png" alt="knowledge and resources" />
-                <h4>What to do when you fear gas leak?</h4>
-                <p>Enjoy Fuel efficient journeys with AG&P Pratham. CNG gives you more mileage per kilometer, saving fuel cost and increasing the earnings.</p>
-                <aside>
-                    <a href="#">
-                        <span>Know more</span>
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    </a>
-                </aside>
+                <img src="images/home/intern2.png" alt="interns" />
+                <div class="item">
+                    <h4>Jack, Operations, UK</h4>
+                    <p>
+                        A keen observer with an eye for detailing, Jack pursues perfection every time. Read more about his internship experience at INKOMPASS.
+                    </p>
+                    <aside><a href="testimonial-interns.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
             </div>
             <div class="items">
-                <img src="images/home/knowledgeresources3.png" alt="knowledge and resources" />
-                <h4>CNG and your pocket</h4>
-                <p>This pocket-friendly choice lets you embark on longer and safer journeys that are not just beneficial to you but also to the environment.</p>
-                <aside>
-                    <a href="#">
-                        <span>Know more</span>
-                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    </a>
-                </aside>
+                <img src="images/home/intern3.png" alt="interns" />
+                <div class="item">
+                    <h4>Andres, International Technology, Ecuador</h4>
+                    <p>
+                        Expressive in the truest sense, Andres always has a solution for everything and everyone. Learn more about his INKOMPASS journey.
+                    </p>
+                    <aside><a href="testimonial-interns.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
+            </div>
+            <div class="items">
+                removed slide on load
             </div>
         </div>
     </div>
-</div>
-<!-- knowledgeresources  =====  end -->
+</section>
+<!-- ourpeoples end -->
 
 
 
+<!-- latestatHere start -->
+<section class="latestatHere">
+    <div class="latestatHereInner">
+        <h2>Latest at INKOMPASS</h2>
+        <div id="latestSlickSlider" class="latestatHereSlider">
+            <div class="items">
+                <img src="images/home/latest1.png" alt="interns" />
+                <div class="item">
+                    <h4>Applications opening soon</h4>
+                    <p>
+                        Japan, Korea and Argentina going live in Q3, 2022
+                    </p>
+                    <aside><a href="testimonial-coaches.html"><span><b>&#8594;</b></span> DON’T MISS OUT!</a></aside>
+                </div>
+            </div>
+            <div class="items">
+                <img src="images/home/latest2.png" alt="interns" />
+                <div class="item">
+                    <h4>Find us near you</h4>
+                    <p>
+                        Australia is going to visit the University of Melbourne on 12th April 2022.
+                    </p>
+                    <aside><a href="testimonial-coaches.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
+            </div>
+            <div class="items">
+                <img src="images/home/latest3.png" alt="interns" />
+                <div class="item">
+                    <h4>John Doe loved his INKOMPASS journey</h4>
+                    <p>
+                        Get to know John Doe’s INKOMPASS experience
+                    </p>
+                    <aside><a href="testimonial-coaches.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
+            </div>
+            <div class="items">
+                <img src="images/home/latest4.png" alt="interns" />
+                <div class="item"> 
+                    <h4>Applications opening soon</h4>
+                    <p>
+                        Japan is going live in Q3, 2022
+                    </p>
+                    <aside><a href="testimonial-coaches.html"><span><b>&#8594;</b></span> DON’T MISS OUT!</a></aside>
+                </div>
+            </div>
+            <div class="items">
+                <img src="images/home/latest5.png" alt="interns" />
+                <div class="item">
+                    <h4>Career Quiz</h4>
+                    <p>
+                        Find out a PMI career path for you
+                    </p>
+                    <aside><a href="testimonial-coaches.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
+            </div>
+            <div class="items">
+                <img src="images/home/latest6.png" alt="interns" />
+                <div class="item">
+                    <h4>Global Top Employer 2022</h4>
+                    <p>
+                        Six years in a row
+                    </p>
+                    <aside><a href="testimonial-coaches.html"><span><b>&#8594;</b></span> READ MORE</a></aside>
+                </div>
+            </div>
+            <div class="items">
+                removed slide on load
+            </div>
 
-<!-- wishtoconnect  =====  start -->
-<footer class="wishtoconnect">
-    <div class="wrapper">
-        <div class="wishtoconnectposter">
-            <img src="images/wishtoconnect.png" alt="wish to connect" />
-        </div>
-        <div class="wishtoconnectcontent">
-            <h2>WISH TO CONNECT?</h2>
-            <p>Just drop a message and we’ll get in touch with you.</p>
-            <ul>
-                <li class="width25">
-                    <input type="text" name="name" placeholder="Name" />
-                    <span class="errorMsg">Enter Name</span>
-                </li>
-                <li class="width25">
-                    <input type="text" name="contactno" placeholder="Contact No." />
-                    <span class="errorMsg">Enter Contact No.</span>
-                </li>
-                <li class="width25">
-                    <input type="text" name="emailid" placeholder="Email ID" />
-                    <span class="errorMsg">Enter Email ID</span>
-                </li>
-                <li class="width25">
-                    <select name="location">
-                        <option value="0">Location</option>
-                        <option>Delhi</option>
-                        <option>Mumbai</option>
-                    </select>
-                    <span class="errorMsg">Select Location</span>
-                </li>
-                <li class="width25">
-                    <select name="typeofquery">
-                        <option value="0">Type of Query</option>
-                        <option>Query 1</option>
-                        <option>Query 2</option>
-                    </select>
-                    <span class="errorMsg">Select Query</span>
-                </li>
-                <li class="width75">
-                    <input type="text" name="message" placeholder="Message" />
-                    <span class="errorMsg">Enter Message</span>
-                </li>
-                <li>
-                    <input type="submit" name="submit"  value="SUBMIT" />
-                </li>
-            </ul>
         </div>
     </div>
-</footer>
-<!-- wishtoconnect  =====  end -->
+</section>
+<!-- latestatHere end -->
 
 
 
-<!-- footer  =====  start -->
+        
+<!-- share-nav start -->
+<nav class="share-nav">
+    <p>Share this page</p>
+    <aside>
+        <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+    </aside>
+</nav>
+<!-- share-nav end -->        
+        
+        
+        
+<!-- footer start -->
 <footer class="footer">
-    <div class="wrapper">
-        <div class="footerleft">
-            <aside><img src="images/logo2.png" alt="logo" /></aside>
-            <dl>
-                <dt><a href="#">MYPRATHAM ACCOUNT</a></dt>
-                <dd><a href="#">GET A NEW CONNECTION</a></dd>
-            </dl>
+    <div class="footer-inner">
+             
+        <section>
             <ul>
-                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><h2>Quick Links</h2></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="explore-opportunities.html">Explore Opportunities</a></li>
+                <li><a href="program-details.html">Program Details</a></li>
+                <li><a href="discover-PMI.html">Discover PMI</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
-            <p>All rights reserved © AG&P Pratham 2022</p>
+            <ul>
+                <li><h2>Our Business</h2></li>
+                <li><a href="discover-PMI.html">Discover PMI</a></li>
+            </ul>
+            <ul>
+                  
+                <li><h2>Legal</h2></li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li><a href="social-media-rules-of-engagement.html">Social Media Rules of Engagement</a></li>
+                <li><a href="company-information.html">Company Information</a></li>
+            </ul>
+            <ul class="followus">
+                <li><h2>Follow us on</h2></li>
+                <li>
+                    <a href="https://www.facebook.com/Inkompass" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/inkompass/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/channel/UCrbDYy2NcklUiTGMtNmAomw" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/showcase/inkompass" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </section>
+        <div class="copyrightpart">
+            <ul>
+                <li><a href="privacy-notice.html">PRIVACY NOTICE</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact-us.html">CONTACT US</a></li>
+                <li><a href="company-information.html">COMPANY INFORMATION</a></li>
+            </ul>
+            <p>&copy; Philip Morris International Management SA</p>
         </div>
-        <div class="footerright">
-            <ul>
-                <li>
-                    <h2>CNG</h2>
-                    <ul>      
-                        <li><a href="#">Product Information</a></li>
-                        <li><a href="#">OEM’s</a></li>
-                        <li><a href="#">Retrofitments</a></li>
-                        <li><a href="#">CNG Stations</a></li>
-                        <li><a href="#">Do’s and Dont’s</a></li>
-                        <li><a href="#">Offers and Promotions</a></li>
-                        <li><a href="#">Calculator</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>PNG Household </h2>
-                    <ul>
-                        <li><a href="#">Product Information </a></li>
-                        <li><a href="#">Connection Process </a></li>
-                        <li><a href="#">PNG Availability </a></li>
-                        <li><a href="#">Do’s and Dont’s </a></li>
-                        <li><a href="#">Offers and Promotions </a></li>
-                        <li><a href="#">Calculator</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>PNG Commercial </h2>
-                    <ul>
-                        <li><a href="#">Product Information </a></li>
-                        <li><a href="#">Connection Process </a></li>
-                        <li><a href="#">PNG Availability </a></li>
-                        <li><a href="#">Do’s and Dont’s </a></li>
-                        <li><a href="#">Calculator</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>PNG Industrial </h2>
-                    <ul>
-                        <li><a href="#">Product Information </a></li>
-                        <li><a href="#">Connection Process</a></li>
-                        <li><a href="#">PNG Availability </a></li>
-                        <li><a href="#">Do’s and Dont’s </a></li>
-                        <li><a href="#">Calculator</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>About Us </h2>
-                    <ul>
-                        <li><a href="#">About AG&P </a></li>
-                        <li><a href="#">Pratham Team </a></li>
-                        <li><a href="#">Financials </a></li>
-                        <li><a href="#">Compliance & Regulations </a></li>
-                        <li><a href="#">CSR</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>Health & Safety </h2>
-                    <ul>
-                        <li><a href="#">Do’s and Dont’s </a></li>
-                        <li><a href="#">Emergency help</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>Others </h2>
-                    <ul>
-                        <li><a href="#">FAQs </a></li>
-                        <li><a href="#">Privacy Notice </a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3><a href="#">Resources </a></h3>
-                    <h3><a href="#">Careers </a></h3>
-                    <h3><a href="#">Investors </a></h3>
-                    <h3><a href="#">Contact Us</a></h3>
-                </li>
-            </ul>
 
-            <h4>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </h4>
-            <p>All rights reserved © AG&P Pratham 2022</p>
-        </div>
     </div>
 </footer>
-<!-- footer  =====  end -->
-
-
-
-<!-- wishtoconnect  =====  end -->
-
-
-</main>
+<!-- footer end -->
 
 
 
 
-
-<!-- quicklink  =====  start -->
-<div class="quicklinkBG" id="quicklinkBG"></div>
-<div class="quicklink" id="quicklink">
-        <aside id="quicklinkToggle">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMy4wIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowNzJBRjlBRUZFMkIxMUVDQTNBN0RBMDRCRkNCQUE2OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowNzJBRjlBRkZFMkIxMUVDQTNBN0RBMDRCRkNCQUE2OSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA3MkFGOUFDRkUyQjExRUNBM0E3REEwNEJGQ0JBQTY5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA3MkFGOUFERkUyQjExRUNBM0E3REEwNEJGQ0JBQTY5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+OgeRbgAAAtFJREFUeNqslk1oE0EUgGfz0zSlPRU8aAriwZT4e9BDAmKqR5UWJD2IYNuDEotYvVRoYGYxQgtW0UPBi0T0Ys2hpXg0TS/xoGBFxbQXxcQgRT2YuElMNuObNbOZbIl0QgeGzbx5O9+b97dRfl3cj9odSlcPdoUmiePwCWNdXU2g8rMZQrW8Kuo52gXY+vpx1/WHBECmzBkYRPY+L9HujCERZNsugLCH2J6tdyduG2IFVN8uM4sVNmvZtbgJisQJ05WGMOtEQOXlouo4NED4vjY7Og6gjXq8kDt8j+liKUjnyK0mgNM/SMT97rupjTqIG4Wc/iEiBbHvPdIIsgUggOKV1GLjHe/R9gLPLW0dN29D9/tXOQgE2QAU564gff0VBRHVZsco389fOnC89CiyDLc01rRY0CsvHl+VqpNSbEpR3N3YHb7PMuefO+DJDoefxDU8Gew4eZ6rF8rz0+dqP3JLjhZZhMQqBkW+1QSA4MNcQJBhSWdgyHwHRg5udApis2qsWFsRZ3lpDlPL+H17FOUn/Fj/8tGU/UktUJBRUcZGTcu/KcamPOKZtuYUjeKO0+GmrGHW1rJpoz7EG5RiERXcg7isHoPnkMLH4AbZph7HGyQDiGlpHJ5ZM9wBAGQFsBjA3Af9KmTr3RWCXpUA3Ql46psaKYNYAeDPFbCG9Dx4l4RDKc8WBijPz6hwEJHqFGCJCFgBwEDnhWiQAQwXaHkRwG6FIcBU6pOgZ9LU5jGLR2mlWLgW8AHgA3Obvv6a9SllyzcRAP9X9PSHeFwUSHEpdzGrtjJcZy4PC21FlYJAXYgvvIeYYKhgnyWNMTRHXz1N1fLTaanA22/sribpz5wCwQzCegd7QkqOa9FQsJJ48tm+5+AIyAgHQCxI7dsnuf8CvE4gywhkFW6laAIyafnPtekSqAtwlbrdgE2fXwaC1q0KDZGlq6rdPNs2gI2/AgwARGKjjcdOEOMAAAAASUVORK5CYII=" alt="toggle" />
-        </aside>
-        <h6><i id="qlMobileClose" class="fa fa-times" aria-hidden="true"></i></h6>
-        <h2>
-            <span>QUICK LINKS</span>
-            <img src="images/icon.png" alt="QUICK LINKS" />
-        </h2>
-        <h3>Smell Gas?</h3> 
+<!-- side cookies start -->
+<div class="siteusescookies" id="siteusescookies">
+    <div class="sitecookies">
         <p>
-            <span>Call Us: </span> <a href="tell"> 0800 111 999</a> 
+            This site uses cookies. We do this to remember your preferences and compile analytics of visits. By using our site, you agree to our use of all cookies. 
+            <a href="cookie-policy.html" target="_blank">Read More</a>
         </p>
-        <div class="qlservice">
-            <h4>PNG Users</h4>
-            <ul>
-                <li> 
-                    <a href="#" >
-                        <span class="ql_connection"></span>
-                        <b>New Connection</b>
-                    </a>
-                </li>
-                <li> 
-                    <a href="#" >
-                        <span class="ql_availability"></span>
-                        <b>PNG Availability</b>
-                    </a>
-                </li>
-                <li> 
-                    <a href="#" >
-                        <span class="ql_ratecard"></span>
-                        <b>Rate Card</b>
-                    </a>
-                </li>
-                <li> 
-                    <a href="#" >
-                        <span class="ql_billpay"></span>
-                        <b>Bill Pay</b>
-                    </a>
-                </li>
-                <li> 
-                    <a href="#" >
-                        <span class="ql_referral"></span>
-                        <b>Referral</b>
-                    </a>
-                </li>
-                <li> 
-                    <a href="#" >
-                        <span class="ql_offers"></span>
-                        <b>Offers</b>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="qlservice">
-            <h4>CNG Users</h4>
-            <ul class="abc">
-                <li> 
-                    <a href="#" >
-                        <span class="ql_stations"></span>
-                        <b>Stations </b>
-                    </a>
-                </li>
-                <li> 
-                    <a href="#" >
-                        <span class="ql_calculator"></span>
-                        <b>Calculator</b>
-                    </a>
-                </li>
-                <li> 
-                    <a href="#" >
-                        <span class="ql_ratecard"></span>
-                    <b>Rate Card</b>
-                    </a>
-                </li>
-            </ul>
-        </div>
-</div>
-<!-- quicklink  =====  end -->
-
-
-
-
-
-<!-- mobilemenu  =====  start -->
-<div class="mobilemenuBG" id="mobilemenuBG"></div>
-<div class="mobilemenu" id="mobilemenu">
-    <aside><i id="menuobileClose" class="fa fa-times" aria-hidden="true"></i></aside>
-    <h4>
-        <i class="fa fa-user-circle" aria-hidden="true"></i>
-        <a href="#">
-            <span>Welcome Guest</span>
-            <span>Login/Signup</span>
-        </a>
-    </h4>
-    <ul>
-        <li>
-            <h2>
-                <img src="images/menu/icon2.png" alt="menu" />
-                <span>About Us</span>
-            </h2>
-            <ul>
-            <li><a href="#">About AG&P Pratham</a></li>
-            <li><a href="#">Financials</a></li>
-            <li><a href="#">CSR</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Compliances & Regulations</a></li>
-            </ul>
-        </li>
-        <li>
-            <h2>
-                <img src="images/menu/icon3.png" alt="menu" />
-                <span>CNG</span>
-            </h2>
-            <ul>
-                <li><a href="#">Product Information</a></li>
-                <li><a href="#">OEM’s</a></li>
-                <li><a href="#">Offers and Promotions</a></li>
-                <li><a href="#">Retrofitments</a></li>
-                <li><a href="#">Calculator</a></li>
-                <li><a href="#">CNG Stations</a></li>
-                <li><a href="#">Do’s and Dont’s</a></li>
-            </ul>
-        </li>
-        <li>
-            <h2>
-                <img src="images/menu/icon1.png" alt="menu" />
-                <span>PNG</span>
-            </h2>
-            <ul>
-                <li><h3>Household</h3></li>
-                <li>
-                    <ol>
-                        <li><a href="#">Product Information</a></li>
-                        <li><a href="#">Connection Process</a></li>
-                        <li><a href="#">PNG Availability</a></li>
-                        <li><a href="#">Do’s and Dont’s</a></li>
-                        <li><a href="#">Offers and Promotions</a></li>
-                        <li><a href="#">Calculator</a></li>
-                    </ol>
-                </li>
-                <li><h3>Commercial</h3></li>
-                <li>
-                    <ol>
-                        <li><a href="#">Product Information</a></li>
-                        <li><a href="#">Connection Process</a></li>
-                        <li><a href="#">PNG Availability</a></li>
-                        <li><a href="#">Do’s and Dont’s</a></li>
-                        <li><a href="#">Calculator</a></li>
-                    </ol>
-                </li>
-                <li><h3>Industries</h3></li>
-                <li>
-                    <ol>
-                        <li><a href="#">Product Information</a></li>
-                        <li><a href="#">Connection Process</a></li>
-                        <li><a href="#">PNG Availability</a></li>
-                        <li><a href="#">Do’s and Dont’s</a></li>
-                        <li><a href="#">Calculator</a></li>
-                    </ol>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <h2 class="nosubmenu" onclick="window.open('#','_self')">
-                <img src="images/menu/icon5.png" alt="menu" />
-                <span>Health and Safety</span>
-            </h2>
-        </li>
-        <li>
-            <h2 class="nosubmenu" onclick="window.open('#','_self')">
-                <img src="images/menu/icon4.png" alt="menu" />
-                <span>Resources</span>
-            </h2>
-        </li>
-        <li> 
-            <h2 class="more_h2">
-                <img src="images/menu/icon6.png" alt="menu" />
-                <span>More</span>
-            </h2>
-            <ul class="more_ul">
-                <li><a href="#">Investors</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">New Connection</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </li>
-    </ul>
-    <div class="menusocial">
-        <h5>
-            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </h5>
-        <p>All rights reserved © AG&P Pratham 2022</p>
+        <aside>
+            <span onclick="acceptcookies()">GOT IT! <b>&#8594;</b></span>
+        </aside>
     </div>
 </div>
-<!-- mobilemenu  =====  end -->
+<!-- side cookies end -->
 
-
-
-
-
+        
+</main>
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>window.jQuery || document.write("<script src='scripts/jquery-min.js'><\/script>")</script>
-
-<script src="scripts/slick.min.js"></script>
-<script src="scripts/slimscroll.min.js"></script>
 <script src="scripts/common.js"></script>
-
+<script src="scripts/slick.min.js"></script>
+ 
  
 </body>
 </html>

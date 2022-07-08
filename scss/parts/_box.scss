@@ -1,35 +1,37 @@
-
-
 .boxpart { 
     padding:4rem 0; width:100%; float:left; background:$homebg; overflow: hidden;
     .boxpartInner { 
         display: flow-root; position: relative; width:95%; max-width:1372px; margin:0 auto; 
         .boxpartWEB { display:block; width:80%; float: right; }
         .boxpartMOB { display:none; }
-        div 
-        { 
-            position:absolute; top:50%; left:0; z-index:2; transform:translateY(-50%); background:$white; width:45%; padding:2rem;
-            h2 {  
-                width:100%; float:left; font-size:30px; line-height: 1.2; color:$lightBlack; font-weight:600; font-family:'latosemibold';
-            }
-            h3 {  
-                 width:100%; float:left; margin:1.1rem 0 1.7rem 0; font-size:20px;  color:$lightBlack2; font-weight:400; font-family:'latoregular';
-            }
+        div { 
+            position:absolute; top:50%; left:0; z-index:2; transform:translateY(-50%); background:$white; width:45%; padding:2rem 1rem 2rem 2rem;
+            h2 { width:100%; float:left; font-size:30px; line-height: 1.2; color:$lightBlack; font-weight:600; font-family:'latosemibold'; }
+            h3 { width:100%; float:left; margin:1.1rem 0 1.7rem 0; font-size:20px;  color:$lightBlack2; font-weight:400; font-family:'latoregular'; }
             p{
                 width:100%; float:left; 
                 a { 
-                    background:$darkBlue; padding:15px 20px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
-                    b{ margin-left:5px; @include transition(ease-out); display:inline-block; font-size:0; width:8px; height:8px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; }
+                    background:$darkBlue; padding:21px 26px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
+                    b{ margin-left:5px; @include transition(ease-out); display:inline-block; font-size:0; margin-top:-2px; width:10px; height:10px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; }
                     &:hover { 
-                        background:$darkBlue2; padding:15px 15px 15px 20px; @include transition(ease-in);
+                        background:$darkBlue2; padding-right:21px; @include transition(ease-in);
                         b { margin-left:10px; @include transition(ease-in); } 
                     }
-                    &.shareopportunity {
+                    &.shareopportunity { position:relative;
                         margin-left:5px;  color:$darkBlue; background:$white; box-shadow: inset 0px 0px 0px 1px $darkBlue;
                         i.fa.fa-share-alt { margin-left:5px; @include transition(ease-out); }
+                        span.copyalerttext { 
+                            opacity:0; position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 150px; padding: 5px;background:$lightBlack; border-radius: 3px; text-align: center; text-transform: none;  word-break: break-all; color:$white; font-weight:300; font-family:'latolight'; line-height: 1.2; font-size: 12px; 
+                            &:after { content: "\f0d7"; position: absolute; bottom: -12px;left: 48%; font-family: 'FontAwesome'; color:$lightBlack; font-size: 18px; }
+                        }
+                        span.copyurltext { 
+                            display: none; position: absolute; bottom: -60px;left: 0; width: 100%; padding: 5px;background:$lightBlack; border-radius: 3px; text-align: center; text-transform: none;  word-break: break-all; color:$white; font-weight:300; font-family:'latolight'; line-height: 1.2; font-size: 12px; 
+                            &:after { content: "\f0d8"; position: absolute;top: -17px;left: 48%; font-family: 'FontAwesome'; color:$lightBlack; font-size:22px; }
+                        }
                         &:hover { 
                             color:$white; background:$darkBlue;  
                             i.fa.fa-share-alt { margin-left:10px; @include transition(ease-in); } 
+                            span.copyalerttext { opacity:1; }
                         } 
                     }
                 }
@@ -43,6 +45,14 @@
                 li { list-style:disc; margin:3px 0 3px 20px; font-size:20px; color:$lightBlack2; font-weight:400; font-family:'latoregular'; }
             }
         }
+    }
+}
+
+
+
+.boxpart.discover {
+    .boxpartInner { 
+        div { padding:2rem; }
     }
 }
 
@@ -117,7 +127,7 @@
         width: 100%;display: flex;flex-wrap: wrap; flex-direction: column;
         .boxpartWEB { width: 100%;}
         div {
-            position: relative;top: 0;left: 0; transform: translateY(0);width: 90%;padding: 1.5rem;float: left; margin: 0 5%; margin-top: -100px; 
+            position: relative;top: 0;left: 0; transform: translateY(0);width: 90%;padding:1.5rem; float: left; margin: 0 5%; margin-top: -100px; 
             h2{text-align:center;}
             h3{text-align:center;}
             p {text-align: center;}
@@ -126,7 +136,7 @@
     }
 
     .boxpart.testimonialstory{
-        padding: 3rem 0 6rem 0;
+        padding: 3rem 0 3rem 0;
         .boxpartInner {
             width: 90%;
             .boxpartstory { width:100%;  }
@@ -157,7 +167,7 @@
     }
 
     .boxpart.testimonialstory {
-        padding:0 0 5rem 0;
+        padding:0 0 3rem 0;
         .boxpartInner {
             width: 100%; margin-top:0px;
             div {
@@ -172,7 +182,7 @@
         .boxpartInner {
             .boxpartstory { width:100%;  }
             div p a {
-                width: 245px;
+                width: 260px; clear: both;
                 &.shareopportunity { margin: 10px 0 0 0; }
             }
         }  

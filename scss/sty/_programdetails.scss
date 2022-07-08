@@ -9,7 +9,7 @@
             width:100%; float:left; margin-top:2rem; @include display(space-between, stretch); flex-wrap:wrap;
             li {
                 list-style:none; position:relative; width:49%; margin:0.6rem 0; overflow:hidden;
-                &:before { opacity:1;  content:''; z-index:1; position:absolute; top:0; left:0; width:100%; height:100%; background: transparent linear-gradient(0deg, #000000 0%, #54545400 40%) 0% 0% no-repeat padding-box; transition:all 0.5s ease-out; }
+                &:before { opacity:1;  content:''; z-index:1; position:absolute; top:0; left:0; width:100%; height:100%; background:transparent; background: transparent linear-gradient(0deg, #000 0%, #54545400 60%) 0% 0% no-repeat padding-box; transition:all 0.5s ease-out; }
                 img { width:100%;height:100%; margin:0; }
                 .items {
                     z-index:2; position:absolute; left:0; bottom:0; padding:2.5rem; width:100%; height:auto; overflow:hidden; background:trasparent; transition:all 0.5s ease-out;
@@ -25,15 +25,15 @@
                         }
                     }
                     .item {
-                        width:100%; height:1px; overflow:hidden; float:left; transition:all 0.5s ease-out;
+                        width:100%; height:1px; overflow:hidden; float:left; transition:height 0.5s ease-out;
                         h4 {  width:100%; float:left; font-size:18px; margin:0; color:$white; font-weight:700; font-family:'latobold'; }
                         p {  font-size:16px; font-weight:400; font-family:'latoregular';  }
                     } 
                 }
                 &:hover {
-                    &:before {  background:rgba(0,0,0,0.5); transition:all 0.5s ease-in; }
+                    &:before {  background:rgba(0,0,0,0.6); transition:all 0.5s ease-in; }
                     .items {
-                        overflow:hidden; top:0; bottom:auto; transition:all 0.5s ease-in;
+                        overflow:hidden; top:0; bottom:auto; transition:height 0.5s ease-in;
                         aside { display:none; transition:all 0.5s ease-in; }
                         .item { height:auto; transition:all 0.5s ease-in;  }
                     }

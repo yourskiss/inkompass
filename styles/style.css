@@ -353,12 +353,12 @@ main {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 80px 0 0 0;
+  padding: 100px 0 0 0;
 }
 
 @media only screen and (max-width: 1255px) {
   main {
-    padding: 59px 0 0 0;
+    padding: 60px 0 0 0;
   }
 }
 
@@ -547,6 +547,7 @@ main {
           align-items: center;
   float: right;
   width: auto;
+  margin-top: -2px;
 }
 
 .header-right .headerMenu {
@@ -618,7 +619,7 @@ main {
 
 .header-right .headerApplication {
   background: #1F3C84;
-  padding: 20px;
+  padding: 21px 26px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -654,7 +655,7 @@ main {
 }
 
 .header-right .headerApplication:hover {
-  padding-right: 15px;
+  padding-right: 21px;
   background: #0f2867;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -668,7 +669,7 @@ main {
 
 .header-right .headerApplication.active {
   background: #0f2867;
-  padding-right: 15px;
+  padding-right: 21px;
 }
 
 .header-right .headerApplication.active b {
@@ -1626,7 +1627,7 @@ main {
 
 .home-block p a {
   background: #1F3C84;
-  padding: 20px;
+  padding: 21px 26px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -1666,7 +1667,7 @@ main {
 
 .home-block p a:hover {
   background: #0f2867;
-  padding-right: 15px;
+  padding-right: 21px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -1765,7 +1766,7 @@ main {
 
 /* applicaton block */
 .mainbanner.applicaton {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .applications-block {
@@ -2434,7 +2435,7 @@ main {
 
 .boxpart .boxpartInner div p a {
   background: #1F3C84;
-  padding: 20px;
+  padding: 21px 26px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -2474,7 +2475,7 @@ main {
 
 .boxpart .boxpartInner div p a:hover {
   background: #0f2867;
-  padding-right: 15px;
+  padding-right: 21px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -2817,7 +2818,8 @@ main {
     width: 100%;
   }
   .boxpart.application .boxpartInner div p a {
-    width: 245px;
+    width: 260px;
+    clear: both;
   }
   .boxpart.application .boxpartInner div p a.shareopportunity {
     margin: 10px 0 0 0;
@@ -4216,7 +4218,7 @@ main {
 .registeruswrap .registeruscontainer .registerform .formField .formfieldSubmit {
   display: inline-block;
   background: #1F3C84;
-  padding: 20px;
+  padding: 21px 26px;
   font-weight: 600;
   font-family: 'latosemibold';
   font-size: 14px;
@@ -4256,7 +4258,7 @@ main {
 
 .registeruswrap .registeruscontainer .registerform .formField .formfieldSubmit:hover {
   background: #0f2867;
-  padding-right: 15px;
+  padding-right: 21px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -6071,30 +6073,27 @@ body.hidden-scroll {
 }
 
 .recruitment_button a {
-  display: inline-block;
   background: #1F3C84;
-  padding: 20px;
+  margin: 0 10px;
+  padding: 21px 26px;
   font-weight: 700;
   font-family: 'latobold';
-  font-size: 0.8rem;
+  font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .recruitment_button a b {
@@ -6112,7 +6111,7 @@ body.hidden-scroll {
 
 .recruitment_button a:hover {
   background: #0f2867;
-  padding-right: 15px;
+  padding-right: 21px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -6125,7 +6124,6 @@ body.hidden-scroll {
 
 .recruitment_button a.shareopportunity {
   position: relative;
-  margin-left: 5px;
   color: #1F3C84;
   background: #ffffff;
   -webkit-box-shadow: inset 0px 0px 0px 1px #1F3C84;
@@ -6588,16 +6586,23 @@ body.hidden-scroll {
 
 @media only screen and (max-width: 599px) {
   /* #################### recruitment button  #################### */
+  .recruitment_button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .recruitment_button a {
-    width: 230px;
-    padding: 0.9rem;
-    letter-spacing: 1px;
+    width: 265px;
+    clear: both;
+    margin: 0 10px;
   }
-  .recruitment_button a:hover {
-    padding: 0.9rem 0.6rem 0.9rem 0.9rem;
-  }
-  .recruitment_button a.sharebtn {
-    margin: 9px 0 0 0;
+  .recruitment_button a.shareopportunity {
+    margin-top: 10px;
   }
 }
 

@@ -1,63 +1,55 @@
 @font-face {
-    font-family:'arial';
-    src: url('../fonts/arial.woff2') format('woff2'), url('../fonts/arial.woff') format('woff');
-    font-weight:300; 
+    font-family:'latoheavy';
+    src: url('../fonts/Lato-Heavy.woff2') format('woff2'), url('../fonts/Lato-Heavy.woff') format('woff');
+    font-weight:normal; /* bold */
     font-style:normal;
     font-stretch:normal;
-    font-display: swap;
 }
 @font-face {
-    font-family:'arialmedium';
-    src: url('../fonts/arial-medium.woff2') format('woff2'), url('../fonts/arial-medium.woff') format('woff');
-    font-weight:500; 
+    font-family: 'latomedium';
+    src: url('../fonts/Lato-Medium.woff2') format('woff2'), url('../fonts/Lato-Medium.woff') format('woff');
+    font-weight:normal; /* 500 */
     font-style:normal;
     font-stretch:normal;
-    font-display: swap;
-}
-@font-face {
-    font-family:'arialbold';
-    src: url('../fonts/arial-bold.woff2') format('woff2'), url('../fonts/arial-bold.woff') format('woff');
-    font-weight:bold; 
-    font-style:normal;
-    font-stretch:normal;
-    font-display: swap;
 }
 
 @font-face {
-    font-family:'eurostilebold';
-    src: url('../fonts/eurostile-bold.woff2') format('woff2'), url('../fonts/eurostile-bold.woff') format('woff');
-    font-weight:bold; 
+    font-family:'latoblack';
+    src: url('../fonts/Lato-Black.woff2') format('woff2'), url('../fonts/Lato-Black.woff') format('woff');
+    font-weight:normal; /* 900 */
     font-style:normal;
     font-stretch:normal;
-    font-display: swap;
+}
+@font-face {
+    font-family:'latobold';
+    src: url('../fonts/Lato-Bold.woff2') format('woff2'), url('../fonts/Lato-Bold.woff') format('woff');
+    font-weight:normal; /* 700 */
+    font-style:normal;
+    font-stretch:normal;
 }
 
+@font-face {
+    font-family:'latosemibold';
+    src: url('../fonts/Lato-Semibold.woff2') format('woff2'), url('../fonts/Lato-Semibold.woff') format('woff');
+    font-weight:normal; /* 600 */
+    font-style:normal;
+    font-stretch:normal;
+}
 
-  @mixin Arial {
-    font-family:'arial', Arial, sans-serif;
-    font-weight: 300;
-  }
-  @mixin aMedium {
-    font-family:'arialmedium', Arial, sans-serif;
-    font-weight: 500;
-  }
-  @mixin aBold {
-    font-family:'arialbold', Arial, sans-serif;
-    font-weight: bold;
-  }
-  @mixin eurostile {
-    font-family:'eurostilebold', Helvetica, sans-serif;
-    font-weight: bold;
-  }
+@font-face {
+    font-family:'latoregular';
+    src: url('../fonts/Lato-Regular.woff2') format('woff2'), url('../fonts/Lato-Regular.woff') format('woff');
+    font-weight:normal; /* 400 */
+    font-style:normal;
+    font-stretch:normal;
+}
+@font-face {
+    font-family:'latolight';
+    src: url('../fonts/Lato-Light.woff2') format('woff2'), url('../fonts/Lato-Light.woff') format('woff');
+    font-weight:normal; /* 300 */
+    font-style:normal;
+    font-stretch:normal;
+}
+ 
 
-  @mixin FA {
-    font-family: 'FontAwesome';
-    font-weight: 400;
-  }
-/*
-  @include Arial();
-  @include aMedium();
-  @include aBold();
-  @include eurostile();
-  @include FA();
-*/
+ 
