@@ -1,0 +1,127 @@
+.share-nav { width:100%; float:left; padding:1rem; background:$shareNavBg; @include display(center, center); overflow: hidden; }
+.share-nav aside { margin-left:1rem; @include display(center, center);  }
+.share-nav aside a { @include borderradius(50%); @include display(center, center); background:$darkBlue; height: 50px; width: 50px; margin: 0 10px; text-decoration:none;   color:$white; cursor:pointer; @include transition(ease-out); }
+.share-nav aside a:hover { background:$white; color:$darkBlue;  @include transition(ease-in); }
+.share-nav aside a i.fa { font-size:1.5rem;}
+.share-nav p { font-weight:400; font-family:'latoregular'; font-size:18px; color:$white;  }
+
+.share-nav .sharethis-inline-share-buttons { z-index:1 !important; @include display(center, center);  display:flex !important; margin-left:5px !important; }
+.share-nav .sharethis-inline-share-buttons .st-btn {  @include display(center, center); display:flex !important; background:$darkBlue; height:50px !important; width: 50px !important; margin: 0 0 0 10px !important; border-radius:50% !important; padding:0 !important; line-height:1 !important; text-decoration:none; color:$white; cursor:pointer; position: static !important; opacity: 1 !important; transition: all 0.5s ease-out  !important;   }
+.share-nav .sharethis-inline-share-buttons .st-btn:hover { background:$lightBlue !important; position: static !important; top: 0 !important; opacity: 1 !important; color:$white; transition: all 0.5s ease-in  !important; }
+.share-nav .sharethis-inline-share-buttons .st-btn img { position: static !important; width:1.5rem  !important; height:auto !important; filter: none !important; }
+
+
+
+.footer { width:100%; float:left; background: $footerBG; text-align:center; overflow: hidden; }
+.footer-inner { display:inline-block; width:95%; max-width:1372px; margin:0 auto; float:none; }
+
+.footer section { 
+    width:100%; float:left; padding: 1.5rem 0; @include display(space-between, flex-start); align-items: stretch; 
+    ul { 
+        height: inherit; width:25%; border-right:solid 1px $footerLine; padding: 0 2rem 0 4rem; 
+        &:first-child { padding-left:0; }
+        li { 
+            list-style:none;  text-align:left; margin-bottom:.4rem; 
+            &:last-child { margin-bottom:0; }
+            h2 { margin-bottom:1rem; font-size:18px; font-weight:700; font-family:'latobold'; color:$lightBlack }
+            a { 
+                text-decoration:none; font-size:16px; color: $ultralightBlack;  font-weight:400; font-family:'latoregular'; @include transition(ease-out); 
+                &:hover { color:$footerLiA; @include transition(ease-in); }
+            }
+        }
+    &.followus { 
+        border-right:none; 
+        li{
+            a { 
+                margin-right:9%; font-size:2rem; color:$lightBlue2; 
+                &:hover { color: $ultralightBlack;  }
+            }
+        } 
+    }
+    }
+}
+ 
+
+.footer .copyrightpart { 
+    width:100%; float:left; padding: 1.5rem 0; border-top:solid 1px $footerLine; @include display(space-between, center); 
+    ul { 
+        @include display(flex-start, center); 
+        li { 
+            list-style:none; display:inline-block; text-align:left; margin-right:2rem; 
+            &:last-child { margin-right:0; }
+            a { 
+                text-decoration:none; font-size:14px; letter-spacing: 3px; color: $ultralightBlack; text-transform: uppercase; font-weight:400; font-family:'latoregular'; @include transition(ease-out); 
+                &:hover { color: $copyrightLiA; @include transition(ease-in); }
+            }
+        }
+    }
+    p { font-size:14px;  color: $ultralightBlack; font-weight:400; font-family:'latoregular'; }
+}
+  
+
+@media only screen and (max-width:1255px) 
+{
+    .footer section ul {padding: 0 1rem 0 2rem;}
+}   
+@media only screen and (max-width:1023px) 
+{
+    .share-nav aside a {height: 42px;width: 42px; }
+    .share-nav .sharethis-inline-share-buttons .st-btn { height: 42px !important; width: 42px !important;  }
+ 
+ 
+    .footer-inner { width: 100%; }
+    .footer section {
+        padding:2rem 0; flex-wrap: wrap; align-items: flex-start;
+        ul {
+            padding: 0; width: 100%; border-right: 0; margin-bottom:2.5rem;
+            li {
+                text-align: center; margin-bottom:0.6rem;
+                h2 {
+                    margin-bottom:1rem; 
+                }
+            }
+         &.followus { 
+             margin-bottom: 0;
+             li a { margin: 0 15px; font-size: 2.3rem; }
+            }
+        }
+    }
+    .footer .copyrightpart {padding:2rem 0 1rem 0; flex-wrap: wrap;justify-content: center;}
+    .footer .copyrightpart ul li {margin:0 0.7rem; }
+    .footer .copyrightpart ul li a { letter-spacing:2px; }
+    .footer .copyrightpart p { width:100%; text-align:center; margin-top: 1.5rem; }
+}
+
+@media only screen and (max-width:767px) 
+{
+    
+}
+
+@media only screen and (max-width:599px) 
+{
+    .share-nav {  
+        flex-wrap: wrap; flex-direction: column;
+        p {  margin-bottom:0.7rem;}
+        aside a { height: 38px;width:38px;  margin: 0 7px; }  
+    }
+    .share-nav .sharethis-inline-share-buttons {margin-left:0 !important; width:100%; }
+    .share-nav .sharethis-inline-share-buttons .st-btn { height:38px !important; width:38px !important; margin:0 7px !important; }
+
+ 
+
+
+    .footer .copyrightpart ul{
+        width:100%;
+        justify-content: center; align-items:flex-start; flex-direction: column;
+        li {
+            width:100%; margin:0.3rem 0; text-align:center;
+            a { letter-spacing:3px; }
+        }
+    }
+ 
+    
+ 
+    
+    
+
+}

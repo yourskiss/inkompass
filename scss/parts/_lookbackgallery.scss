@@ -1,0 +1,90 @@
+
+/* #################### lookback activities  #################### */
+.lookback_activities  { 
+    width:100%; float:left; padding:3.5rem 0; background:$whiteLight;
+    .lookback_activities_inner { 
+        display: flow-root; width:95%; max-width:1372px; float:none; margin:0 auto; 
+        h2 { width:100%; float:left; text-align:center; font-size:32px;  color:$lightBlack; font-weight:600; font-family:'latosemibold'; }
+        h3 { width:100%; float:left; margin:0.5rem 0 1.5rem 0;  text-align:center;  font-size:18px;  color:$lightBlack2; font-weight:400; font-family:'latoregular'; }
+        .lookbackwrap { width:100%; float:left; display: grid;gap: 1rem; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(auto, auto); }
+        .lookbackbox { 
+            background:$white; display: block; cursor: pointer;
+            a { 
+                cursor: pointer; text-decoration: none; 
+                img { width:100%;padding-bottom:1rem; }
+                .lookbackWeb { display:block; }
+                .lookbackMob { display:none; }
+                h4 { padding:0 1rem; width:100%; font-size:18px;  color:$darkBlue; font-weight:700; font-family:'latobold'; }
+                p { padding:0.2rem 1rem 1rem 1rem; width:100%; font-size:16px;  color:$lightBlack; font-weight:400; font-family:'latoregular'; }
+            } 
+                &.one { grid-row-start: 1; grid-row-end: 3; grid-column-start: 1; grid-column-end: 3;  }
+                &.two { grid-column: 3; grid-row: 1; }
+                &.three {grid-column:4;grid-row: 1; }
+                &.four { grid-column: 3; grid-row: 2;}
+                &.five { grid-column: 4;grid-row: 2;}
+            
+        }
+    }
+}
+
+
+
+ 
+
+
+@media only screen and (max-width:1255px) 
+{
+
+    
+    /* #################### lookback activities  #################### */
+    .lookback_activities  { 
+        padding:3rem 0;
+        .lookback_activities_inner {  
+            h2 { font-size:24px;  }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:1023px) 
+{
+
+   
+
+
+    /* #################### lookback activities  #################### */
+    .lookback_activities  { 
+        padding:2.5rem 0; 
+        .lookback_activities_inner { 
+            h3 { margin:0 0 1rem 0; }
+            .lookbackwrap { width:100%; float:left; display: block; gap: 0;   }
+            .lookbackbox { 
+                a{
+                    .lookbackWeb { display:none; }
+                    .lookbackMob { display:block; }
+                    h4 { padding:0 1rem; width:100%;  color:$darkBlue; font-weight:700; font-family:'latobold'; }
+                    p { padding:0.2rem 1rem 1rem 1rem; width:100%;color:$lightBlack; font-weight:400; font-family:'latoregular'; }
+                }
+                    &.one { grid-row-start: none; grid-row-end: none; grid-column-start:none; grid-column-end:none;  }
+                    &.two { grid-column: none; grid-row: none; }
+                    &.three {grid-column:none;grid-row: none; }
+                    &.four { grid-column: none; grid-row:none;}
+                    &.five { grid-column: none;grid-row:none;}
+               
+            }
+        }
+    }
+    .lookbackwrap.slick-dotted.slick-slider { margin-bottom: 0; padding-bottom: 2rem; }
+    .lookbackwrap .slick-list {  padding:5px 40px 5px 20px !important;   }
+    .lookbackwrap .slick-track { display: flex; align-items:stretch; }
+    .lookbackwrap .slick-slide { height:initial; margin: 0 10px;  }
+    .lookbackwrap .slick-slide div { height:100%;   }
+    .lookbackwrap.slick-slider .slick-dots {  bottom: 0;    }
+    .lookbackwrap.slick-slider .slick-dots li { background:$white; border:solid 1px $lightBlue; }
+    .lookbackwrap.slick-slider .slick-dots li.slick-active { background:$darkBlue; border-color:$darkBlue; }
+
+
+
+}
+

@@ -1,0 +1,75 @@
+/* breadcrumbs */
+.breadcrumbs { 
+    margin:1rem 0; width:100%; float:left; @include display(flex-start, center); 
+    li { 
+        @include display(center, center); height:20px;  list-style:none; margin-right:0.7rem; font-size:14px; font-weight:400; font-family:'latoregular'; color:$lightBlack; 
+        i.fa.fa-circle { font-size:3px; line-height: 0; }
+        a { 
+            color:$lightBlack;  text-decoration:underline; font-weight:400; font-family:'latoregular'; @include transition(ease-out); 
+            &:hover { color:$darkBlue !important; text-decoration:none;  @include transition(ease-in); }
+        }
+        &:first-child { margin-left:0; }
+    }
+}
+
+
+
+.mainbanner.home.discover .breadcrumbs{
+    li {  
+        color:$white; 
+        a { color:$white;}
+    }
+}
+
+.mainbanner.aboutus .breadcrumbs{
+    li {  
+        color:$white; 
+        a { color:$white;}
+    }
+}
+.mainbanner.contactus .breadcrumbs {
+    li {  
+        color:$superultralightBlack; 
+        a { 
+            color:$superultralightBlack; 
+        }
+    }
+}
+.mainbanner.faqsbanner .breadcrumbs {
+    li {  
+        font-size:11px; color:$lightBlack2; 
+        a { 
+            color:$lightBlack2; 
+        }
+    }
+}
+.mainbanner.exploreopportunity .breadcrumbs {
+    li {  
+        color:$white; 
+        a { 
+            color:$white; 
+        }
+    }
+}
+.termright .breadcrumbs{
+    margin:0 0 2rem 0; 
+    li { 
+        font-size:14px; margin-bottom:0; 
+    }
+}
+.mainbanner.applicaton .breadcrumbs {
+    li {  
+        font-size:11px; color:$white; 
+        a { 
+            color:$white; 
+        }
+    }
+}
+ 
+ 
+
+
+@media only screen and (max-width:1023px) 
+{
+    .breadcrumbs { display:none; }
+}

@@ -1,0 +1,231 @@
+
+
+
+.faqswraps {
+    padding:3rem 0; width:100%; float:left; background:$white;
+    .faqsInsider {
+        display: flow-root; float:none; position: relative; width:95%; max-width:1372px; margin:0 auto; padding-right: 10%;
+    }
+}
+
+.faqsclearsearch {
+    display:none; width:100%; float:left; text-align:right; margin:0 0 1rem 0; 
+    span { 
+        font-size:18px; line-height: 1; color:$darkBlue; font-weight:400; font-family:'latoregular'; text-decoration:underline; @include transition(ease-out); cursor:pointer;
+        &:hover { color:$black; text-decoration:none; @include transition(ease-in); }
+    }
+} 
+.faqsnotfound {
+    display:none; width:100%; float:left; text-align:left;  
+    span { font-size:24px; line-height: 1; color:$darkBlue; font-weight:700; font-family:'latobold'; }
+} 
+
+.faqscontainer { 
+    width:100%; float:left; 
+    h2 { width:100%; float:left; font-size:30px; color:$lightBlack2; font-weight:700; font-family:'latobold'; }
+    p { 
+        width:100%; float:left; margin:1rem 0 2rem 0; font-size:18px; line-height: 1.4; color:$lightBlack; font-weight:400; font-family:'latoregular';
+        a { 
+            text-decoration:underline; color: $darkBlue;
+            &:hover { text-decoration:none; color:$lightBlack; }
+        }
+    }
+    ul { 
+        width:100%; float:left; @include display(space-between, flex-start);
+        li {
+            list-style:none; @include display(flex-start, flex-start); width:31%; padding:1.5rem; border:solid 1px $faq1; background: $white; cursor:pointer; @include transition(ease-out);
+            img { max-width:100%; margin-right:1.2rem; }
+            aside { 
+                width:100%;
+                b { font-size:28px; color: $darkBlue; font-weight:600; font-family:'latosemibold'; }
+                span { display:block; margin-top:1px; font-size:16px; color:$lightBlack; font-weight:400; font-family:'latoregular'; line-height:1.2; }
+            }
+        &:hover {
+            background: $whiteLight; border-color:$whiteLight; @include transition(ease-in);
+        }
+        &.active { background: $whiteLight; border-color:$whiteLight; }
+        }
+    }
+}
+
+.faqsholder { 
+    width:100%; float:left;
+    .faqshead {
+        width:100%; float:left; @include display(space-between, center);  margin:2.5rem 0 0.2rem 0;
+        aside { 
+            @include display(flex-start, center);
+            img { max-width:100%; margin-right:1.5em; background: $lightBlue2; padding:0.9rem; }
+            span { color: $faqsHeadText; font-size:20px; font-weight:700; font-family:'latobold'; }
+        }
+        p { 
+            @include display(flex-start, center);
+            span { 
+                color: $ultralightBlack; font-size:16px; font-weight:400; font-family:'latoregular'; cursor:pointer; letter-spacing: 3px;
+                &:last-child { margin-left:2rem; }
+                &:hover { color: $darkBlue;}
+            }
+        }
+    }
+    .faqsbody {
+        width:100%; float:left; 
+        aside { 
+            position:relative; margin-top:1rem;  padding:1rem 3rem 1rem 1rem; width:100%; float:left; background: $whiteLight; 
+            color: $lightBlack; font-size:18px; font-weight:700; font-family:'latobold'; cursor:pointer;
+            &:after { content:''; position: absolute; right:10px; top:50%; transform: translateY(-50%); width:30px; height:30px; line-height:30px; background: $white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA6UlEQVQ4T2NkoBAwUqifgaABcjZNxo+O1J3FZRFBA+Rtm48x/mc8/eBIdQEDA+N/dIMIGiDq0MDD9YdlE8P//08fsv5NZDjQ8AfZEIIGgBRLGTdwsXCxrAcy34t+E409ezb9N8wQogwAKdbWbmD7Isi6nIHhPzsjy5+QBwcafoDE4QYo2DZn/vvPxIcvVhgZ/rMC5YuBuo49PFzjjW5AIcN/BnF8BvxnYAQZkAE04ACGAYTSA8QLLCuA6tiwegGfARQFopJLB//fH7+3Ar13n6xopDghyVo1mT4+Vnea7KRMKHCJTki4DAIAjKhXEVCiwG0AAAAASUVORK5CYII=') no-repeat center center; border-radius:50%; @include transition(ease-out); }
+            &.disabled { user-select: none; pointer-events: none; }
+            &.active { color:$lightBlue2; background: $white; border:solid 1px $faqsBxBorder; border-bottom:none; 
+            &:after { transform: translateY(-50%) rotate(90deg); @include transition(ease-in); }
+            }
+        }
+        section { 
+            display:none; width:100%; float:left; background: $white; padding: 0 1rem 1rem 1rem; border:solid 1px $faqsBxBorder; border-top:none;
+            p {  
+                width:100%; float:left; color: $darkBlue; font-size:18px; font-weight:400; font-family:'latoregular'; 
+                a { 
+                    text-decoration:underline; color:$darkBlue;
+                    &:hover { text-decoration:none; color:$black; }
+                } 
+            }
+            ul {
+                width:100%; float:left; margin:1rem 0;
+                li { list-style:disc; margin:3px 0 3px 20px; color: $darkBlue; font-size:18px; font-weight:400; font-family:'latoregular';  }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1565px) 
+{
+    .faqswraps {
+        .faqsInsider { padding-right:5%; }
+    }
+}
+
+@media only screen and (max-width:1300px) 
+{
+    .faqswraps {
+        .faqsInsider { padding-right:0%; }
+    }
+}
+
+
+@media only screen and (max-width:1023px) 
+{
+
+    .faqscontainer {  
+        h2 { font-size:24px; }
+        p { font-size:16px; }
+        ul { 
+            flex-wrap:wrap;
+            li {
+                width:100%; margin: 0 0 0.5rem 0; padding:1rem; 
+                img {  margin-right:1rem; }
+                aside { 
+                    width:100%;
+                    b { font-size:22px;   }
+                    span { margin-top:0.5px; font-size:16px;   }
+                }
+            }
+        }
+    }
+
+
+    .faqsholder { 
+        .faqshead {
+            aside { 
+                img { padding:0.7rem; margin-right: 0.8rem; }
+                span { font-size:18px; }
+            }
+            p { 
+                span { 
+                     font-size:14px; letter-spacing: 2px;
+                    &:last-child { margin-left:1rem; }
+                }
+            }
+        }
+        .faqsbody {
+            aside {  font-size:16px; }
+            section { 
+                p { font-size:16px;  }
+                ul {
+                    li {font-size:16px; }
+                }
+            }
+        }
+    }
+ 
+
+
+}
+
+
+@media only screen and (max-width:767px) 
+{
+    .faqsclearsearch { text-align:center; } 
+    .faqsnotfound { text-align:center; } 
+
+    
+}
+
+@media only screen and (max-width:599px) 
+{
+    .faqswraps { padding:0 0 3rem 0;}
+
+    .faqscontainer {  
+        h2 {  text-align:center; }
+        p {  text-align:center; }
+    }
+
+
+}
+
+
+@media only screen and (max-width:479px) 
+{
+    .faqscontainer {  
+        h2 { font-size:24px; }
+        p { font-size:18px; }
+        ul { 
+            flex-wrap:wrap;
+            li {
+                width:100%; margin: 0 0 0.5rem 0; padding:1rem; 
+                img {  margin-right:1rem; }
+                aside { 
+                    b { font-size:24px;  }
+                    span { margin-top:0.5px; font-size:16px;   }
+                }
+            }
+        }
+    }
+
+    .faqsholder { 
+        .faqshead {
+            flex-wrap:wrap; margin:2rem 0 0rem 0;
+            aside { 
+                width:100%; float:left;
+                img {  margin-right:1rem; padding:0.7rem; }
+                span { font-size:20px; }
+            }
+            p { 
+                width:100%; margin: 1.5rem 0 0rem 0;
+                @include display(space-between, center);
+                span { 
+                    font-size:14px; letter-spacing: 2px;
+                   &:last-child { margin-left:1rem; }
+               }
+            }
+        }
+        .faqsbody {
+            aside { font-size:16px; margin-top:0.5rem;  padding:0.8rem 3rem 0.8rem 0.8rem; }
+            section {
+                padding:0 0.8rem 0.8rem 0.8rem;
+                p { font-size:16px;  }
+                ul {
+                    li {font-size:16px; }
+                }
+            }
+        }
+    }
+
+}

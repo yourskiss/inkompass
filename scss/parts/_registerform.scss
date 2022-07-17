@@ -1,0 +1,92 @@
+
+/* #################### registerus  wrap  #################### */
+.registeruswrap  { 
+    width:100%; float:left; padding:3rem 0; background: $white;
+    .registeruscontainer { 
+        width:95%; max-width:1170px; float:none; margin:0 auto; 
+        h2 { width:100%; float:left; margin-bottom:1rem; text-align:center; font-size:30px; color:$lightBlack; font-weight:700; font-family:'latobold'; }
+        h3 { width:100%; float:left; padding-bottom:0.4rem; margin-bottom:1rem; border-bottom:1px solid $superDuperLightBlack; text-align:right; font-size:1rem; color:$darkBlue; font-weight:700; font-family:'latobold'; font-style: italic; }
+        .registerform { 
+            width:100%; float:left;  @include display(space-between, center); flex-wrap:wrap;
+            .formField { 
+                width:48%; margin:1rem 0;
+                &.ff100 { width:100%; }
+                p { width:100%; float:left; margin-bottom:0.5rem; font-size:16px; color:$darkBlue; font-weight:600; font-family:'latosemibold'; }
+                input[type='text'] { padding: 0.7rem 1rem; width:100%; float:left; background:$white; border:1px solid $superDuperLightBlack; outline:0; border-radius:5px; font-weight:400; font-family:'latoregular'; font-size:16px; color:$lightBlack;  }
+                select { padding:0.7rem 2rem 0.7rem 1rem; width:100%; float:left; background:$white url('../Images/down-arrow.png') no-repeat; background-position:right 7px center; text-indent: 2px;text-overflow: '';appearance: none; border:1px solid $superDuperLightBlack; outline:0; border-radius:5px; font-weight:400; font-family:'latoregular'; font-size:16px; color:$lightBlack; }
+                textarea { resize: none; height: 80px; padding: 0.7rem 1rem; width:100%; float:left; background:$white; border:1px solid $superDuperLightBlack; outline:0;  border-radius:5px; font-weight:400; font-family:'latoregular'; font-size:16px; color:$lightBlack;  }
+                .error_msg { display:none; width:100%; float:left; margin-top: 0.4rem; font-weight:300; font-family:'latolight'; font-size:14px;color: #f30; }
+                .formfieldSubmit { 
+                    display:inline-block; background: $darkBlue; padding:21px 26px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing: 2px; text-transform:uppercase; color: $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
+                    b{ display:inline-block; font-size:0; margin-top:-2px; width:10px; height:10px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; margin-left:5px; @include transition(ease-out); }
+                    &:hover { 
+                        background: $darkBlue2; padding-right:21px; @include transition(ease-in);
+                        b { margin-left:10px; @include transition(ease-in); } 
+                    }
+                }
+            }
+            .registerthankyou {
+                width:100%; float:left;  margin:0.5rem 0;
+                p { 
+                  width:100%; float:left; margin-top:0.2rem; @include display(flex-start, center);  
+                  i.fa.fa-envelope { color:$darkBlue; font-size:28px; }
+                  b { 
+                      height:16px; width:16px; margin:0 0 -15px -7px; background:$white; border-radius:50%;  @include display(center, center); 
+                      i.fa.fa-check {  color:$darkBlue; font-size:12px; }
+                  }
+                  span { margin-left:0.7rem; color:$lightBlue2; font-size:20px;  font-weight:700;  font-family:'latobold'; line-height: 1.2; }  
+                }
+            }
+        }
+        
+    }
+}
+
+@media only screen and (max-width:1255px)
+{
+    .registeruswrap  { 
+        .registeruscontainer { 
+            h2 { font-size:26px; }
+        }
+    }
+}
+
+@media only screen and (max-width:1023px)
+{
+    /* #################### registerus  wrap  #################### */
+    .registeruswrap  { 
+         padding:2rem 0; 
+        .registeruscontainer { 
+            .registerform { 
+                .formField { 
+                    margin: 0.7rem 0;
+                    input[type='text'] { padding: 0.5rem 0.7rem; }
+                    select { padding:0.5rem 2rem 0.5rem 0.7rem; background-position:right 5px center; }
+                    textarea { height: 70px; padding: 0.5rem 0.7rem; }
+                }
+                .registerthankyou {
+                    p { 
+                        span { font-size:18px;   }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:479px)
+{
+    /* #################### registerus  wrap  #################### */
+    .registeruswrap  { 
+        .registeruscontainer { 
+            h3 { text-align: left;}
+            .registerform { 
+                .formField { 
+                    width: 100%; margin: 0.5rem 0;
+                    &.center { text-align: center; }
+                    .formfieldSubmit { margin:0 auto; }
+                }
+            }
+        }
+    }
+}

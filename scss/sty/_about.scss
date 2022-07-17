@@ -1,0 +1,65 @@
+
+
+
+/* #################### companyinfomation page  #################### */
+.companyinfomation  { 
+    width:100%; float:left; padding:3.5rem 0; background: $white;
+    .companyinfoInner { 
+        width:95%; max-width:1372px; float:none; margin:0 auto; 
+        h2 { width:100%; float:left; margin-bottom:1.5rem; font-size:30px;  color:$lightBlack; font-weight:700; font-family:'latobold'; }
+        ul { 
+            width:100%; float:left;  
+            li { list-style:none;  width:50%; float:left;  
+                p {  
+                    font-size:18px; line-height: 1.6; color:$lightBlack; font-weight:400; font-family:'latoregular'; 
+                    b { display:inline-block; font-family:'latobold';  font-weight:700; }
+                    strong { font-family:'latobold';  font-weight:700; }
+                }
+                aside {  
+                    margin:0.2rem 0; @include display(flex-start, center); font-size:18px; line-height: 1.4;  font-weight:400; font-family:'latoregular';   
+                    i.fa { 
+                        color:$lightBlack; margin:0 0.7rem 0 0.4rem; font-size: 90%; font-size:90%;
+                        &.fa-phone { transform: rotate(20deg); }
+                    }
+                    a { 
+                        text-decoration:none; color:$lightBlack; 
+                        &:hover { color: $darkBlue; }
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+
+
+
+
+
+@media only screen and (max-width:1024px) 
+{
+    /* #################### companyinfomation page  #################### */
+    .companyinfomation  { 
+        padding:2rem 0; 
+        .companyinfoInner {  
+            h2 { font-size:24px; margin-bottom:0; text-align:center; }
+            ul { 
+                li { 
+                    width:100%; background:$aboutaddressBG; margin-top:1.5rem;padding: 1.5rem;
+                    p { 
+                        strong { color:$darkBlue; }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:479px) 
+{
+    /* #################### companyinfomation page  #################### */
+    .companyinfomation .companyinfoInner h2 { font-weight:500; font-family:'latomedium'; }
+    .companyinfomation .companyinfoInner ul li p b { font-family: 'latosemibold';font-weight: 600;}
+    
+    
+}
