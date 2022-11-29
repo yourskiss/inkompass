@@ -782,6 +782,27 @@ $(function()
         });
     }
  });
+
+
+
+ $(".marketfaqsinner aside").click(function()
+{
+
+    if($(this).hasClass("active"))
+    {
+        $(".marketfaqsinner aside").removeClass("active")
+        $(".marketfaqsinner section").slideUp(300);
+    }
+    else 
+    {
+        $(".marketfaqsinner aside").removeClass("active")
+        $(".marketfaqsinner section").slideUp(300);
+
+        $(this).addClass("active")
+        $(this).next("section").slideDown(300);
+    }
+});
+
 /* ############################ application === end ############################ */
 
 
