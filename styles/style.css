@@ -5338,11 +5338,12 @@ body.hidden-scroll {
   margin: 0 auto;
 }
 .marketfaqswrap .marketfaqsinner aside {
+  position: relative;
   border-top: solid 3px #ffffff;
   width: 100%;
   float: left;
   background: #14A0D2;
-  padding: 0.8rem 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   text-align: left;
   font-size: 18px;
   color: #ffffff;
@@ -5351,8 +5352,22 @@ body.hidden-scroll {
   line-height: 1.2;
   cursor: pointer;
 }
+.marketfaqswrap .marketfaqsinner aside:after {
+  content: "\f067";
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 400;
+}
 .marketfaqswrap .marketfaqsinner aside.active {
   background: #1F9CD4;
+}
+.marketfaqswrap .marketfaqsinner aside.active:after {
+  content: "\f068";
 }
 .marketfaqswrap .marketfaqsinner section {
   display: none;
@@ -5576,10 +5591,10 @@ body.hidden-scroll {
   }
   .marketfaqswrap .marketfaqsinner aside {
     font-size: 16px;
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 1.5rem 0.7rem 0.7rem;
   }
   .marketfaqswrap .marketfaqsinner section {
-    padding: 0.6rem 1rem;
+    padding: 0.7rem;
   }
   .marketfaqswrap .marketfaqsinner section p {
     font-size: 16px;

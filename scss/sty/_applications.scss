@@ -97,8 +97,12 @@
     .marketfaqsinner { 
         display: flow-root; width:95%; max-width:1372px; float:none; margin:0 auto; 
         aside { 
-            border-top: solid 3px $white; width:100%; float:left; background: $lightBlue;  padding:0.8rem 1rem; text-align:left; font-size:18px;  color:$white; font-weight:600; font-family:'latosemibold'; line-height:1.2; cursor: pointer; 
-            &.active { background: $lightBlue2; }
+            position: relative; border-top: solid 3px $white; width:100%; float:left; background: $lightBlue;  padding:1rem 2rem 1rem 1rem; text-align:left; font-size:18px;  color:$white; font-weight:600; font-family:'latosemibold'; line-height:1.2; cursor: pointer; 
+            &:after { content: "\f067"; font-family: 'FontAwesome'; position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); font-size: 16px; color: $white; font-weight: 400; }
+            &.active { 
+                background: $lightBlue2;
+                &:after { content: "\f068"; }
+            }
         }
         section { 
             display: none; width:100%; float:left; background: $white; margin:0; padding:1rem;  
@@ -195,9 +199,9 @@
        padding:3rem 0 1rem 0;  
         h2 { font-size: 24px; margin: 0 0 0.5rem 0; }
         .marketfaqsinner { 
-            aside { font-size:16px; padding: 0.6rem 1rem; }
+            aside { font-size:16px; padding:0.7rem 1.5rem 0.7rem 0.7rem; }
             section { 
-                 padding: 0.6rem 1rem;
+                 padding: 0.7rem;
                 p { font-size:16px; }
              }
         }
