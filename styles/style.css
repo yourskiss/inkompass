@@ -5361,6 +5361,10 @@ body.hidden-scroll {
   background: #ffffff;
   margin: 0;
   padding: 1rem;
+}
+.marketfaqswrap .marketfaqsinner section p {
+  margin: 0;
+  padding: 0;
   text-align: left;
   font-size: 18px;
   color: #393939;
@@ -5575,8 +5579,10 @@ body.hidden-scroll {
     padding: 0.6rem 1rem;
   }
   .marketfaqswrap .marketfaqsinner section {
-    font-size: 16px;
     padding: 0.6rem 1rem;
+  }
+  .marketfaqswrap .marketfaqsinner section p {
+    font-size: 16px;
   }
   /* #################### introducing assessment  #################### */
   .introducing_assessment .introducing_assessment_inner h2 {
