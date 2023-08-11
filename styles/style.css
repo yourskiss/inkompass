@@ -5029,6 +5029,7 @@ body.hidden-scroll {
   align-items: center;
 }
 .market_navigation_wrap .market_navigation_container div {
+  position: relative;
   width: auto;
   float: left;
   display: flex;
@@ -5045,7 +5046,7 @@ body.hidden-scroll {
 }
 .market_navigation_wrap .market_navigation_container div aside {
   cursor: pointer;
-  margin-left: 1rem;
+  margin: 0 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -5055,11 +5056,51 @@ body.hidden-scroll {
   margin-right: 5px;
 }
 .market_navigation_wrap .market_navigation_container div aside span {
-  display: none;
+  display: inline-block;
   color: #262626;
   font-weight: 400;
   font-family: "latoregular";
   font-size: 0.9rem;
+}
+.market_navigation_wrap .market_navigation_container div dl {
+  display: none;
+  z-index: 6;
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  width: 80px;
+  height: auto;
+  margin: 0;
+  padding: 0.3rem 0.5rem;
+  background-color: #ffffff;
+}
+.market_navigation_wrap .market_navigation_container div dl dt {
+  width: 100%;
+  float: left;
+  margin: 0.2rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s ease-out;
+}
+.market_navigation_wrap .market_navigation_container div dl dt img {
+  width: 33px;
+  margin-right: 5px;
+}
+.market_navigation_wrap .market_navigation_container div dl dt span {
+  display: inline-block;
+  color: #262626;
+  font-weight: 400;
+  font-family: "latoregular";
+  font-size: 0.8rem;
+}
+.market_navigation_wrap .market_navigation_container div dl dt:hover {
+  transition: all 0.3s ease-in;
+}
+.market_navigation_wrap .market_navigation_container div dl dt:hover span {
+  color: #1F3C84;
+  transition: all 0.3s ease-in;
 }
 .market_navigation_wrap .market_navigation_container ul {
   width: auto;
@@ -5636,12 +5677,12 @@ body.hidden-scroll {
   }
   .market_navigation_wrap .market_navigation_container div {
     width: 100%;
+    justify-content: space-between;
   }
   .market_navigation_wrap .market_navigation_container div p {
     position: relative;
-    width: 100%;
     background: #ECEFEF;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
     color: #393939;
   }
   .market_navigation_wrap .market_navigation_container div p:after {
@@ -5661,9 +5702,6 @@ body.hidden-scroll {
   .market_navigation_wrap .market_navigation_container div p.active:after {
     content: "\f106";
     color: #ffffff;
-  }
-  .market_navigation_wrap .market_navigation_container div aside {
-    display: none;
   }
   .market_navigation_wrap .market_navigation_container ul {
     display: none;

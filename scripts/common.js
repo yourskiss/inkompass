@@ -1007,3 +1007,16 @@ function registerformValidation()
     }
 }
 /* ############################ register form Validation === end ############################ */
+
+
+
+/* ############################ Applications language dropdown === start ############################ */
+$("#lang_dropdown_head").click(function()
+{
+    $("#lang_dropdown_body").slideToggle(300);
+});
+$("#lang_dropdown_body dt").click(function()
+{
+    $("#lang_dropdown_body").slideUp(300);
+});
+/* ############################ Applications language dropdown === end ############################ */
