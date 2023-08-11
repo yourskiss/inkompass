@@ -7,12 +7,23 @@
          width:95%; max-width:1372px; float:none; margin:0 auto; 
         @include display(space-between, center);
         div {
-                width:auto; float:left; @include display(flex-start, center);
+             position: relative; width:auto; float:left; @include display(flex-start, center);
             p { background:$lightBlue2; color:$white; padding:0.85rem 1.5rem; font-weight:700; font-family:'latobold'; font-size:1rem;  }
             aside {
-                cursor:pointer; margin-left:1rem; @include display(flex-start, center);
+                cursor:pointer; margin:0 1rem; @include display(flex-start, center);
                 img { width:33px; margin-right: 5px; }
-                span { display: none; color:$black3; font-weight:400; font-family:'latoregular'; font-size:0.9rem; }
+                span { display: inline-block; color:$black3; font-weight:400; font-family:'latoregular'; font-size:0.9rem; }
+            }
+            dl {
+                display: none; z-index: 6; position:absolute; top: 100%; right: 1rem; width:80px; height: auto; margin: 0; padding:0.3rem 0.5rem; background-color:$white;
+                dt {
+                    width: 100%; float: left; margin: 0.2rem 0; cursor:pointer; @include display(flex-start, center);
+                    img { width:33px; margin-right: 5px; }
+                    span { display: inline-block; color:$black3; font-weight:400; font-family:'latoregular'; font-size:0.8rem;  @include transition(ease-out); }
+                    &:hover { 
+                        span { color: $darkBlue; @include transition(ease-in); }
+                    }
+                }
             }
         }
         ul {
@@ -246,9 +257,9 @@
         .market_navigation_container { 
             width:100%;  flex-wrap:wrap; position:relative;
             div {
-                width:100%; 
+                width:100%; justify-content: space-between;
                 p {
-                    position:relative; width:100%; background:$whiteLight; padding:0.5rem 1rem; color:$lightBlack2; 
+                    position:relative; background:$whiteLight; padding:0.5rem 2.5rem 0.5rem 1rem; color:$lightBlack2; 
                     &:after {
                         font-size:20px; content: "\f107"; font-family: 'FontAwesome'; position: absolute; right:1rem;top: 50%; transform: translateY(-50%);  color:$lightBlack2; 
                     } 
@@ -256,8 +267,7 @@
                         background: $lightBlue2; color:$white;
                         &:after { content: "\f106"; color:$white; }
                     } 
-                }
-                aside { display:none; }  
+                }  
             }
             ul {
                 display:none; width:100%; padding:0 1rem; background: $whiteLight; z-index:4;  position:absolute; left:0; top:38px;
