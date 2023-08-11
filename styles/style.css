@@ -5082,7 +5082,6 @@ body.hidden-scroll {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  transition: all 0.3s ease-out;
 }
 .market_navigation_wrap .market_navigation_container div dl dt img {
   width: 33px;
@@ -5094,9 +5093,7 @@ body.hidden-scroll {
   font-weight: 400;
   font-family: "latoregular";
   font-size: 0.8rem;
-}
-.market_navigation_wrap .market_navigation_container div dl dt:hover {
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-out;
 }
 .market_navigation_wrap .market_navigation_container div dl dt:hover span {
   color: #1F3C84;
