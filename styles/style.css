@@ -2048,6 +2048,9 @@ main {
 .boxpart .boxpartInner div p {
   width: 100%;
   float: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .boxpart .boxpartInner div p a {
   background: #1F3C84;
@@ -2310,6 +2313,7 @@ main {
   }
   .boxpart .boxpartInner div p {
     text-align: center;
+    justify-content: center;
   }
   .boxpart .boxpartInner div h4 {
     text-align: center;
@@ -2369,8 +2373,11 @@ main {
   .boxpart.application .boxpartInner .boxpartstory {
     width: 100%;
   }
+  .boxpart.application .boxpartInner div p {
+    flex-wrap: wrap;
+  }
   .boxpart.application .boxpartInner div p a {
-    width: 260px;
+    width: 90%;
     clear: both;
   }
 }

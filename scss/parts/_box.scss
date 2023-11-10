@@ -9,7 +9,7 @@
             h2 { width:100%; float:left; font-size:30px; line-height: 1.2; color:$lightBlack; font-weight:600; font-family:'latosemibold'; }
             h3 { width:100%; float:left; margin:1.1rem 0 1.7rem 0; font-size:20px;  color:$lightBlack2; font-weight:400; font-family:'latoregular'; }
             p{
-                width:100%; float:left; 
+                width:100%; float:left; @include display(flex-start, center);
                 a { 
                     background:$darkBlue; padding:21px 26px; margin:5px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
                     b{ margin-left:5px; @include transition(ease-out); display:inline-block; font-size:0; margin-top:-2px; width:10px; height:10px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; }
@@ -130,7 +130,7 @@
             position: relative;top: 0;left: 0; transform: translateY(0);width: 90%;padding:1.5rem; float: left; margin: 0 5%; margin-top: -100px; 
             h2{text-align:center;}
             h3{text-align:center;}
-            p {text-align: center;}
+            p { text-align: center; justify-content:center;}
             h4 {text-align: center;}
         }
     }
@@ -181,8 +181,9 @@
         padding: 2rem 0 2rem 0;
         .boxpartInner {
             .boxpartstory { width:100%;  }
-            div p a {
-                width: 260px; clear: both;
+            div p  {
+                 flex-wrap: wrap;
+                a { width: 90%; clear: both; }
             }
         }  
     }
