@@ -2052,6 +2052,7 @@ main {
 .boxpart .boxpartInner div p a {
   background: #1F3C84;
   padding: 21px 26px;
+  margin: 5px;
   font-weight: 600;
   font-family: "latosemibold";
   font-size: 14px;
@@ -2371,9 +2372,6 @@ main {
   .boxpart.application .boxpartInner div p a {
     width: 260px;
     clear: both;
-  }
-  .boxpart.application .boxpartInner div p a.shareopportunity {
-    margin: 10px 0 0 0;
   }
 }
 /* slick-theme 1.9.0 */

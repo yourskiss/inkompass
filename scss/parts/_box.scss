@@ -11,7 +11,7 @@
             p{
                 width:100%; float:left; 
                 a { 
-                    background:$darkBlue; padding:21px 26px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
+                    background:$darkBlue; padding:21px 26px; margin:5px; font-weight:600; font-family:'latosemibold'; font-size:14px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:  $white; cursor:pointer; @include transition(ease-out); @include display(center, center); display: inline-flex;
                     b{ margin-left:5px; @include transition(ease-out); display:inline-block; font-size:0; margin-top:-2px; width:10px; height:10px; background:url('../Images/go-white.png') no-repeat left top; background-size:100% 100%; }
                     &:hover { 
                         background:$darkBlue2; padding-right:21px; @include transition(ease-in);
@@ -183,7 +183,6 @@
             .boxpartstory { width:100%;  }
             div p a {
                 width: 260px; clear: both;
-                &.shareopportunity { margin: 10px 0 0 0; }
             }
         }  
     }
