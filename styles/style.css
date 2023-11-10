@@ -2050,7 +2050,7 @@ main {
   float: left;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
 }
 .boxpart .boxpartInner div p a {
   background: #1F3C84;
