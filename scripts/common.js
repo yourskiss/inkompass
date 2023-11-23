@@ -1020,3 +1020,13 @@ $("#lang_dropdown_body dt").click(function()
     $("#lang_dropdown_body").slideUp(300);
 });
 /* ############################ Applications language dropdown === end ############################ */
+
+
+
+/* ############################ joinustoggle === start ############################ */
+$("#joinustoggle").click(function()
+{
+    $("#joinuscontainer").slideToggle(300);
+});
+/* ############################ joinustoggle === end ############################ */
+

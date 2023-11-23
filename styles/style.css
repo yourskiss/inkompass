@@ -2184,10 +2184,10 @@ main {
   width: 100%;
   float: left;
   margin: 0 0 0 0;
-  font-size: 20px;
+  font-size: 22px;
   color: #1F3C84;
-  font-weight: 400;
-  font-family: "latoregular";
+  font-weight: normal;
+  font-family: "latobold";
 }
 .boxpart .boxpartInner div ul {
   width: 100%;
@@ -2218,7 +2218,7 @@ main {
   text-align: center;
 }
 .boxpart .boxpartInner div.centercontent ul li {
-  list-style: none;
+  list-style-position: inside;
   text-align: center;
 }
 .boxpart .boxpartInner div.leftcontent {
@@ -2248,6 +2248,46 @@ main {
 }
 .boxpart .boxpartInner div.bottomcontent p {
   justify-content: center;
+}
+.boxpart .boxpartInner div.joinuscontainer {
+  display: none;
+  transform: none;
+  position: static;
+  background: transparent;
+  width: 100%;
+  float: left;
+  padding: 0;
+}
+.boxpart .boxpartInner div.joinuscontainer dl {
+  width: 100%;
+  float: left;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.boxpart .boxpartInner div.joinuscontainer dl dt {
+  display: block;
+  padding: 0.5rem;
+  margin: 0;
+  width: 33.3%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.boxpart .boxpartInner div.joinuscontainer dl dt a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #393939;
+  font-weight: 400;
+  font-family: "latoregular";
+  transition: all 0.3s ease-out;
+}
+.boxpart .boxpartInner div.joinuscontainer dl dt a:hover {
+  text-decoration: underline;
+  color: #1F3C84;
+  transition: all 0.3s ease-in;
 }
 
 .boxpart.discover .boxpartInner div {
@@ -2322,7 +2362,7 @@ main {
     font-size: 18px;
   }
   .boxpart .boxpartInner div h5 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .boxpart .boxpartInner div ul {
     margin: 0 0 1rem 0;
@@ -2357,6 +2397,17 @@ main {
     padding: 0;
     margin: 0 2%;
     margin-top: 1rem;
+  }
+  .boxpart .boxpartInner div.joinuscontainer {
+    width: 96%;
+    padding: 0;
+    margin: 0 2%;
+  }
+  .boxpart .boxpartInner div.joinuscontainer dl dt {
+    width: 50%;
+  }
+  .boxpart .boxpartInner div.joinuscontainer dl dt a {
+    font-size: 18px;
   }
   .boxpart.application .boxpartInner .boxpartWEB {
     width: 90%;
@@ -2428,6 +2479,14 @@ main {
   .boxpart .boxpartInner div {
     padding: 1rem;
     margin-top: -50px;
+  }
+  .boxpart .boxpartInner div.joinuscontainer {
+    width: 96%;
+    padding: 0;
+    margin: 0 2%;
+  }
+  .boxpart .boxpartInner div.joinuscontainer dl dt {
+    width: 100%;
   }
   .boxpart .boxpartInner .boxpartWEB {
     display: none;
@@ -5550,6 +5609,10 @@ body.hidden-scroll {
   font-weight: 400;
   font-family: "latoregular";
 }
+.introducing_assessment .introducing_assessment_inner p.disclaimertext {
+  margin: 0;
+  font-size: 12px;
+}
 
 /* #################### career quiz   #################### */
 .careerquizWrap {
@@ -5734,6 +5797,10 @@ body.hidden-scroll {
   .introducing_assessment .introducing_assessment_inner p {
     font-size: 18px;
     padding: 0 2%;
+  }
+  .introducing_assessment .introducing_assessment_inner p.disclaimertext {
+    margin: 0;
+    font-size: 12px;
   }
   /* #################### career quiz   #################### */
   .careerquizWrap .careerquizContainer .careerquiz div {

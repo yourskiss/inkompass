@@ -131,7 +131,10 @@
     .introducing_assessment_inner { 
         display: flow-root; width:95%; max-width:1372px; float:none; margin:0 auto; 
         h2 { width:100%; float:left;  padding:0 5%; text-align:center; font-size:30px;  color:$lightBlack; font-weight:600; font-family:'latosemibold'; line-height:1.2; }
-        p { width:100%; float:left; margin:1rem 0 2rem 0; padding:0 5%;  text-align:center;  font-size:18px;  color:$lightBlack2; font-weight:400; font-family:'latoregular'; }
+        p { 
+            width:100%; float:left; margin:1rem 0 2rem 0; padding:0 5%;  text-align:center;  font-size:18px;  color:$lightBlack2; font-weight:400; font-family:'latoregular'; 
+            &.disclaimertext { margin: 0; font-size: 12px;}
+        }
     }
 }
 
@@ -222,7 +225,10 @@
     .introducing_assessment  { 
         .introducing_assessment_inner { 
             h2 { font-size:24px;  padding:0 2%; }
-            p { font-size:18px;  padding:0 2%;  }
+            p { 
+                font-size:18px;  padding:0 2%;  
+                &.disclaimertext { margin: 0; font-size: 12px;}
+            }
         }
     }
 
