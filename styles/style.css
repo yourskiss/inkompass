@@ -2180,6 +2180,15 @@ main {
   display: block;
   color: #393939;
 }
+.boxpart .boxpartInner div h5 {
+  width: 100%;
+  float: left;
+  margin: 0 0 0 0;
+  font-size: 20px;
+  color: #1F3C84;
+  font-weight: 400;
+  font-family: "latoregular";
+}
 .boxpart .boxpartInner div ul {
   width: 100%;
   float: left;
@@ -2192,6 +2201,53 @@ main {
   color: #393939;
   font-weight: 400;
   font-family: "latoregular";
+}
+.boxpart .boxpartInner div.centercontent {
+  transform: none;
+  position: static;
+  background: transparent;
+  width: 100%;
+  float: left;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.boxpart .boxpartInner div.centercontent h2 {
+  text-align: center;
+}
+.boxpart .boxpartInner div.centercontent h3 {
+  text-align: center;
+}
+.boxpart .boxpartInner div.centercontent ul li {
+  list-style: none;
+  text-align: center;
+}
+.boxpart .boxpartInner div.leftcontent {
+  transform: none;
+  position: static;
+  background: transparent;
+  width: 48%;
+  float: left;
+  padding: 0;
+}
+.boxpart .boxpartInner div.rightcontent {
+  transform: none;
+  position: static;
+  background: transparent;
+  width: 48%;
+  float: right;
+  padding: 0;
+}
+.boxpart .boxpartInner div.bottomcontent {
+  transform: none;
+  position: static;
+  background: transparent;
+  width: 100%;
+  float: left;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+.boxpart .boxpartInner div.bottomcontent p {
+  justify-content: center;
 }
 
 .boxpart.discover .boxpartInner div {
@@ -2265,6 +2321,9 @@ main {
   .boxpart .boxpartInner div h4 {
     font-size: 18px;
   }
+  .boxpart .boxpartInner div h5 {
+    font-size: 18px;
+  }
   .boxpart .boxpartInner div ul {
     margin: 0 0 1rem 0;
   }
@@ -2276,6 +2335,28 @@ main {
   }
   .boxpart .boxpartInner div {
     width: 47%;
+  }
+  .boxpart .boxpartInner div.centercontent {
+    width: 96%;
+    padding: 0;
+    margin: 0 2%;
+    margin-bottom: 1rem;
+  }
+  .boxpart .boxpartInner div.leftcontent {
+    width: 96%;
+    padding: 0;
+    margin: 0 2%;
+  }
+  .boxpart .boxpartInner div.rightcontent {
+    width: 96%;
+    padding: 0;
+    margin: 0 2%;
+  }
+  .boxpart .boxpartInner div.bottomcontent {
+    width: 96%;
+    padding: 0;
+    margin: 0 2%;
+    margin-top: 1rem;
   }
   .boxpart.application .boxpartInner .boxpartWEB {
     width: 90%;
@@ -2316,6 +2397,9 @@ main {
     justify-content: center;
   }
   .boxpart .boxpartInner div h4 {
+    text-align: center;
+  }
+  .boxpart .boxpartInner div h5 {
     text-align: center;
   }
   .boxpart.testimonialstory {

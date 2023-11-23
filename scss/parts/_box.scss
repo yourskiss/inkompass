@@ -40,9 +40,24 @@
                 width:100%; float:left; margin:0 0 1rem 0; font-size:20px;  color:$darkBlue; font-weight:400; font-family:'latoregular';
                 span { display:block; color:$lightBlack2;  }
             }
+            h5 { width:100%; float:left; margin:0 0 0 0; font-size:20px;  color:$darkBlue; font-weight:400; font-family:'latoregular'; }
             ul {
                 width:100%; float:left; margin:0 0 1.5rem 0;
                 li { list-style:disc; margin:3px 0 3px 20px; font-size:20px; color:$lightBlack2; font-weight:400; font-family:'latoregular'; }
+            }
+            &.centercontent { 
+                transform: none; position: static; background: transparent; width: 100%; float: left;padding: 0; margin: 0 0 1.5rem 0; 
+                h2 { text-align: center; }
+                h3 { text-align: center; }
+                ul {
+                    li {list-style: none;  text-align: center; }
+                }
+            }
+            &.leftcontent { transform: none; position: static; background: transparent; width: 48%; float: left; padding: 0;}
+            &.rightcontent { transform: none; position: static; background: transparent; width: 48%; float: right; padding: 0; }
+            &.bottomcontent { 
+                transform: none; position: static; background: transparent; width: 100%; float: left; padding: 0; margin: 1rem 0 0 0;
+                p {   justify-content: center;}
             }
         }
     }
@@ -100,6 +115,7 @@
                 h2 { font-size:24px; }
                 h3 {  margin:1rem 0 1rem 0; font-size:18px;}
                 h4 {  font-size:18px; }
+                h5 {  font-size:18px; }
                 ul {
                      margin:0 0 1rem 0;
                     li { font-size:18px;  }
@@ -111,12 +127,19 @@
 
     .boxpart .boxpartInner {
         .boxpartWEB { width: 80%; }
-        div { width: 47%; }
+        div { 
+            width: 47%; 
+            &.centercontent { width: 96%; padding: 0; margin: 0 2%; margin-bottom: 1rem; }
+            &.leftcontent { width: 96%;  padding: 0; margin: 0 2%; }
+            &.rightcontent {  width: 96%; padding: 0; margin: 0 2%;  }
+            &.bottomcontent { width: 96%;  padding: 0; margin: 0 2%; margin-top: 1rem; }
+        }
     }
 
     .boxpart.application .boxpartInner {
         .boxpartWEB { width: 90%; }
-        div { width: 50%; }
+        div { 
+            width: 50%; }
     }
 }
 
@@ -132,6 +155,7 @@
             h3{text-align:center;}
             p { text-align: center; justify-content:center;}
             h4 {text-align: center;}
+            h5 {text-align: center;}
         }
     }
 
